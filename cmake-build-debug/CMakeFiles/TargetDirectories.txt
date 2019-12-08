@@ -1,0 +1,3 @@
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
