@@ -9,6 +9,7 @@
 #include <thread>
 #include "../include/rapidjson/prettywriter.h"
 #include "../include/rapidjson/stringbuffer.h"
+#include "../include/rapidjson/document.h"
 #include "../Commands/Command.h"
 
 using namespace std;
@@ -16,6 +17,7 @@ using namespace rapidjson;
 
 Client::Client(SOCKET &sck) {
     this->sck = sck;
+    this->crypto = new Crypto();
 }
 
 void Client::start() {
@@ -27,6 +29,7 @@ void Client::receive() {
     int a = 0;
     char syncBuffer[4];
     char* buffer;
+
     cout << "Starting receive!\n";
     do{
 
@@ -71,18 +74,41 @@ void Client::receive() {
 
         received = recv(this->sck, syncBuffer, 4, 0);
 
-        if(received != 4){
+        if (received != 4) {
             continue;
         }
 
         memcpy(&a, syncBuffer, 4);
-        if(a != 43214321){
+        if (a != 43214321) {
             cout << "Sync error on step 1.\n";
             continue;
         }
 
-        cout << "Received a new message: " << buffer << "\n";
-        if(strcmp(buffer, "ciao") == 0){
+
+        if (!crypted) {
+            Document document;
+            document.Parse(buffer);
+            if (document.HasMember("id") && document.HasMember("key")) {
+                int id = document["id"].GetInt();
+                string key = document["key"].GetString();
+                if (id == 0) {
+                    crypto->setClientPublicKey(const_cast<char *>(key.c_str()));
+                    string str(crypto->pub_key);
+                    CommandKey *cmdKey = new CommandKey(0, str);
+                    sendMessage(cmdKey->getSerializedString());
+                    delete cmdKey;
+                    crypted = true;
+                    cout << "Connection is now secure!\n";
+                }
+            }
+
+        } else {
+            char *decrypted = crypto->decrypt(buffer);
+            cout << "Received a new message: " << decrypted << "\n";
+            string s(decrypted);
+            sendMessage(s);
+        }
+        /*if(strcmp(buffer, "ciao") == 0){
 
             StringBuffer sb;
             PrettyWriter<StringBuffer> writer(sb);
@@ -93,7 +119,7 @@ void Client::receive() {
             string message = sb.GetString();
             sendMessage(message);
             delete c;
-        }
+        }*/
 
     } while(received > 0);
 
@@ -112,33 +138,51 @@ void Client::close() {
     // cleanup
     closesocket(this->sck);
 
+    //Delete the crypto
+    delete crypto;
+
+    //Deattacching the thread
     this->t.detach();
-    cout << "Client closed and thread deattached!\n";
     this->closed = true;
+    cout << "Client closed and thread deattached!\n";
+
 }
 
 
 void Client::sendMessage(string msg) {
 
-    char* buffer = new char[msg.size() + 12];
+    char *content;
+    int messageLen = 0;
+    if (crypted) {
+        content = crypto->encrypt(const_cast<char *>(msg.c_str()));
+        messageLen = crypto->lastCryptedLen;
+    } else {
+        content = const_cast<char *>(msg.c_str());
+        messageLen = msg.size();
+    }
+
+    char *buffer = new char[messageLen + 12];
     int num = 12344321;
     memcpy(buffer, &num, 4);
-    num = msg.size();
-    memcpy(buffer + 4, &num, 4);
 
-    memcpy(buffer + 8, msg.c_str(), msg.size());
+    memcpy(buffer + 4, &messageLen, 4);
+
+    memcpy(buffer + 8, content, messageLen);
     num = 43214321;
-    memcpy(buffer + 8 + msg.size(), &num, 4);
+    memcpy(buffer + 8 + messageLen, &num, 4);
 
-    int result = send(this->sck, buffer, msg.size() + 12, 0);
+    int result = send(this->sck, buffer, messageLen + 12, 0);
     if (result == SOCKET_ERROR) {
         cout << "Data send failed with error: " << WSAGetLastError() << "\n";
         this->close();
     } else {
-       cout << "Message sent: " << msg << "\n";
+        //cout << "Message sent: " << msg << "\n";
     }
 
-    delete [] buffer;
+    delete[] buffer;
+    if (crypted) {
+        delete[] content;
+    }
 }
 
 Client::~Client() {

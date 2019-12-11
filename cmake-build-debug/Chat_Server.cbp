@@ -5,7 +5,7 @@
 		<Option title="Chat_Server"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\vcpkg-2019.11\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libbsoncxx\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
@@ -24,6 +24,8 @@
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
+					<Add directory="C:/Program Files/OpenSSL-Win64/include"/>
+					<Add directory="C:/vcpkg-2019.11/installed/x86-windows/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -47,6 +49,8 @@
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
+					<Add directory="C:/Program Files/OpenSSL-Win64/include"/>
+					<Add directory="C:/vcpkg-2019.11/installed/x86-windows/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -93,10 +97,19 @@
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h">
 			<Option target="Chat_Server"/>
 		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Crypto.h">
+			<Option target="Chat_Server"/>
+		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h">
 			<Option target="Chat_Server"/>
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/main.cpp">
@@ -104,6 +117,15 @@
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/libmongocxx/libmongocxx-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/libbsoncxx/libbsoncxx-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libbsoncxx\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

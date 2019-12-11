@@ -13,6 +13,7 @@
 #include <WS2tcpip.h>
 #include <thread>
 #include <string>
+#include "Crypto.h"
 
 
 #ifndef CHAT_SERVER_CLIENT_H
@@ -22,15 +23,17 @@
 class Client {
 private:
     SOCKET sck;
+
     void receive();
+
     std::thread t;
+    Crypto *crypto;
+    bool crypted = false;
 public:
-    Client(){};
+
     Client(SOCKET &sck);
 
     bool closed = false;
-
-    void setSocket(SOCKET &sck){ this->sck = sck; };
 
     void start();
 

@@ -16,30 +16,41 @@ using namespace rapidjson;
 class Command {
 public:
     int id;
-    string name;
-    string other;
-    Command(int id, string name, string other){
+
+    Command(int id) {
         this->id = id;
-        this->name = name;
-        this->other = other;
     }
 
-    template <typename Writer>
 
-    void Serialize(Writer& writer) const {
-        writer.StartObject();
-
+protected:
+    template<typename Writer>
+    void Serialize(Writer &writer) const {
         writer.String("id");
         writer.Uint(id);
+    };
 
-        writer.String("name");
-        writer.String(name.c_str(), static_cast<SizeType>(name.length()));
+};
 
-        writer.String("other");
-        writer.String(other.c_str(), static_cast<SizeType>(other.length()));
+class CommandKey : public Command {
+private:
+    string key;
+public:
+    CommandKey(int id, const string &key) : Command(id), key(key) {}
 
+    template<typename Writer>
+    void Serialize(Writer &writer) const {
+        writer.StartObject();
+        Command::Serialize(writer);
+        writer.String("key");
+        writer.String(key.c_str(), static_cast<SizeType>(key.size()));
         writer.EndObject();
     }
 
+    virtual string getSerializedString() {
+        StringBuffer sb;
+        PrettyWriter<StringBuffer> prettyWriter(sb);
+        this->Serialize(prettyWriter);
+        return sb.GetString();
+    }
 
 };

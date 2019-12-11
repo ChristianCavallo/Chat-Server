@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -IC:\PROGRA~1\OPENSS~1\include -IC:\vcpkg-2019.11\installed\x86-windows\include 
 

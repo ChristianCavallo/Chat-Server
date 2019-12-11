@@ -178,6 +178,33 @@ Socket\Server.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Socket\Server.cpp.s
 .PHONY : Socket\Server.cpp.s
 
+Utils\base64.obj: Utils\base64.cpp.obj
+
+.PHONY : Utils\base64.obj
+
+# target to build an object file
+Utils\base64.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\base64.cpp.obj
+.PHONY : Utils\base64.cpp.obj
+
+Utils\base64.i: Utils\base64.cpp.i
+
+.PHONY : Utils\base64.i
+
+# target to preprocess a source file
+Utils\base64.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\base64.cpp.i
+.PHONY : Utils\base64.cpp.i
+
+Utils\base64.s: Utils\base64.cpp.s
+
+.PHONY : Utils\base64.s
+
+# target to generate assembly for a file
+Utils\base64.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\base64.cpp.s
+.PHONY : Utils\base64.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -220,6 +247,9 @@ help:
 	@echo ... Socket/Server.obj
 	@echo ... Socket/Server.i
 	@echo ... Socket/Server.s
+	@echo ... Utils/base64.obj
+	@echo ... Utils/base64.i
+	@echo ... Utils/base64.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
