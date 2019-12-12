@@ -124,6 +124,33 @@ Chat_Server\fast:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\build
 .PHONY : Chat_Server\fast
 
+Database\mongodb.obj: Database\mongodb.cpp.obj
+
+.PHONY : Database\mongodb.obj
+
+# target to build an object file
+Database\mongodb.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj
+.PHONY : Database\mongodb.cpp.obj
+
+Database\mongodb.i: Database\mongodb.cpp.i
+
+.PHONY : Database\mongodb.i
+
+# target to preprocess a source file
+Database\mongodb.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.i
+.PHONY : Database\mongodb.cpp.i
+
+Database\mongodb.s: Database\mongodb.cpp.s
+
+.PHONY : Database\mongodb.s
+
+# target to generate assembly for a file
+Database\mongodb.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
+.PHONY : Database\mongodb.cpp.s
+
 Socket\Client.obj: Socket\Client.cpp.obj
 
 .PHONY : Socket\Client.obj
@@ -241,6 +268,9 @@ help:
 	@echo ... Chat_Server
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Database/mongodb.obj
+	@echo ... Database/mongodb.i
+	@echo ... Database/mongodb.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s

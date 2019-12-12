@@ -7,9 +7,9 @@
 #include "Client.h"
 #include <iostream>
 #include <thread>
-#include "../include/rapidjson/prettywriter.h"
-#include "../include/rapidjson/stringbuffer.h"
-#include "../include/rapidjson/document.h"
+#include <rapidjson/prettywriter.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/document.h>
 #include "../Commands/Command.h"
 
 using namespace std;
@@ -107,19 +107,10 @@ void Client::receive() {
             cout << "Received a new message: " << decrypted << "\n";
             string s(decrypted);
             sendMessage(s);
+            delete[] decrypted;
         }
-        /*if(strcmp(buffer, "ciao") == 0){
 
-            StringBuffer sb;
-            PrettyWriter<StringBuffer> writer(sb);
-
-            Command* c = new Command(12345, "Pollo", "sono un pollo");
-            c->Serialize(writer);
-
-            string message = sb.GetString();
-            sendMessage(message);
-            delete c;
-        }*/
+        delete[] buffer;
 
     } while(received > 0);
 

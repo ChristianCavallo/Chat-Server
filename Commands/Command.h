@@ -3,8 +3,9 @@
 //
 
 #include <string>
-#include "../include/rapidjson/prettywriter.h"
-#include "../include/rapidjson/stringbuffer.h"
+#include <rapidjson/prettywriter.h>
+#include <rapidjson/stringbuffer.h>
+
 #ifndef CHAT_SERVER_COMMAND_H
 #define CHAT_SERVER_COMMAND_H
 

@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Path to a library.
-BSON_LIBRARY:FILEPATH=C:/vcpkg-2019.11/installed/x86-windows/lib/bson-1.0.lib
-
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Debug
@@ -232,10 +229,10 @@ LIB_EAY_DEBUG:FILEPATH=LIB_EAY_DEBUG-NOTFOUND
 LIB_EAY_LIBRARY_DEBUG:FILEPATH=LIB_EAY_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-LIB_EAY_RELEASE:FILEPATH=C:/Program Files/OpenSSL-Win64/lib/libcrypto.lib
+LIB_EAY_RELEASE:FILEPATH=C:/vcpkg-2019.11/installed/x86-windows/debug/lib/libeay32.lib
 
 //Path to a file.
-OPENSSL_INCLUDE_DIR:PATH=C:/Program Files/OpenSSL-Win64/include
+OPENSSL_INCLUDE_DIR:PATH=C:/vcpkg-2019.11/installed/x86-windows/include
 
 //Path to a library.
 SSL_EAY_DEBUG:FILEPATH=SSL_EAY_DEBUG-NOTFOUND
@@ -244,7 +241,7 @@ SSL_EAY_DEBUG:FILEPATH=SSL_EAY_DEBUG-NOTFOUND
 SSL_EAY_LIBRARY_DEBUG:FILEPATH=SSL_EAY_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-SSL_EAY_RELEASE:FILEPATH=C:/Program Files/OpenSSL-Win64/lib/libssl.lib
+SSL_EAY_RELEASE:FILEPATH=C:/vcpkg-2019.11/installed/x86-windows/debug/lib/ssleay32.lib
 
 //Automatically copy dependencies into the output directory for
 // executables.
@@ -256,14 +253,14 @@ VCPKG_TARGET_TRIPLET:STRING=x86-windows
 //Path to a program.
 _VCPKG_CL:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx86/x86/cl.exe
 
-//The directory containing a CMake configuration file for libbson.
-libbson_DIR:PATH=C:/vcpkg-2019.11/installed/x86-windows/share/libbson
-
 //The directory containing a CMake configuration file for libbsoncxx.
 libbsoncxx_DIR:PATH=C:/vcpkg-2019.11/installed/x86-windows/share/libbsoncxx
 
 //The directory containing a CMake configuration file for libmongocxx.
 libmongocxx_DIR:PATH=C:/vcpkg-2019.11/installed/x86-windows/share/libmongocxx
+
+//The directory containing a CMake configuration file for rapidjson.
+rapidjson_DIR:PATH=C:/vcpkg-2019.11/installed/x86-windows/share/rapidjson
 
 
 ########################
@@ -407,7 +404,7 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[C:/Program Files/OpenSSL-Win64/lib/libcrypto.lib][C:/Program Files/OpenSSL-Win64/include][c ][v1.0.2s()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[C:/vcpkg-2019.11/installed/x86-windows/debug/lib/libeay32.lib][C:/vcpkg-2019.11/installed/x86-windows/include][c ][v1.0.2s()]
 //ADVANCED property for variable: LIB_EAY_LIBRARY_DEBUG
 LIB_EAY_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR

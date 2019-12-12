@@ -44,6 +44,7 @@ public:
         RSA_free(keypair);
         RSA_free(client_key);
         delete[] pub_key;
+        cout << "Released keys\n";
     }
 
     char *encrypt(char *msg) {

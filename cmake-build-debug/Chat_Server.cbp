@@ -5,7 +5,7 @@
 		<Option title="Chat_Server"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\vcpkg-2019.11\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libbsoncxx\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\vcpkg-2019.11\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\rapidjson\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libbsoncxx\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
@@ -24,7 +24,6 @@
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Program Files/OpenSSL-Win64/include"/>
 					<Add directory="C:/vcpkg-2019.11/installed/x86-windows/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
@@ -49,7 +48,6 @@
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Program Files/OpenSSL-Win64/include"/>
 					<Add directory="C:/vcpkg-2019.11/installed/x86-windows/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
@@ -91,6 +89,12 @@
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h">
 			<Option target="Chat_Server"/>
 		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h">
+			<Option target="Chat_Server"/>
+		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
@@ -120,6 +124,12 @@
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/scripts/buildsystems/vcpkg.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/rapidjson/RapidJSONConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\rapidjson\"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/rapidjson/RapidJSONConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\rapidjson\"/>
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/libmongocxx/libmongocxx-config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\"/>
