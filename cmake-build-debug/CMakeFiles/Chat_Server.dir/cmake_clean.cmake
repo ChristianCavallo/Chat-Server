@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Chat_Server.dir/Database/mongodb.cpp.obj"
   "CMakeFiles/Chat_Server.dir/Socket/Client.cpp.obj"
+  "CMakeFiles/Chat_Server.dir/Socket/Security/Crypto.cpp.obj"
   "CMakeFiles/Chat_Server.dir/Socket/Server.cpp.obj"
   "CMakeFiles/Chat_Server.dir/Utils/base64.cpp.obj"
+  "CMakeFiles/Chat_Server.dir/core/Dispatcher.cpp.obj"
   "CMakeFiles/Chat_Server.dir/main.cpp.obj"
   "Chat_Server.exe"
   "Chat_Server.exe.manifest"

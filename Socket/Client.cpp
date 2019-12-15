@@ -11,6 +11,7 @@
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
+#include "../core/Dispatcher.h"
 
 using namespace std;
 using namespace rapidjson;
@@ -18,6 +19,8 @@ using namespace rapidjson;
 Client::Client(SOCKET &sck) {
     this->sck = sck;
     this->crypto = new Crypto();
+    this->id = 0;
+    this->user_id = "";
 }
 
 void Client::start() {
@@ -60,7 +63,7 @@ void Client::receive() {
             cout << "Size error: " << a << "\n";
             continue;
         }
-        cout << "Payload size is " << a << "\n";
+        //cout << "Payload size is " << a << "\n";
 
         //allocate a new buffer with sizeof(a)
         //TODO: REMEMBER TO DELETE THE BUFFER!!!!!
@@ -85,7 +88,7 @@ void Client::receive() {
         }
 
 
-        if (!crypted) {
+        if (!cryptedRSA) {
             Document document;
             document.Parse(buffer);
             if (document.HasMember("id") && document.HasMember("key")) {
@@ -93,21 +96,26 @@ void Client::receive() {
                 string key = document["key"].GetString();
                 if (id == 0) {
                     crypto->setClientPublicKey(const_cast<char *>(key.c_str()));
+                    cryptedRSA = true;
+
                     string str(crypto->pub_key);
-                    CommandKey *cmdKey = new CommandKey(0, str);
+                    string aes_key = base64_encode(crypto->AES_Key, 32);
+                    string aes_iv = base64_encode(crypto->AES_iv, crypto->AES_BLOCK_SIZE);
+                    CommandKey *cmdKey = new CommandKey(str, aes_key, aes_iv);
                     sendMessage(cmdKey->getSerializedString());
+
                     delete cmdKey;
-                    crypted = true;
+
+                    cryptedAES = true;
                     cout << "Connection is now secure!\n";
                 }
             }
 
         } else {
-            char *decrypted = crypto->decrypt(buffer);
+            string decrypted = crypto->decrypt_AES(buffer);
             cout << "Received a new message: " << decrypted << "\n";
-            string s(decrypted);
-            sendMessage(s);
-            delete[] decrypted;
+            Dispatcher::getInstance().executeRequest(*this, decrypted);
+            decrypted.clear();
         }
 
         delete[] buffer;
@@ -144,9 +152,14 @@ void Client::sendMessage(string msg) {
 
     char *content;
     int messageLen = 0;
-    if (crypted) {
-        content = crypto->encrypt(const_cast<char *>(msg.c_str()));
+    if (cryptedRSA && !cryptedAES) {
+        content = crypto->encrypt_RSA(const_cast<char *>(msg.c_str()));
         messageLen = crypto->lastCryptedLen;
+    } else if (cryptedAES) {
+
+        content = crypto->encrypt_AES(const_cast<char *>(msg.c_str()));
+        messageLen = crypto->lastCryptedLen;
+
     } else {
         content = const_cast<char *>(msg.c_str());
         messageLen = msg.size();
@@ -167,11 +180,11 @@ void Client::sendMessage(string msg) {
         cout << "Data send failed with error: " << WSAGetLastError() << "\n";
         this->close();
     } else {
-        //cout << "Message sent: " << msg << "\n";
+        cout << "Message sent: " << msg << "\n";
     }
 
     delete[] buffer;
-    if (crypted) {
+    if (cryptedRSA) {
         delete[] content;
     }
 }
