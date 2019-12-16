@@ -27,16 +27,25 @@ using namespace std;
 
 
 class Mongodb {
-
+private:
+    instance* inst;
+    client* client;
 public:
-    Mongodb() {
-        mongocxx::instance instance{}; // This should be done only once.
-        mongocxx::client client{mongocxx::uri{}};
+    database db;
+    collection coll;
 
-        //mongocxx::database db = client["testdb"];
+    Mongodb() {
+        inst = new instance();
+        client = new mongocxx::client(uri{});
+
+        db = client->database("testdb");
         cout << "Mongo connected\n";
     }
 
+    virtual ~Mongodb();
+
+
+    void CreateCollection(string name);
 };
 
 

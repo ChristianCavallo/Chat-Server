@@ -49,10 +49,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server"
+CMAKE_SOURCE_DIR = "C:\Users\Noemi Buggea\CLionProjects\Chat-Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,9 +81,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles" "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,60 @@ Database\mongodb.s: Database\mongodb.cpp.s
 Database\mongodb.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
 .PHONY : Database\mongodb.cpp.s
+
+Oggetti\GestoreUtenti.obj: Oggetti\GestoreUtenti.cpp.obj
+
+.PHONY : Oggetti\GestoreUtenti.obj
+
+# target to build an object file
+Oggetti\GestoreUtenti.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\GestoreUtenti.cpp.obj
+.PHONY : Oggetti\GestoreUtenti.cpp.obj
+
+Oggetti\GestoreUtenti.i: Oggetti\GestoreUtenti.cpp.i
+
+.PHONY : Oggetti\GestoreUtenti.i
+
+# target to preprocess a source file
+Oggetti\GestoreUtenti.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\GestoreUtenti.cpp.i
+.PHONY : Oggetti\GestoreUtenti.cpp.i
+
+Oggetti\GestoreUtenti.s: Oggetti\GestoreUtenti.cpp.s
+
+.PHONY : Oggetti\GestoreUtenti.s
+
+# target to generate assembly for a file
+Oggetti\GestoreUtenti.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\GestoreUtenti.cpp.s
+.PHONY : Oggetti\GestoreUtenti.cpp.s
+
+Oggetti\Utenti.obj: Oggetti\Utenti.cpp.obj
+
+.PHONY : Oggetti\Utenti.obj
+
+# target to build an object file
+Oggetti\Utenti.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\Utenti.cpp.obj
+.PHONY : Oggetti\Utenti.cpp.obj
+
+Oggetti\Utenti.i: Oggetti\Utenti.cpp.i
+
+.PHONY : Oggetti\Utenti.i
+
+# target to preprocess a source file
+Oggetti\Utenti.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\Utenti.cpp.i
+.PHONY : Oggetti\Utenti.cpp.i
+
+Oggetti\Utenti.s: Oggetti\Utenti.cpp.s
+
+.PHONY : Oggetti\Utenti.s
+
+# target to generate assembly for a file
+Oggetti\Utenti.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\Utenti.cpp.s
+.PHONY : Oggetti\Utenti.cpp.s
 
 Socket\Client.obj: Socket\Client.cpp.obj
 
@@ -271,6 +325,12 @@ help:
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s
+	@echo ... Oggetti/GestoreUtenti.obj
+	@echo ... Oggetti/GestoreUtenti.i
+	@echo ... Oggetti/GestoreUtenti.s
+	@echo ... Oggetti/Utenti.obj
+	@echo ... Oggetti/Utenti.i
+	@echo ... Oggetti/Utenti.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s

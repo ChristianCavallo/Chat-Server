@@ -14,20 +14,9 @@ using namespace std;
 
 int main() {
 
-    mongocxx::instance inst{};
-    mongocxx::client conn{mongocxx::uri{}};
+    Mongodb *mongo = new Mongodb();
+    mongo->CreateCollection("lista");
 
-    bsoncxx::builder::stream::document document{};
-
-    auto collection = conn["testdb"]["testcollection"];
-    document << "hello" << "world";
-
-    collection.insert_one(document.view());
-    auto cursor = collection.find({});
-
-    for (auto &&doc : cursor) {
-        std::cout << bsoncxx::to_json(doc) << std::endl;
-    }
 
     Server *server = new Server();
     server->start();
