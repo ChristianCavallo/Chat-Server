@@ -13,7 +13,7 @@
 #include <WS2tcpip.h>
 #include <thread>
 #include <string>
-#include "Crypto.h"
+#include "Security/Crypto.h"
 
 
 #ifndef CHAT_SERVER_CLIENT_H
@@ -28,18 +28,24 @@ private:
 
     std::thread t;
     Crypto *crypto;
-    bool crypted = false;
+    bool cryptedRSA = false;
+    bool cryptedAES = false;
+
+
 public:
+    int id;
+
+    string user_id;
 
     Client(SOCKET &sck);
 
     bool closed = false;
 
+    void sendMessage(std::string msg);
+
     void start();
 
     void close();
-
-    void sendMessage(std::string msg);
 
     virtual ~Client();
 };

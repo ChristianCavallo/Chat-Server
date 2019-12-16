@@ -6,23 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Commands/Command.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
 string
+-
+iostream
 -
 rapidjson/prettywriter.h
 -
 rapidjson/stringbuffer.h
 -
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Database/mongodb.cpp
-mongodb.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Database/mongodb.h
-../Commands/Command.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Commands/Command.h
-../Oggetti/Utenti.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/Utenti.h
-
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Database/mongodb.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
 cstdint
 -
 iostream
@@ -44,15 +38,25 @@ bsoncxx/builder/stream/array.hpp
 bsoncxx/builder/stream/document.hpp
 -
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/Utenti.cpp
-Utenti.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/Utenti.h
-
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/Utenti.h
-string
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp
+Client.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+iostream
 -
+thread
+-
+rapidjson/prettywriter.h
+-
+rapidjson/stringbuffer.h
+-
+rapidjson/document.h
+-
+../Commands/Command.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+../core/Dispatcher.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Client.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
 Windows.h
 -
 WinSock2.h
@@ -63,10 +67,10 @@ thread
 -
 string
 -
-Crypto.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Crypto.h
+Security/Crypto.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Crypto.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
 openssl/rsa.h
 -
 openssl/pem.h
@@ -77,42 +81,62 @@ string
 -
 iostream
 -
-../Utils/base64.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Utils/base64.h
+../../Utils/base64.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
 chrono
 -
+openssl/conf.h
+-
+openssl/evp.h
+-
+openssl/err.h
+-
+openssl/rand.h
+-
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Server.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
 Client.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Client.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
 vector
 -
 thread
 -
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Utils/base64.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
 string
 -
 
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/main.cpp
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.cpp
+rapidjson/prettywriter.h
+-
+rapidjson/stringbuffer.h
+-
+rapidjson/document.h
+-
+../Commands/Command.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+Dispatcher.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
+
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
+../Socket/Client.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/main.cpp
 iostream
 -
 string
 -
 Database/mongodb.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Database/mongodb.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
 Socket/Server.h
-C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Server.h
-bsoncxx/builder/stream/document.hpp
--
-bsoncxx/json.hpp
--
-mongocxx/client.hpp
--
-mongocxx/instance.hpp
--
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
+Commands/Command.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+core/Dispatcher.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 
-C:/vcpkg/installed/x86-windows/include/boost/assert.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp
 boost/config.hpp
 -
 boost/current_function.hpp
@@ -120,7 +144,7 @@ boost/current_function.hpp
 assert.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config.hpp
 boost/config/user.hpp
 -
 boost/config/detail/select_compiler_config.hpp
@@ -132,7 +156,7 @@ boost/config/detail/select_platform_config.hpp
 boost/config/detail/suffix.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/borland.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/borland.hpp
 climits
 -
 cwchar
@@ -148,49 +172,49 @@ errno.h
 float.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/clang.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/clang.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/codegear.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/codegear.hpp
 cstring
 -
 errno.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/comeau.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/comeau.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/common_edg.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/common_edg.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/compaq_cxx.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/compaq_cxx.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/cray.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/cray.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/digitalmars.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/digitalmars.hpp
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/gcc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/gcc.hpp
 cstddef
 -
 stddef.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/gcc_xml.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/gcc_xml.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/greenhills.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/greenhills.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/hp_acc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/hp_acc.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/intel.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/intel.hpp
 boost/config/compiler/visualc.hpp
 -
 boost/config/compiler/gcc.hpp
@@ -200,49 +224,49 @@ boost/config/compiler/common_edg.hpp
 cwchar
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/kai.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/kai.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/metrowerks.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/metrowerks.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/mpw.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/mpw.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/nvcc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/nvcc.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/pathscale.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/pathscale.hpp
 boost/config/compiler/clang.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/boost/config/compiler/clang.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/boost/config/compiler/clang.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/pgi.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/pgi.hpp
 boost/config/compiler/gcc.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/sgi_mipspro.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/sgi_mipspro.hpp
 boost/config/compiler/common_edg.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/sunpro_cc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/sunpro_cc.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/vacpp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/vacpp.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/visualc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/visualc.hpp
 boost/config/pragma_message.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/xlcpp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/xlcpp.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/compiler/xlcpp_zos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/xlcpp_zos.hpp
 features.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/posix_features.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/posix_features.hpp
 unistd.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/select_compiler_config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/select_compiler_config.hpp
 boost/config/compiler/nvcc.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/compiler/nvcc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/compiler/nvcc.hpp
 boost/config/compiler/gcc_xml.hpp
 -
 boost/config/compiler/cray.hpp
@@ -290,47 +314,47 @@ boost/config/compiler/pgi.hpp
 boost/config/compiler/visualc.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/select_platform_config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/select_platform_config.hpp
 boost/config/detail/posix_features.hpp
 -
 boost/config/platform/linux.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/linux.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/linux.hpp
 boost/config/platform/bsd.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/bsd.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/bsd.hpp
 boost/config/platform/solaris.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/solaris.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/solaris.hpp
 boost/config/platform/irix.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/irix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/irix.hpp
 boost/config/platform/hpux.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/hpux.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/hpux.hpp
 boost/config/platform/cygwin.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/cygwin.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/cygwin.hpp
 boost/config/platform/win32.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/win32.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/win32.hpp
 boost/config/platform/beos.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/beos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/beos.hpp
 boost/config/platform/macos.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/macos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/macos.hpp
 boost/config/platform/zos.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/zos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/zos.hpp
 boost/config/platform/aix.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/aix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/aix.hpp
 boost/config/platform/amigaos.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/amigaos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/amigaos.hpp
 boost/config/platform/qnxnto.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/qnxnto.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/qnxnto.hpp
 boost/config/platform/vxworks.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/vxworks.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/vxworks.hpp
 boost/config/platform/symbian.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/symbian.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/symbian.hpp
 boost/config/platform/cray.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/cray.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/cray.hpp
 boost/config/platform/vms.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/platform/vms.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/platform/vms.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/select_stdlib_config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/select_stdlib_config.hpp
 cstddef
 -
 stddef.h
@@ -338,29 +362,29 @@ stddef.h
 utility
 -
 boost/config/stdlib/stlport.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/stlport.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/stlport.hpp
 boost/config/stdlib/libcomo.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/libcomo.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/libcomo.hpp
 boost/config/stdlib/roguewave.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/roguewave.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/roguewave.hpp
 boost/config/stdlib/libcpp.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/libcpp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/libcpp.hpp
 boost/config/stdlib/libstdcpp3.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/libstdcpp3.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/libstdcpp3.hpp
 boost/config/stdlib/sgi.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/sgi.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/sgi.hpp
 boost/config/stdlib/msl.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/msl.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/msl.hpp
 boost/config/stdlib/xlcpp_zos.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/xlcpp_zos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/xlcpp_zos.hpp
 boost/config/stdlib/vacpp.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/vacpp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/vacpp.hpp
 boost/config/stdlib/modena.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/modena.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/modena.hpp
 boost/config/stdlib/dinkumware.hpp
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/dinkumware.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/boost/config/stdlib/dinkumware.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/detail/suffix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/detail/suffix.hpp
 limits.h
 -
 cstddef
@@ -370,31 +394,31 @@ typeinfo
 boost/config/helper_macros.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/helper_macros.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/helper_macros.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/no_tr1/utility.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/no_tr1/utility.hpp
 utility
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/aix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/aix.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/amigaos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/amigaos.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/beos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/beos.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/bsd.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/bsd.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/cray.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/cray.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/cygwin.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/cygwin.hpp
 unistd.h
 -
 sys/types.h
@@ -406,15 +430,15 @@ pthread.h
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/hpux.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/hpux.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/irix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/irix.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/linux.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/linux.hpp
 cstdlib
 -
 stdlib.h
@@ -422,19 +446,19 @@ stdlib.h
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/macos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/macos.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/qnxnto.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/qnxnto.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/solaris.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/solaris.hpp
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/symbian.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/symbian.hpp
 cstdlib
 -
 stdlib.h
@@ -444,9 +468,9 @@ boost/config/detail/posix_features.hpp
 sys/endian.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/vms.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/vms.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/vxworks.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/vxworks.hpp
 version.h
 -
 time.h
@@ -466,19 +490,19 @@ signal.h
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/win32.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/win32.hpp
 _mingw.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/platform/zos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/platform/zos.hpp
 features.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/pragma_message.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/pragma_message.hpp
 boost/config/helper_macros.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/dinkumware.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/dinkumware.hpp
 boost/config/no_tr1/utility.hpp
 -
 exception
@@ -486,23 +510,23 @@ exception
 typeinfo
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/libcomo.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/libcomo.hpp
 boost/config/no_tr1/utility.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/libcpp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/libcpp.hpp
 ciso646
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/libstdcpp3.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/libstdcpp3.hpp
 unistd.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/modena.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/modena.hpp
 boost/config/no_tr1/utility.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/msl.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/msl.hpp
 boost/config/no_tr1/utility.hpp
 -
 cstddef
@@ -510,11 +534,11 @@ cstddef
 boost/config/detail/posix_features.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/roguewave.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/roguewave.hpp
 boost/config/no_tr1/utility.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/sgi.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/sgi.hpp
 boost/config/no_tr1/utility.hpp
 -
 unistd.h
@@ -522,7 +546,7 @@ unistd.h
 string
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/stlport.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/stlport.hpp
 cstddef
 -
 unistd.h
@@ -534,25 +558,25 @@ string.h
 algorithm
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/vacpp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/vacpp.hpp
 unistd.h
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/config/stdlib/xlcpp_zos.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/stdlib/xlcpp_zos.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/user.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/user.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/config/workaround.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/workaround.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/container_hash/hash_fwd.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/container_hash/hash_fwd.hpp
 boost/config/workaround.hpp
 -
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/core/addressof.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/core/addressof.hpp
 boost/config.hpp
 -
 boost/config/workaround.hpp
@@ -560,17 +584,17 @@ boost/config/workaround.hpp
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/core/enable_if.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/core/enable_if.hpp
 boost/config.hpp
-C:/vcpkg/installed/x86-windows/include/boost/core/boost/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/core/boost/config.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/core/explicit_operator_bool.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/core/explicit_operator_bool.hpp
 boost/config.hpp
 -
 boost/config/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/core/swap.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/core/swap.hpp
 boost/core/enable_if.hpp
 -
 boost/config.hpp
@@ -582,27 +606,27 @@ algorithm
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/current_function.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/current_function.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/detail/reference_content.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/detail/reference_content.hpp
 boost/config.hpp
-C:/vcpkg/installed/x86-windows/include/boost/detail/boost/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/detail/boost/config.hpp
 boost/type_traits/integral_constant.hpp
-C:/vcpkg/installed/x86-windows/include/boost/detail/boost/type_traits/integral_constant.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/detail/boost/type_traits/integral_constant.hpp
 boost/type_traits/has_nothrow_copy.hpp
-C:/vcpkg/installed/x86-windows/include/boost/detail/boost/type_traits/has_nothrow_copy.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/detail/boost/type_traits/has_nothrow_copy.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/detail/workaround.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/detail/workaround.hpp
 boost/config/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/exception/exception.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/exception/exception.hpp
 boost/config.hpp
 -
 memory
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/core.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/core.hpp
 boost/config.hpp
 -
 boost/move/detail/config_begin.hpp
@@ -616,13 +640,13 @@ boost/move/detail/meta_utils.hpp
 boost/move/detail/config_end.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/detail/config_begin.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/detail/config_begin.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/detail/config_end.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/detail/config_end.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/move/detail/meta_utils.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/detail/meta_utils.hpp
 boost/move/detail/config_begin.hpp
 -
 boost/move/detail/workaround.hpp
@@ -634,11 +658,11 @@ cstddef
 boost/move/detail/config_end.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/detail/meta_utils_core.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/detail/meta_utils_core.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/detail/type_traits.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/detail/type_traits.hpp
 boost/config.hpp
 -
 boost/move/detail/config_begin.hpp
@@ -658,11 +682,11 @@ msl_utility
 boost/move/detail/config_end.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/detail/workaround.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/detail/workaround.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/traits.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/traits.hpp
 boost/config.hpp
 -
 boost/move/detail/config_begin.hpp
@@ -676,7 +700,7 @@ boost/move/detail/type_traits.hpp
 boost/move/detail/config_end.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/utility.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/utility.hpp
 boost/config.hpp
 -
 boost/move/detail/config_begin.hpp
@@ -692,7 +716,7 @@ utility
 boost/move/detail/config_end.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/move/utility_core.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/move/utility_core.hpp
 boost/config.hpp
 -
 boost/move/detail/config_begin.hpp
@@ -710,19 +734,19 @@ utility
 boost/move/detail/config_end.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/none.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/none.hpp
 boost/none_t.hpp
-C:/vcpkg/installed/x86-windows/include/boost/boost/none_t.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/boost/none_t.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/none_t.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/none_t.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/bad_optional_access.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/bad_optional_access.hpp
 stdexcept
 -
 string
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/old_optional_implementation.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/old_optional_implementation.hpp
 boost/detail/reference_content.hpp
 -
 boost/type_traits/is_reference.hpp
@@ -732,33 +756,33 @@ boost/type_traits/integral_constant.hpp
 boost/type_traits/conditional.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_aligned_storage.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_aligned_storage.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_config.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_factory_support.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_factory_support.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_reference_spec.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_reference_spec.hpp
 boost/type_traits/is_integral.hpp
 -
 boost/type_traits/is_const.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_relops.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_relops.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_swap.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_swap.hpp
 boost/core/swap.hpp
 -
 boost/optional/optional_fwd.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/detail/optional_trivially_copyable_base.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/detail/optional_trivially_copyable_base.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/optional.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/optional.hpp
 new
 -
 iosfwd
@@ -844,25 +868,25 @@ boost/optional/detail/optional_relops.hpp
 boost/optional/detail/optional_swap.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/optional/optional_fwd.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/optional/optional_fwd.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/arithmetic/dec.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/arithmetic/dec.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/arithmetic/inc.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/arithmetic/inc.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/array/data.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/array/data.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/tuple/elem.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/array/elem.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/array/elem.hpp
 boost/preprocessor/array/data.hpp
 -
 boost/preprocessor/array/size.hpp
@@ -872,19 +896,19 @@ boost/preprocessor/config/config.hpp
 boost/preprocessor/tuple/elem.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/array/size.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/array/size.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/tuple/elem.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/cat.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/cat.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/config/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/config/config.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/control/if.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/control/if.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/control/iif.hpp
@@ -892,17 +916,17 @@ boost/preprocessor/control/iif.hpp
 boost/preprocessor/logical/bool.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/control/iif.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/control/iif.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/debug/error.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/debug/error.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/detail/auto_rec.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/detail/auto_rec.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/detail/dmc/auto_rec.hpp
@@ -910,41 +934,41 @@ boost/preprocessor/detail/dmc/auto_rec.hpp
 boost/preprocessor/control/iif.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/detail/dmc/auto_rec.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/detail/dmc/auto_rec.hpp
 boost/preprocessor/control/iif.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/detail/split.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/detail/split.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/detail/is_empty.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/detail/is_empty.hpp
 boost/preprocessor/punctuation/is_begin_parens.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/empty.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/empty.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/expand.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/expand.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/identity.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/identity.hpp
 boost/preprocessor/facilities/empty.hpp
 -
 boost/preprocessor/tuple/eat.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/intercept.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/intercept.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/is_1.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/is_1.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/facilities/is_empty.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/is_empty.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/is_empty.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/facilities/is_empty_variadic.hpp
@@ -958,7 +982,7 @@ boost/preprocessor/cat.hpp
 boost/preprocessor/detail/split.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/is_empty_variadic.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/is_empty_variadic.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/punctuation/is_begin_parens.hpp
@@ -966,13 +990,13 @@ boost/preprocessor/punctuation/is_begin_parens.hpp
 boost/preprocessor/facilities/detail/is_empty.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/facilities/overload.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/facilities/overload.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/variadic/size.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/iteration/iterate.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/iteration/iterate.hpp
 boost/preprocessor/arithmetic/dec.hpp
 -
 boost/preprocessor/arithmetic/inc.hpp
@@ -988,13 +1012,13 @@ boost/preprocessor/slot/slot.hpp
 boost/preprocessor/tuple/elem.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/logical/bool.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/logical/bool.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/punctuation/comma.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/punctuation/comma.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/punctuation/comma_if.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/punctuation/comma_if.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/control/if.hpp
@@ -1004,17 +1028,17 @@ boost/preprocessor/facilities/empty.hpp
 boost/preprocessor/punctuation/comma.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/punctuation/detail/is_begin_parens.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/punctuation/detail/is_begin_parens.hpp
 boost/preprocessor/facilities/empty.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/punctuation/is_begin_parens.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/punctuation/is_begin_parens.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/punctuation/detail/is_begin_parens.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/repetition/enum_binary_params.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/repetition/enum_binary_params.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
@@ -1028,7 +1052,7 @@ boost/preprocessor/tuple/elem.hpp
 boost/preprocessor/tuple/rem.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/repetition/enum_params.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/repetition/enum_params.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/punctuation/comma_if.hpp
@@ -1036,7 +1060,7 @@ boost/preprocessor/punctuation/comma_if.hpp
 boost/preprocessor/repetition/repeat.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/repetition/enum_shifted_params.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/repetition/enum_shifted_params.hpp
 boost/preprocessor/arithmetic/dec.hpp
 -
 boost/preprocessor/arithmetic/inc.hpp
@@ -1050,13 +1074,13 @@ boost/preprocessor/punctuation/comma_if.hpp
 boost/preprocessor/repetition/repeat.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/repetition/enum_trailing_params.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/repetition/enum_trailing_params.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/repetition/repeat.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/repetition/repeat.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/repetition/repeat.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
@@ -1068,15 +1092,15 @@ boost/preprocessor/detail/auto_rec.hpp
 boost/preprocessor/tuple/eat.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/slot/detail/def.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/slot/detail/def.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/slot/slot.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/slot/slot.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/slot/detail/def.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/tuple/detail/is_single_return.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/tuple/detail/is_single_return.hpp
 boost/preprocessor/config/config.hpp
 -
 boost/preprocessor/control/iif.hpp
@@ -1086,11 +1110,11 @@ boost/preprocessor/facilities/is_1.hpp
 boost/preprocessor/tuple/size.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/tuple/eat.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/tuple/eat.hpp
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/tuple/elem.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/tuple/elem.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
@@ -1106,7 +1130,7 @@ boost/preprocessor/variadic/elem.hpp
 boost/preprocessor/tuple/detail/is_single_return.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/tuple/rem.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/tuple/rem.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
@@ -1118,7 +1142,7 @@ boost/preprocessor/facilities/overload.hpp
 boost/preprocessor/tuple/detail/is_single_return.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/tuple/size.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/tuple/size.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
@@ -1126,25 +1150,25 @@ boost/preprocessor/config/config.hpp
 boost/preprocessor/variadic/size.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/variadic/elem.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/variadic/elem.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/preprocessor/variadic/size.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/preprocessor/variadic/size.hpp
 boost/preprocessor/cat.hpp
 -
 boost/preprocessor/config/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/static_assert.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/static_assert.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/throw_exception.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/throw_exception.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
@@ -1156,27 +1180,27 @@ boost/exception/exception.hpp
 boost/current_function.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/add_const.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/add_const.hpp
 boost/type_traits/detail/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/add_lvalue_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/add_lvalue_reference.hpp
 boost/type_traits/add_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/add_pointer.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/add_pointer.hpp
 boost/type_traits/remove_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/add_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/add_reference.hpp
 boost/detail/workaround.hpp
 -
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/add_rvalue_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/add_rvalue_reference.hpp
 boost/config.hpp
 -
 boost/type_traits/is_void.hpp
@@ -1184,7 +1208,7 @@ boost/type_traits/is_void.hpp
 boost/type_traits/is_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/alignment_of.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/alignment_of.hpp
 boost/config.hpp
 -
 cstddef
@@ -1194,11 +1218,11 @@ boost/type_traits/intrinsics.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/conditional.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/conditional.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/decay.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/decay.hpp
 boost/type_traits/is_array.hpp
 -
 boost/type_traits/is_function.hpp
@@ -1212,13 +1236,13 @@ boost/type_traits/remove_reference.hpp
 boost/type_traits/remove_cv.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/declval.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/declval.hpp
 boost/config.hpp
 -
 boost/type_traits/add_rvalue_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/config.hpp
 boost/config.hpp
 -
 boost/version.hpp
@@ -1226,7 +1250,7 @@ boost/version.hpp
 boost/config/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_function_cxx_03.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_function_cxx_03.hpp
 boost/type_traits/is_reference.hpp
 -
 boost/type_traits/detail/is_function_ptr_helper.hpp
@@ -1238,29 +1262,29 @@ boost/type_traits/detail/yes_no_type.hpp
 boost/type_traits/detail/is_function_msvc10_fix.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_function_cxx_11.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_function_cxx_11.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_function_msvc10_fix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_function_msvc10_fix.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_function_ptr_helper.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_function_ptr_helper.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_function_ptr_tester.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_function_ptr_tester.hpp
 boost/type_traits/detail/yes_no_type.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_mem_fun_pointer_impl.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_mem_fun_pointer_impl.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_mem_fun_pointer_tester.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_mem_fun_pointer_tester.hpp
 boost/type_traits/detail/yes_no_type.hpp
 -
 boost/type_traits/detail/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_member_function_pointer_cxx_03.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_member_function_pointer_cxx_03.hpp
 boost/type_traits/detail/is_mem_fun_pointer_impl.hpp
 -
 boost/type_traits/remove_cv.hpp
@@ -1276,19 +1300,19 @@ boost/type_traits/detail/yes_no_type.hpp
 boost/type_traits/detail/is_mem_fun_pointer_tester.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/is_rvalue_reference_msvc10_fix.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/is_rvalue_reference_msvc10_fix.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/detail/yes_no_type.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/detail/yes_no_type.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/enable_if.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/enable_if.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_nothrow_assign.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_nothrow_assign.hpp
 cstddef
 -
 boost/type_traits/integral_constant.hpp
@@ -1322,7 +1346,7 @@ boost/type_traits/is_array.hpp
 boost/type_traits/is_pod.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_nothrow_constructor.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_nothrow_constructor.hpp
 cstddef
 -
 boost/type_traits/intrinsics.hpp
@@ -1340,7 +1364,7 @@ boost/type_traits/remove_all_extents.hpp
 boost/type_traits/has_trivial_constructor.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_nothrow_copy.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_nothrow_copy.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1370,7 +1394,7 @@ boost/type_traits/is_copy_constructible.hpp
 boost/type_traits/has_trivial_copy.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_trivial_assign.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_trivial_assign.hpp
 cstddef
 -
 boost/type_traits/detail/config.hpp
@@ -1388,7 +1412,7 @@ boost/type_traits/is_volatile.hpp
 boost/type_traits/is_assignable.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_trivial_constructor.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_trivial_constructor.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/is_pod.hpp
@@ -1404,7 +1428,7 @@ boost/type_traits/is_pod.hpp
 boost/type_traits/is_default_constructible.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_trivial_copy.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_trivial_copy.hpp
 cstddef
 -
 boost/type_traits/intrinsics.hpp
@@ -1420,7 +1444,7 @@ boost/type_traits/add_const.hpp
 boost/type_traits/add_lvalue_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_trivial_move_assign.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_trivial_move_assign.hpp
 cstddef
 -
 boost/type_traits/intrinsics.hpp
@@ -1444,7 +1468,7 @@ boost/type_traits/is_assignable.hpp
 boost/type_traits/remove_const.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/has_trivial_move_constructor.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/has_trivial_move_constructor.hpp
 cstddef
 -
 boost/type_traits/intrinsics.hpp
@@ -1470,13 +1494,13 @@ boost/type_traits/is_pod.hpp
 boost/type_traits/is_volatile.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/integral_constant.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/integral_constant.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/intrinsics.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/intrinsics.hpp
 boost/config.hpp
 -
 boost/type_traits/detail/config.hpp
@@ -1506,7 +1530,7 @@ boost/type_traits/is_volatile.hpp
 boost/type_traits/is_void.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_abstract.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_abstract.hpp
 cstddef
 -
 boost/type_traits/intrinsics.hpp
@@ -1522,19 +1546,19 @@ boost/type_traits/is_class.hpp
 boost/type_traits/is_polymorphic.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_arithmetic.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_arithmetic.hpp
 boost/type_traits/is_integral.hpp
 -
 boost/type_traits/is_floating_point.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_array.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_array.hpp
 boost/type_traits/integral_constant.hpp
 -
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_assignable.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_assignable.hpp
 cstddef
 -
 boost/type_traits/integral_constant.hpp
@@ -1554,7 +1578,7 @@ boost/type_traits/has_trivial_assign.hpp
 boost/type_traits/remove_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_base_and_derived.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_base_and_derived.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1574,7 +1598,7 @@ boost/type_traits/remove_cv.hpp
 boost/type_traits/is_same.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_base_of.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_base_of.hpp
 boost/type_traits/is_base_and_derived.hpp
 -
 boost/type_traits/is_same.hpp
@@ -1582,7 +1606,7 @@ boost/type_traits/is_same.hpp
 boost/type_traits/is_class.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_class.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_class.hpp
 boost/type_traits/detail/config.hpp
 -
 boost/type_traits/intrinsics.hpp
@@ -1604,7 +1628,7 @@ boost/type_traits/is_void.hpp
 boost/type_traits/is_function.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_complete.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_complete.hpp
 boost/type_traits/declval.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1618,13 +1642,13 @@ boost/type_traits/detail/yes_no_type.hpp
 boost/config/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_const.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_const.hpp
 cstddef
 -
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_constructible.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_constructible.hpp
 boost/type_traits/integral_constant.hpp
 -
 boost/detail/workaround.hpp
@@ -1646,7 +1670,7 @@ boost/type_traits/is_convertible.hpp
 boost/type_traits/is_default_constructible.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_convertible.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_convertible.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1686,7 +1710,7 @@ boost/type_traits/is_function.hpp
 boost/type_traits/is_same.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_copy_constructible.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_copy_constructible.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
@@ -1710,7 +1734,7 @@ boost/type_traits/is_array.hpp
 boost/type_traits/declval.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_default_constructible.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_default_constructible.hpp
 cstddef
 -
 boost/type_traits/integral_constant.hpp
@@ -1730,7 +1754,7 @@ boost/type_traits/detail/yes_no_type.hpp
 boost/type_traits/is_pod.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_destructible.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_destructible.hpp
 cstddef
 -
 boost/type_traits/integral_constant.hpp
@@ -1750,7 +1774,7 @@ boost/type_traits/is_pod.hpp
 boost/type_traits/is_class.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_enum.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_enum.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1774,11 +1798,11 @@ boost/type_traits/is_class.hpp
 boost/type_traits/is_union.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_floating_point.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_floating_point.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_function.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_function.hpp
 boost/type_traits/detail/config.hpp
 -
 boost/config/workaround.hpp
@@ -1788,17 +1812,17 @@ boost/type_traits/detail/is_function_cxx_11.hpp
 boost/type_traits/detail/is_function_cxx_03.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_integral.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_integral.hpp
 boost/config.hpp
 -
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_lvalue_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_lvalue_reference.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_member_function_pointer.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_member_function_pointer.hpp
 boost/type_traits/detail/config.hpp
 -
 boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp
@@ -1806,17 +1830,17 @@ boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp
 boost/type_traits/detail/is_member_function_pointer_cxx_03.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_member_pointer.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_member_pointer.hpp
 boost/detail/workaround.hpp
 -
 boost/type_traits/is_member_function_pointer.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_noncopyable.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_noncopyable.hpp
 boost/type_traits/is_base_and_derived.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_nothrow_move_assignable.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_nothrow_move_assignable.hpp
 boost/config.hpp
 -
 boost/type_traits/has_trivial_move_assign.hpp
@@ -1836,7 +1860,7 @@ boost/type_traits/is_complete.hpp
 boost/static_assert.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_nothrow_move_constructible.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_nothrow_move_constructible.hpp
 cstddef
 -
 boost/config.hpp
@@ -1862,7 +1886,7 @@ boost/type_traits/has_nothrow_copy.hpp
 boost/type_traits/is_array.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_pod.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_pod.hpp
 cstddef
 -
 boost/type_traits/detail/config.hpp
@@ -1878,11 +1902,11 @@ boost/type_traits/is_function.hpp
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_pointer.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_pointer.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_polymorphic.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_polymorphic.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1892,13 +1916,13 @@ boost/type_traits/is_class.hpp
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_reference.hpp
 boost/type_traits/is_lvalue_reference.hpp
 -
 boost/type_traits/is_rvalue_reference.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_rvalue_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_rvalue_reference.hpp
 boost/config.hpp
 -
 boost/type_traits/integral_constant.hpp
@@ -1906,11 +1930,11 @@ boost/type_traits/integral_constant.hpp
 boost/type_traits/detail/is_rvalue_reference_msvc10_fix.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_same.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_same.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_scalar.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_scalar.hpp
 boost/type_traits/is_arithmetic.hpp
 -
 boost/type_traits/is_enum.hpp
@@ -1922,23 +1946,23 @@ boost/type_traits/is_member_pointer.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_union.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_union.hpp
 boost/type_traits/intrinsics.hpp
 -
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_void.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_void.hpp
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/is_volatile.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/is_volatile.hpp
 cstddef
 -
 boost/type_traits/integral_constant.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/remove_all_extents.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/remove_all_extents.hpp
 boost/config.hpp
 -
 cstddef
@@ -1946,11 +1970,11 @@ cstddef
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/remove_bounds.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/remove_bounds.hpp
 boost/type_traits/remove_extent.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/remove_const.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/remove_const.hpp
 boost/config.hpp
 -
 cstddef
@@ -1958,7 +1982,7 @@ cstddef
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/remove_cv.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/remove_cv.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
@@ -1966,7 +1990,7 @@ boost/detail/workaround.hpp
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/remove_extent.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/remove_extent.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
@@ -1974,17 +1998,17 @@ boost/detail/workaround.hpp
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/remove_reference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/remove_reference.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/type_identity.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/type_identity.hpp
 boost/config.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/type_traits/type_with_alignment.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/type_traits/type_with_alignment.hpp
 boost/type_traits/alignment_of.hpp
 -
 boost/type_traits/is_pod.hpp
@@ -2000,13 +2024,13 @@ boost/detail/workaround.hpp
 boost/type_traits/conditional.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/compare_pointees.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/compare_pointees.hpp
 functional
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/detail/result_of_iterate.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/detail/result_of_iterate.hpp
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/ostream_string.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/ostream_string.hpp
 boost/config.hpp
 -
 iosfwd
@@ -2014,7 +2038,7 @@ iosfwd
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/result_of.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/result_of.hpp
 boost/config.hpp
 -
 boost/preprocessor/cat.hpp
@@ -2056,7 +2080,7 @@ boost/core/enable_if.hpp
 boost/utility/detail/result_of_iterate.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/string_ref.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/string_ref.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
@@ -2080,13 +2104,13 @@ string
 iosfwd
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/string_ref_fwd.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/string_ref_fwd.hpp
 boost/config.hpp
 -
 string
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/string_view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/string_view.hpp
 boost/config.hpp
 -
 boost/detail/workaround.hpp
@@ -2114,15 +2138,15 @@ cstring
 iosfwd
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/utility/string_view_fwd.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/utility/string_view_fwd.hpp
 boost/config.hpp
 -
 string
 -
 
-C:/vcpkg/installed/x86-windows/include/boost/version.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/boost/version.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/array/element.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/array/element.hpp
 cstddef
 -
 cstdint
@@ -2134,7 +2158,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/array/value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/array/value.hpp
 cstdlib
 -
 memory
@@ -2148,7 +2172,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/array/view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/array/view.hpp
 cstddef
 -
 cstdint
@@ -2164,7 +2188,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/array/view_or_value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/array/view_or_value.hpp
 bsoncxx/array/value.hpp
 -
 bsoncxx/array/view.hpp
@@ -2178,7 +2202,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/array.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/array.hpp
 bsoncxx/array/value.hpp
 -
 bsoncxx/array/view.hpp
@@ -2196,7 +2220,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/document.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/document.hpp
 bsoncxx/builder/basic/impl.hpp
 -
 bsoncxx/builder/basic/kvp.hpp
@@ -2214,7 +2238,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/helpers.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/helpers.hpp
 bsoncxx/builder/concatenate.hpp
 -
 bsoncxx/config/prelude.hpp
@@ -2222,7 +2246,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/impl.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/impl.hpp
 bsoncxx/builder/basic/sub_array.hpp
 -
 bsoncxx/builder/basic/sub_document.hpp
@@ -2234,7 +2258,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/kvp.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/kvp.hpp
 tuple
 -
 bsoncxx/config/prelude.hpp
@@ -2242,7 +2266,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/sub_array.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/sub_array.hpp
 bsoncxx/builder/basic/helpers.hpp
 -
 bsoncxx/builder/concatenate.hpp
@@ -2254,7 +2278,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/basic/sub_document.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/basic/sub_document.hpp
 bsoncxx/builder/basic/helpers.hpp
 -
 bsoncxx/builder/concatenate.hpp
@@ -2268,7 +2292,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/concatenate.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/concatenate.hpp
 bsoncxx/array/view_or_value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -2278,7 +2302,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/core.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/core.hpp
 memory
 -
 stdexcept
@@ -2302,7 +2326,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/array.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/array.hpp
 bsoncxx/array/value.hpp
 -
 bsoncxx/array/view.hpp
@@ -2322,7 +2346,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/array_context.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/array_context.hpp
 bsoncxx/array/value.hpp
 -
 bsoncxx/builder/concatenate.hpp
@@ -2340,13 +2364,13 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/closed_context.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/closed_context.hpp
 bsoncxx/config/prelude.hpp
 -
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/document.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/document.hpp
 bsoncxx/builder/core.hpp
 -
 bsoncxx/builder/stream/key_context.hpp
@@ -2362,7 +2386,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/helpers.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/helpers.hpp
 bsoncxx/builder/concatenate.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -2372,7 +2396,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/key_context.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/key_context.hpp
 bsoncxx/builder/core.hpp
 -
 bsoncxx/builder/stream/closed_context.hpp
@@ -2388,7 +2412,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/single_context.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/single_context.hpp
 bsoncxx/builder/core.hpp
 -
 bsoncxx/builder/stream/array_context.hpp
@@ -2402,7 +2426,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/builder/stream/value_context.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/builder/stream/value_context.hpp
 bsoncxx/builder/core.hpp
 -
 bsoncxx/builder/stream/array_context.hpp
@@ -2418,15 +2442,15 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/config/compiler.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/config/compiler.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/config/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/config/config.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/config/export.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/config/export.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/config/postlude.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/config/postlude.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/config/prelude.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/config/prelude.hpp
 bsoncxx/config/compiler.hpp
 -
 bsoncxx/config/config.hpp
@@ -2436,9 +2460,9 @@ bsoncxx/config/export.hpp
 bsoncxx/config/version.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/config/version.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/config/version.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/decimal128.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/decimal128.hpp
 cstdint
 -
 string
@@ -2450,7 +2474,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/document/element.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/document/element.hpp
 cstddef
 -
 cstdint
@@ -2462,7 +2486,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/document/value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/document/value.hpp
 cstdlib
 -
 memory
@@ -2474,7 +2498,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/document/view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/document/view.hpp
 cstddef
 -
 cstdint
@@ -2490,7 +2514,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/document/view_or_value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/document/view_or_value.hpp
 bsoncxx/document/value.hpp
 -
 bsoncxx/document/view.hpp
@@ -2502,11 +2526,11 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/enums/binary_sub_type.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/enums/binary_sub_type.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/enums/type.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/enums/type.hpp
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/json.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/json.hpp
 string
 -
 bsoncxx/document/value.hpp
@@ -2520,7 +2544,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/oid.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/oid.hpp
 array
 -
 ctime
@@ -2534,7 +2558,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/stdx/optional.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/stdx/optional.hpp
 bsoncxx/config/prelude.hpp
 -
 core/optional.hpp
@@ -2552,7 +2576,7 @@ optional
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/stdx/string_view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/stdx/string_view.hpp
 bsoncxx/config/prelude.hpp
 -
 core/string.hpp
@@ -2572,7 +2596,7 @@ string_view
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/string/view_or_value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/string/view_or_value.hpp
 string
 -
 bsoncxx/stdx/string_view.hpp
@@ -2584,7 +2608,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/types.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/types.hpp
 chrono
 -
 cstring
@@ -2610,7 +2634,7 @@ bsoncxx/enums/type.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/types/value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/types/value.hpp
 cstddef
 -
 cstdint
@@ -2624,7 +2648,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/util/functor.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/util/functor.hpp
 functional
 -
 type_traits
@@ -2634,7 +2658,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/bsoncxx/view_or_value.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/bsoncxx/view_or_value.hpp
 type_traits
 -
 bsoncxx/stdx/optional.hpp
@@ -2644,7 +2668,7 @@ bsoncxx/config/prelude.hpp
 bsoncxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/bulk_write.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/bulk_write.hpp
 mongocxx/client_session.hpp
 -
 mongocxx/model/write.hpp
@@ -2658,7 +2682,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/change_stream.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/change_stream.hpp
 memory
 -
 bsoncxx/document/view.hpp
@@ -2670,7 +2694,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/client.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/client.hpp
 memory
 -
 mongocxx/client_session.hpp
@@ -2696,7 +2720,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/client_session.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/client_session.hpp
 memory
 -
 bsoncxx/document/view.hpp
@@ -2710,7 +2734,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/collection.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/collection.hpp
 algorithm
 -
 cstdint
@@ -2804,15 +2828,15 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/config/compiler.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/config/compiler.hpp
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/config/config.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/config/config.hpp
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/config/export.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/config/export.hpp
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/config/postlude.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/config/postlude.hpp
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/config/prelude.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/config/prelude.hpp
 mongocxx/config/compiler.hpp
 -
 mongocxx/config/config.hpp
@@ -2822,9 +2846,9 @@ mongocxx/config/export.hpp
 mongocxx/config/version.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/config/version.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/config/version.hpp
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/cursor.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/cursor.hpp
 memory
 -
 bsoncxx/document/view.hpp
@@ -2836,7 +2860,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/database.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/database.hpp
 memory
 -
 string
@@ -2866,7 +2890,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/command_failed_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/command_failed_event.hpp
 memory
 -
 bsoncxx/document/view.hpp
@@ -2876,7 +2900,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/command_started_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/command_started_event.hpp
 memory
 -
 bsoncxx/document/view.hpp
@@ -2886,7 +2910,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/command_succeeded_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/command_succeeded_event.hpp
 memory
 -
 bsoncxx/document/view.hpp
@@ -2896,7 +2920,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/heartbeat_failed_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/heartbeat_failed_event.hpp
 bsoncxx/stdx/string_view.hpp
 -
 mongocxx/config/prelude.hpp
@@ -2904,7 +2928,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/heartbeat_started_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/heartbeat_started_event.hpp
 bsoncxx/stdx/string_view.hpp
 -
 mongocxx/config/prelude.hpp
@@ -2912,7 +2936,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/heartbeat_succeeded_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/heartbeat_succeeded_event.hpp
 bsoncxx/document/view.hpp
 -
 bsoncxx/stdx/string_view.hpp
@@ -2922,7 +2946,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/server_changed_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/server_changed_event.hpp
 bsoncxx/oid.hpp
 -
 bsoncxx/stdx/string_view.hpp
@@ -2934,7 +2958,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/server_closed_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/server_closed_event.hpp
 bsoncxx/oid.hpp
 -
 bsoncxx/stdx/string_view.hpp
@@ -2944,7 +2968,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/server_description.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/server_description.hpp
 bsoncxx/document/view.hpp
 -
 bsoncxx/stdx/string_view.hpp
@@ -2954,7 +2978,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/server_opening_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/server_opening_event.hpp
 bsoncxx/oid.hpp
 -
 mongocxx/config/prelude.hpp
@@ -2962,7 +2986,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/topology_changed_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/topology_changed_event.hpp
 bsoncxx/oid.hpp
 -
 mongocxx/events/topology_description.hpp
@@ -2972,7 +2996,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/topology_closed_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/topology_closed_event.hpp
 bsoncxx/oid.hpp
 -
 mongocxx/config/prelude.hpp
@@ -2980,7 +3004,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/topology_description.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/topology_description.hpp
 vector
 -
 bsoncxx/stdx/string_view.hpp
@@ -2994,7 +3018,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/events/topology_opening_event.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/events/topology_opening_event.hpp
 bsoncxx/oid.hpp
 -
 mongocxx/events/topology_description.hpp
@@ -3004,7 +3028,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/gridfs/bucket.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/gridfs/bucket.hpp
 istream
 -
 memory
@@ -3038,7 +3062,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/gridfs/downloader.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/gridfs/downloader.hpp
 cstddef
 -
 cstdint
@@ -3060,7 +3084,7 @@ mongocxx/stdx.hpp
 mongocxx/config/prelude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/gridfs/uploader.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/gridfs/uploader.hpp
 cstddef
 -
 cstdint
@@ -3088,7 +3112,7 @@ mongocxx/stdx.hpp
 mongocxx/config/prelude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/hint.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/hint.hpp
 bsoncxx/document/value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -3106,7 +3130,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/index_model.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/index_model.hpp
 bsoncxx/document/value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -3118,7 +3142,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/index_view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/index_view.hpp
 string
 -
 vector
@@ -3140,7 +3164,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/instance.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/instance.hpp
 memory
 -
 mongocxx/config/prelude.hpp
@@ -3148,7 +3172,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/delete_many.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/delete_many.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3160,7 +3184,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/delete_one.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/delete_one.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3172,7 +3196,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/insert_one.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/insert_one.hpp
 bsoncxx/document/view_or_value.hpp
 -
 mongocxx/config/prelude.hpp
@@ -3180,7 +3204,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/replace_one.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/replace_one.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3192,7 +3216,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/update_many.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/update_many.hpp
 bsoncxx/array/view_or_value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -3206,7 +3230,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/update_one.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/update_one.hpp
 bsoncxx/array/view_or_value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -3220,7 +3244,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/model/write.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/model/write.hpp
 cstdint
 -
 bsoncxx/stdx/optional.hpp
@@ -3244,7 +3268,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/aggregate.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/aggregate.hpp
 chrono
 -
 cstdint
@@ -3266,7 +3290,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/apm.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/apm.hpp
 functional
 -
 mongocxx/events/command_failed_event.hpp
@@ -3298,7 +3322,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/bulk_write.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/bulk_write.hpp
 bsoncxx/stdx/optional.hpp
 -
 mongocxx/write_concern.hpp
@@ -3308,7 +3332,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/change_stream.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/change_stream.hpp
 chrono
 -
 bsoncxx/document/view_or_value.hpp
@@ -3324,7 +3348,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/client.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/client.hpp
 string
 -
 bsoncxx/stdx/optional.hpp
@@ -3338,7 +3362,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/client_session.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/client_session.hpp
 bsoncxx/stdx/optional.hpp
 -
 mongocxx/options/transaction.hpp
@@ -3350,7 +3374,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/count.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/count.hpp
 chrono
 -
 cstdint
@@ -3370,7 +3394,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/create_collection.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/create_collection.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3384,7 +3408,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/create_view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/create_view.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3400,7 +3424,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/delete.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/delete.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3412,7 +3436,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/distinct.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/distinct.hpp
 chrono
 -
 cstdint
@@ -3430,7 +3454,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/estimated_document_count.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/estimated_document_count.hpp
 chrono
 -
 bsoncxx/stdx/optional.hpp
@@ -3442,7 +3466,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/find.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/find.hpp
 chrono
 -
 cstdint
@@ -3464,7 +3488,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/find_one_and_delete.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/find_one_and_delete.hpp
 chrono
 -
 cstdint
@@ -3480,7 +3504,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/find_one_and_replace.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/find_one_and_replace.hpp
 chrono
 -
 cstdint
@@ -3500,7 +3524,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/find_one_and_update.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/find_one_and_update.hpp
 chrono
 -
 cstdint
@@ -3522,13 +3546,13 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/find_one_common_options.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/find_one_common_options.hpp
 mongocxx/config/prelude.hpp
 -
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/gridfs/bucket.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/gridfs/bucket.hpp
 string
 -
 bsoncxx/stdx/optional.hpp
@@ -3546,7 +3570,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/gridfs/upload.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/gridfs/upload.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3558,7 +3582,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/index.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/index.hpp
 chrono
 -
 memory
@@ -3580,7 +3604,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/index_view.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/index_view.hpp
 chrono
 -
 bsoncxx/stdx/optional.hpp
@@ -3592,7 +3616,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/insert.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/insert.hpp
 bsoncxx/document/view.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3606,7 +3630,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/replace.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/replace.hpp
 bsoncxx/array/view_or_value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -3622,7 +3646,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/ssl.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/ssl.hpp
 string
 -
 bsoncxx/stdx/optional.hpp
@@ -3636,7 +3660,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/transaction.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/transaction.hpp
 memory
 -
 bsoncxx/stdx/optional.hpp
@@ -3648,7 +3672,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/options/update.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/options/update.hpp
 bsoncxx/array/view_or_value.hpp
 -
 bsoncxx/document/view_or_value.hpp
@@ -3664,7 +3688,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/pipeline.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/pipeline.hpp
 cstdint
 -
 memory
@@ -3682,7 +3706,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/read_concern.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/read_concern.hpp
 memory
 -
 bsoncxx/stdx/optional.hpp
@@ -3698,7 +3722,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/read_preference.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/read_preference.hpp
 chrono
 -
 cstdint
@@ -3720,7 +3744,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/bulk_write.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/bulk_write.hpp
 cstdint
 -
 map
@@ -3738,7 +3762,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/delete.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/delete.hpp
 cstdint
 -
 mongocxx/result/bulk_write.hpp
@@ -3748,7 +3772,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/gridfs/upload.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/gridfs/upload.hpp
 bsoncxx/array/value.hpp
 -
 bsoncxx/types/value.hpp
@@ -3758,7 +3782,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/insert_many.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/insert_many.hpp
 cstdint
 -
 map
@@ -3774,7 +3798,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/insert_one.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/insert_one.hpp
 bsoncxx/array/value.hpp
 -
 bsoncxx/types.hpp
@@ -3788,7 +3812,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/replace_one.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/replace_one.hpp
 cstdint
 -
 bsoncxx/stdx/optional.hpp
@@ -3804,7 +3828,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/result/update.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/result/update.hpp
 cstdint
 -
 bsoncxx/stdx/optional.hpp
@@ -3820,13 +3844,13 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/stdx.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/stdx.hpp
 mongocxx/config/prelude.hpp
 -
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/uri.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/uri.hpp
 memory
 -
 string
@@ -3848,7 +3872,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/validation_criteria.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/validation_criteria.hpp
 bsoncxx/document/view_or_value.hpp
 -
 bsoncxx/stdx/optional.hpp
@@ -3860,7 +3884,7 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/write_concern.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/write_concern.hpp
 chrono
 -
 cstdint
@@ -3884,13 +3908,13 @@ mongocxx/config/prelude.hpp
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/mongocxx/write_type.hpp
+C:/vcpkg-2019.11/installed/x86-windows/include/mongocxx/write_type.hpp
 mongocxx/config/prelude.hpp
 -
 mongocxx/config/postlude.hpp
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/asn1.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/asn1.h
 time.h
 -
 openssl/e_os2.h
@@ -3908,7 +3932,7 @@ openssl/ossl_typ.h
 openssl/bn.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/bio.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/bio.h
 openssl/e_os2.h
 -
 stdio.h
@@ -3922,7 +3946,7 @@ stdint.h
 inttypes.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/bn.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/bn.h
 limits.h
 -
 openssl/e_os2.h
@@ -3936,7 +3960,7 @@ openssl/crypto.h
 assert.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/buffer.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/buffer.h
 openssl/ossl_typ.h
 -
 stddef.h
@@ -3944,7 +3968,21 @@ stddef.h
 sys/types.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/crypto.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/conf.h
+openssl/bio.h
+-
+openssl/lhash.h
+-
+openssl/stack.h
+-
+openssl/safestack.h
+-
+openssl/e_os2.h
+-
+openssl/ossl_typ.h
+-
+
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/crypto.h
 stdlib.h
 -
 openssl/e_os2.h
@@ -3964,7 +4002,7 @@ openssl/ebcdic.h
 openssl/symhacks.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/dh.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/dh.h
 openssl/e_os2.h
 -
 openssl/bio.h
@@ -3974,7 +4012,7 @@ openssl/ossl_typ.h
 openssl/bn.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/dsa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/dsa.h
 openssl/e_os2.h
 -
 openssl/bio.h
@@ -3988,17 +4026,17 @@ openssl/bn.h
 openssl/dh.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/e_os2.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/e_os2.h
 openssl/opensslconf.h
 -
 sys/socket.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/ebcdic.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/ebcdic.h
 sys/types.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/ec.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/ec.h
 openssl/opensslconf.h
 -
 openssl/asn1.h
@@ -4008,7 +4046,7 @@ openssl/symhacks.h
 openssl/bn.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/ecdh.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/ecdh.h
 openssl/opensslconf.h
 -
 openssl/ec.h
@@ -4018,7 +4056,7 @@ openssl/ossl_typ.h
 openssl/bn.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/ecdsa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/ecdsa.h
 openssl/opensslconf.h
 -
 openssl/ec.h
@@ -4028,7 +4066,7 @@ openssl/ossl_typ.h
 openssl/bn.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/err.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/err.h
 openssl/e_os2.h
 -
 stdio.h
@@ -4044,7 +4082,7 @@ openssl/lhash.h
 errno.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/evp.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/evp.h
 openssl/opensslconf.h
 -
 openssl/opensslconf.h
@@ -4058,7 +4096,7 @@ openssl/bio.h
 openssl/objects.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/lhash.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/lhash.h
 openssl/e_os2.h
 -
 stdio.h
@@ -4066,9 +4104,9 @@ stdio.h
 openssl/bio.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/obj_mac.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/obj_mac.h
 
-C:/vcpkg/installed/x86-windows/include/openssl/objects.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/objects.h
 openssl/obj_mac.h
 -
 openssl/bio.h
@@ -4076,15 +4114,15 @@ openssl/bio.h
 openssl/asn1.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/opensslconf.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/opensslconf.h
 
-C:/vcpkg/installed/x86-windows/include/openssl/opensslv.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/opensslv.h
 
-C:/vcpkg/installed/x86-windows/include/openssl/ossl_typ.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/ossl_typ.h
 openssl/e_os2.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/pem.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/pem.h
 openssl/e_os2.h
 -
 openssl/bio.h
@@ -4100,9 +4138,9 @@ openssl/pem2.h
 openssl/symhacks.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/pem2.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/pem2.h
 
-C:/vcpkg/installed/x86-windows/include/openssl/pkcs7.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/pkcs7.h
 openssl/asn1.h
 -
 openssl/bio.h
@@ -4114,7 +4152,17 @@ openssl/symhacks.h
 openssl/ossl_typ.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/rsa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/rand.h
+stdlib.h
+-
+openssl/ossl_typ.h
+-
+openssl/e_os2.h
+-
+windows.h
+-
+
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/rsa.h
 openssl/asn1.h
 -
 openssl/bio.h
@@ -4126,23 +4174,23 @@ openssl/ossl_typ.h
 openssl/bn.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/safestack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/safestack.h
 openssl/stack.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/sha.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/sha.h
 openssl/e_os2.h
 -
 stddef.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/stack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/stack.h
 
-C:/vcpkg/installed/x86-windows/include/openssl/symhacks.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/symhacks.h
 openssl/e_os2.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/x509.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/x509.h
 openssl/e_os2.h
 -
 openssl/symhacks.h
@@ -4180,7 +4228,7 @@ openssl/x509_vfy.h
 openssl/pkcs7.h
 -
 
-C:/vcpkg/installed/x86-windows/include/openssl/x509_vfy.h
+C:/vcpkg-2019.11/installed/x86-windows/include/openssl/x509_vfy.h
 openssl/x509.h
 -
 openssl/opensslconf.h
@@ -4194,69 +4242,127 @@ openssl/crypto.h
 openssl/symhacks.h
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/allocators.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/allocators.h
 rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/encodings.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/document.h
+reader.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/reader.h
+internal/meta.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/meta.h
+internal/strfunc.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strfunc.h
+memorystream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/memorystream.h
+encodedstream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodedstream.h
+new
+-
+limits
+-
+iterator
+-
+utility
+-
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodedstream.h
+stream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
+memorystream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/memorystream.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodings.h
 rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/diyfp.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/error/error.h
 ../rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/biginteger.h
+../rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
+intrin.h
+-
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/diyfp.h
+../rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 limits
 -
 intrin.h
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/dtoa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/dtoa.h
 itoa.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/itoa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/itoa.h
 diyfp.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/diyfp.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/diyfp.h
 ieee754.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/ieee754.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/ieee754.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/ieee754.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/ieee754.h
 ../rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/itoa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/itoa.h
 ../rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/meta.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/meta.h
 ../rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 type_traits
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/stack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/pow10.h
+../rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
 ../allocators.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/allocators.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/allocators.h
 swap.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/swap.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/swap.h
 cstddef
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/strfunc.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strfunc.h
 ../stream.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/stream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
 cwchar
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/swap.h
-../rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strtod.h
+ieee754.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/ieee754.h
+biginteger.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/biginteger.h
+diyfp.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/diyfp.h
+pow10.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/pow10.h
+climits
+-
+limits
+-
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/msinttypes/inttypes.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/swap.h
+../rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/memorystream.h
+stream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/msinttypes/inttypes.h
 stdint.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/msinttypes/stdint.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/msinttypes/stdint.h
 inttypes.h
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/msinttypes/stdint.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/msinttypes/stdint.h
 stdint.h
 -
 limits.h
@@ -4264,23 +4370,23 @@ limits.h
 wchar.h
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/prettywriter.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/prettywriter.h
 writer.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/writer.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/writer.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 cstdlib
 -
 cstring
 -
 rapidjson/...
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson/...
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/...
 string
 -
 msinttypes/stdint.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/msinttypes/stdint.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/msinttypes/stdint.h
 msinttypes/inttypes.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/msinttypes/inttypes.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/msinttypes/inttypes.h
 stdint.h
 -
 inttypes.h
@@ -4288,41 +4394,73 @@ inttypes.h
 endian.h
 -
 rapidjson/...
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson/...
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/...
 cassert
 -
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/stream.h
-rapidjson.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/rapidjson.h
-encodings.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/encodings.h
-
-C:/vcpkg/installed/x86-windows/include/rapidjson/stringbuffer.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/reader.h
+allocators.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/allocators.h
 stream.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/stream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
+encodedstream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodedstream.h
+internal/meta.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/meta.h
 internal/stack.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/stack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
+internal/strtod.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strtod.h
+limits
+-
+intrin.h
+-
+nmmintrin.h
+-
+emmintrin.h
+-
+arm_neon.h
+-
+stdexcept
+-
+rapidjson/error/error.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/error/error.h
+rapidjson/reader.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/reader.h
+error/error.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/error/error.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
+rapidjson.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
+encodings.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodings.h
+
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stringbuffer.h
+stream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
+internal/stack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
 utility
 -
 internal/stack.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/stack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
 
-C:/vcpkg/installed/x86-windows/include/rapidjson/writer.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/writer.h
 stream.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/stream.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
 internal/meta.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/meta.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/meta.h
 internal/stack.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/stack.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
 internal/strfunc.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/strfunc.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strfunc.h
 internal/dtoa.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/dtoa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/dtoa.h
 internal/itoa.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/internal/itoa.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/itoa.h
 stringbuffer.h
-C:/vcpkg/installed/x86-windows/include/rapidjson/stringbuffer.h
+C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stringbuffer.h
 new
 -
 intrin.h

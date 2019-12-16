@@ -118,4 +118,24 @@ void Server::startListen() {
     cout << "Server is dead\n";
 }
 
+Client *Server::getClientById(int id) {
+    for (int i = 0; i < clients.size(); i++) {
+        Client *c = clients.at(i);
+        if (c->id == id) {
+            return c;
+        }
+    }
+    return nullptr;
+}
+
+Client *Server::getClientByUserId(string id) {
+    for (int i = 0; i < clients.size(); i++) {
+        Client *c = clients.at(i);
+        if (c->user_id == id) {
+            return c;
+        }
+    }
+    return nullptr;
+}
+
 

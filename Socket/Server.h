@@ -24,8 +24,9 @@ public:
     void start();
     void stop();
 
-    Client getClient(int id);
+    Client *getClientById(int id);
 
+    Client *getClientByUserId(string id);
 };
 
 

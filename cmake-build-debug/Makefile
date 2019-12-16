@@ -232,6 +232,33 @@ Socket\Client.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Socket\Client.cpp.s
 .PHONY : Socket\Client.cpp.s
 
+Socket\Security\Crypto.obj: Socket\Security\Crypto.cpp.obj
+
+.PHONY : Socket\Security\Crypto.obj
+
+# target to build an object file
+Socket\Security\Crypto.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.obj
+.PHONY : Socket\Security\Crypto.cpp.obj
+
+Socket\Security\Crypto.i: Socket\Security\Crypto.cpp.i
+
+.PHONY : Socket\Security\Crypto.i
+
+# target to preprocess a source file
+Socket\Security\Crypto.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.i
+.PHONY : Socket\Security\Crypto.cpp.i
+
+Socket\Security\Crypto.s: Socket\Security\Crypto.cpp.s
+
+.PHONY : Socket\Security\Crypto.s
+
+# target to generate assembly for a file
+Socket\Security\Crypto.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.s
+.PHONY : Socket\Security\Crypto.cpp.s
+
 Socket\Server.obj: Socket\Server.cpp.obj
 
 .PHONY : Socket\Server.obj
@@ -286,6 +313,33 @@ Utils\base64.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\base64.cpp.s
 .PHONY : Utils\base64.cpp.s
 
+core\Dispatcher.obj: core\Dispatcher.cpp.obj
+
+.PHONY : core\Dispatcher.obj
+
+# target to build an object file
+core\Dispatcher.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj
+.PHONY : core\Dispatcher.cpp.obj
+
+core\Dispatcher.i: core\Dispatcher.cpp.i
+
+.PHONY : core\Dispatcher.i
+
+# target to preprocess a source file
+core\Dispatcher.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.i
+.PHONY : core\Dispatcher.cpp.i
+
+core\Dispatcher.s: core\Dispatcher.cpp.s
+
+.PHONY : core\Dispatcher.s
+
+# target to generate assembly for a file
+core\Dispatcher.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.s
+.PHONY : core\Dispatcher.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -334,12 +388,18 @@ help:
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s
+	@echo ... Socket/Security/Crypto.obj
+	@echo ... Socket/Security/Crypto.i
+	@echo ... Socket/Security/Crypto.s
 	@echo ... Socket/Server.obj
 	@echo ... Socket/Server.i
 	@echo ... Socket/Server.s
 	@echo ... Utils/base64.obj
 	@echo ... Utils/base64.i
 	@echo ... Utils/base64.s
+	@echo ... core/Dispatcher.obj
+	@echo ... core/Dispatcher.i
+	@echo ... core/Dispatcher.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -4,19 +4,14 @@
 #include <string>
 #include "Database/mongodb.h"
 #include "Socket/Server.h"
-#include <bsoncxx/builder/stream/document.hpp>
-#include <bsoncxx/json.hpp>
-#include <mongocxx/client.hpp>
-#include <mongocxx/instance.hpp>
+#include "Commands/Command.h"
+#include "core/Dispatcher.h"
 
 using namespace std;
 
 
 int main() {
-
-    Mongodb *mongo = new Mongodb();
-    mongo->CreateCollection("lista");
-
+    Dispatcher::getInstance(); //Lazy initialization
 
     Server *server = new Server();
     server->start();

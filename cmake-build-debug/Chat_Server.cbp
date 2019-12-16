@@ -5,26 +5,26 @@
 		<Option title="Chat_Server"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\vcpkg\;CMake Files\..\..\..\..\vcpkg\scripts\;CMake Files\..\..\..\..\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\..\vcpkg\installed\;CMake Files\..\..\..\..\vcpkg\installed\x86-windows\;CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\;CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\rapidjson\;CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\libmongocxx\;CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\libbsoncxx\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\vcpkg-2019.11\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\;CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\rapidjson\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\;CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libbsoncxx\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug"/>
+				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Chat_Server">
-				<Option output="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug/Chat_Server.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug"/>
+				<Option output="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/Chat_Server.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/vcpkg/installed/x86-windows/include"/>
+					<Add directory="C:/vcpkg-2019.11/installed/x86-windows/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -35,20 +35,20 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 Chat_Server"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 Chat_Server"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Chat_Server/fast">
-				<Option output="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug/Chat_Server.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug"/>
+				<Option output="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/Chat_Server.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/vcpkg/installed/x86-windows/include"/>
+					<Add directory="C:/vcpkg-2019.11/installed/x86-windows/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -59,95 +59,92 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 Chat_Server/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 Chat_Server/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug"/>
+				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/cmake-build-debug"/>
+				<Option working_dir="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Commands/Command.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Database/mongodb.cpp">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Database/mongodb.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/GestoreUtenti.cpp">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/GestoreUtenti.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/Utenti.cpp">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Oggetti/Utenti.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Client.cpp">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Client.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Crypto.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Server.cpp">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Socket/Server.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Utils/base64.cpp">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/Utils/base64.h">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/main.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/main.cpp">
-			<Option target="Chat_Server"/>
-		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/CMakeLists.txt">
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/../../../../vcpkg/scripts/buildsystems/vcpkg.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\vcpkg\scripts\buildsystems\"/>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\scripts\buildsystems\"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/../../../../vcpkg/installed/x86-windows/share/rapidjson/RapidJSONConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\rapidjson\"/>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/rapidjson/RapidJSONConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\rapidjson\"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/../../../../vcpkg/installed/x86-windows/share/rapidjson/RapidJSONConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\rapidjson\"/>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/rapidjson/RapidJSONConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\rapidjson\"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/../../../../vcpkg/installed/x86-windows/share/libmongocxx/libmongocxx-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\libmongocxx\"/>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/libmongocxx/libmongocxx-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libmongocxx\"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi Buggea/CLionProjects/Chat-Server/../../../../vcpkg/installed/x86-windows/share/libbsoncxx/libbsoncxx-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\vcpkg\installed\x86-windows\share\libbsoncxx\"/>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/../../../../../vcpkg-2019.11/installed/x86-windows/share/libbsoncxx/libbsoncxx-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\vcpkg-2019.11\installed\x86-windows\share\libbsoncxx\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
