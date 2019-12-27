@@ -7,6 +7,7 @@
 
 
 #include "../Socket/Client.h"
+#include "../Managers/Users_Manager.h"
 
 class Dispatcher {
 public:
@@ -16,10 +17,16 @@ public:
     }
 
 private:
-    //TODO: GESTORE UTENTI -----> GestoreUtenti *gestoreUtenti;
+    //allora noe, il dispatcher deve avere un collegamento ai gestori. infatti avevo aggiunto questi TODO:
+    //altrimenti che li abbiamo fatti a fare?
+
     //TODO: GESTORE CHAT ----> GestoreChat *gestoreChat;
 
-    Dispatcher() {}
+    Users_Manager* usersManager;
+
+    Dispatcher() {
+        usersManager = new Users_Manager();
+    }
 
 public:
     Dispatcher(Dispatcher const &) = delete;

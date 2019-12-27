@@ -151,59 +151,32 @@ Database\mongodb.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
 .PHONY : Database\mongodb.cpp.s
 
-Oggetti\GestoreUtenti.obj: Oggetti\GestoreUtenti.cpp.obj
+Managers\Users_Manager.obj: Managers\Users_Manager.cpp.obj
 
-.PHONY : Oggetti\GestoreUtenti.obj
-
-# target to build an object file
-Oggetti\GestoreUtenti.cpp.obj:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\GestoreUtenti.cpp.obj
-.PHONY : Oggetti\GestoreUtenti.cpp.obj
-
-Oggetti\GestoreUtenti.i: Oggetti\GestoreUtenti.cpp.i
-
-.PHONY : Oggetti\GestoreUtenti.i
-
-# target to preprocess a source file
-Oggetti\GestoreUtenti.cpp.i:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\GestoreUtenti.cpp.i
-.PHONY : Oggetti\GestoreUtenti.cpp.i
-
-Oggetti\GestoreUtenti.s: Oggetti\GestoreUtenti.cpp.s
-
-.PHONY : Oggetti\GestoreUtenti.s
-
-# target to generate assembly for a file
-Oggetti\GestoreUtenti.cpp.s:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\GestoreUtenti.cpp.s
-.PHONY : Oggetti\GestoreUtenti.cpp.s
-
-Oggetti\Utenti.obj: Oggetti\Utenti.cpp.obj
-
-.PHONY : Oggetti\Utenti.obj
+.PHONY : Managers\Users_Manager.obj
 
 # target to build an object file
-Oggetti\Utenti.cpp.obj:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\Utenti.cpp.obj
-.PHONY : Oggetti\Utenti.cpp.obj
+Managers\Users_Manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj
+.PHONY : Managers\Users_Manager.cpp.obj
 
-Oggetti\Utenti.i: Oggetti\Utenti.cpp.i
+Managers\Users_Manager.i: Managers\Users_Manager.cpp.i
 
-.PHONY : Oggetti\Utenti.i
+.PHONY : Managers\Users_Manager.i
 
 # target to preprocess a source file
-Oggetti\Utenti.cpp.i:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\Utenti.cpp.i
-.PHONY : Oggetti\Utenti.cpp.i
+Managers\Users_Manager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.i
+.PHONY : Managers\Users_Manager.cpp.i
 
-Oggetti\Utenti.s: Oggetti\Utenti.cpp.s
+Managers\Users_Manager.s: Managers\Users_Manager.cpp.s
 
-.PHONY : Oggetti\Utenti.s
+.PHONY : Managers\Users_Manager.s
 
 # target to generate assembly for a file
-Oggetti\Utenti.cpp.s:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Oggetti\Utenti.cpp.s
-.PHONY : Oggetti\Utenti.cpp.s
+Managers\Users_Manager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s
+.PHONY : Managers\Users_Manager.cpp.s
 
 Socket\Client.obj: Socket\Client.cpp.obj
 
@@ -379,12 +352,9 @@ help:
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s
-	@echo ... Oggetti/GestoreUtenti.obj
-	@echo ... Oggetti/GestoreUtenti.i
-	@echo ... Oggetti/GestoreUtenti.s
-	@echo ... Oggetti/Utenti.obj
-	@echo ... Oggetti/Utenti.i
-	@echo ... Oggetti/Utenti.s
+	@echo ... Managers/Users_Manager.obj
+	@echo ... Managers/Users_Manager.i
+	@echo ... Managers/Users_Manager.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s

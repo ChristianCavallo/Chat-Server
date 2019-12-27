@@ -115,6 +115,8 @@ void Client::receive() {
             string decrypted = crypto->decrypt_AES(buffer);
             cout << "Received a new message: " << decrypted << "\n";
             Dispatcher::getInstance().executeRequest(*this, decrypted);
+            //Quando arriva un nuovo messaggio, questo viene passato al Dispatcher... di preciso alla funzione executeRequest
+            //ok?ok
             decrypted.clear();
         }
 
