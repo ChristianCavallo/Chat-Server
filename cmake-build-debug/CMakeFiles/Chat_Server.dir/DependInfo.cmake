@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Database/MediaManager.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Database/mongodb.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Socket/Client.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Socket/Security/Crypto.cpp.obj"

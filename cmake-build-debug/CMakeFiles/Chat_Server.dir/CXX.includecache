@@ -16,6 +16,20 @@ rapidjson/prettywriter.h
 rapidjson/stringbuffer.h
 -
 
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.cpp
+MediaManager.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
+fstream
+-
+iostream
+-
+random
+-
+
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
+string
+-
+
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
 cstdint
 -
@@ -44,8 +58,6 @@ C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
 iostream
 -
 thread
--
-rapidjson/prettywriter.h
 -
 rapidjson/stringbuffer.h
 -
@@ -94,6 +106,24 @@ openssl/err.h
 openssl/rand.h
 -
 
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.cpp
+Windows.h
+-
+WinSock2.h
+-
+WS2tcpip.h
+-
+stdio.h
+-
+string
+-
+iostream
+-
+Server.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
+thread
+-
+
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
 Client.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
@@ -107,20 +137,22 @@ string
 -
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.cpp
-rapidjson/prettywriter.h
--
 rapidjson/stringbuffer.h
 -
 rapidjson/document.h
 -
 ../Commands/Command.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+../Database/MediaManager.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
 Dispatcher.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 ../Socket/Client.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+../Socket/Server.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/main.cpp
 iostream
@@ -135,6 +167,10 @@ Commands/Command.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
 core/Dispatcher.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
+Database/MediaManager.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
+fstream
+-
 
 C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp
 boost/config.hpp

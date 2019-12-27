@@ -124,6 +124,33 @@ Chat_Server\fast:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\build
 .PHONY : Chat_Server\fast
 
+Database\MediaManager.obj: Database\MediaManager.cpp.obj
+
+.PHONY : Database\MediaManager.obj
+
+# target to build an object file
+Database\MediaManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj
+.PHONY : Database\MediaManager.cpp.obj
+
+Database\MediaManager.i: Database\MediaManager.cpp.i
+
+.PHONY : Database\MediaManager.i
+
+# target to preprocess a source file
+Database\MediaManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.i
+.PHONY : Database\MediaManager.cpp.i
+
+Database\MediaManager.s: Database\MediaManager.cpp.s
+
+.PHONY : Database\MediaManager.s
+
+# target to generate assembly for a file
+Database\MediaManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.s
+.PHONY : Database\MediaManager.cpp.s
+
 Database\mongodb.obj: Database\mongodb.cpp.obj
 
 .PHONY : Database\mongodb.obj
@@ -322,6 +349,9 @@ help:
 	@echo ... Chat_Server
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Database/MediaManager.obj
+	@echo ... Database/MediaManager.i
+	@echo ... Database/MediaManager.s
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s

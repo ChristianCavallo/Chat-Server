@@ -6,15 +6,29 @@
 #include "Socket/Server.h"
 #include "Commands/Command.h"
 #include "core/Dispatcher.h"
+#include "Database/MediaManager.h"
+#include <fstream>
 
 using namespace std;
 
 
 int main() {
+
+
+    string t = MediaManager::saveMedia("prova123prova!");
+    string res = MediaManager::getMediaById(t);
+    //cout << t << "\n";
+    if (!res.empty()) {
+        cout << res << "\n";
+    }
+
+
     Dispatcher::getInstance(); //Lazy initialization
 
-    Server *server = new Server();
+    auto *server = new Server();
     server->start();
+
+    Dispatcher::getInstance().server = server;
 
     cin.get();
 

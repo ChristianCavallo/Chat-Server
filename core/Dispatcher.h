@@ -7,6 +7,7 @@
 
 
 #include "../Socket/Client.h"
+#include "../Socket/Server.h"
 
 class Dispatcher {
 public:
@@ -19,9 +20,14 @@ private:
     //TODO: GESTORE UTENTI -----> GestoreUtenti *gestoreUtenti;
     //TODO: GESTORE CHAT ----> GestoreChat *gestoreChat;
 
+
+
     Dispatcher() {}
 
 public:
+
+    Server *server;
+
     Dispatcher(Dispatcher const &) = delete;
 
     void operator=(Dispatcher const &) = delete;
@@ -30,7 +36,7 @@ public:
 public:
 
 
-    void executeRequest(Client &sender, string message);
+    void executeRequest(Client &sender, const string &message);
 
     void executeResponse(Client &sender, Command *c);
 

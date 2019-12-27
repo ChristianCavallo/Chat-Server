@@ -25,6 +25,28 @@ enum Commands {
 
     COMMAND_LOGIN_REQUEST = 20,
     COMMAND_LOGIN_RESPONSE = 21,
+
+    COMMAND_ADD_CONTACT_REQUEST = 30,
+    COMMAND_ADD_CONTACT_RESPONSE = 31,
+
+    COMMAND_MESSAGE_REQUEST = 40,
+    COMMAND_MESSAGE_RESPONSE = 41,
+
+    COMMAND_CREATE_GROUP_REQUEST = 50,
+    COMMAND_CREATE_GROUP_RESPONSE = 51,
+
+    COMMAND_MEDIA_REQUEST = 60,
+    COMMAND_MEDIA_RESPONSE = 61,
+
+    COMMAND_DELETE_CHAT_REQUEST = 70,
+    COMMAND_DELETE_CHAT_RESPONSE = 71,
+
+    COMMAND_FETCH_CONTACTS_REQUEST = 80,
+    COMMAND_FETCH_CONTACTS_RESPONSE = 81,
+
+    COMMAND_FETCH_CHAT_REQUEST = 90,
+    COMMAND_FETCH_CHAT_RESPONSE = 91
+
 };
 
 class Command {
@@ -105,3 +127,55 @@ public:
     }
 
 };
+
+class CommandMedia : public Command {
+private:
+    string media_id;
+    string media;
+public:
+
+    CommandMedia(const string &mediaId, const string &media) : Command(COMMAND_MEDIA_RESPONSE), media_id(mediaId),
+                                                               media(media) {}
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        writer.StartObject();
+
+        Command::Serialize(writer);
+        writer.String("media-id");
+        writer.String(media_id.c_str(), static_cast<SizeType>(media_id.size()));
+
+        writer.String("media");
+        if (media == "") {
+            writer.Null();
+        } else {
+            writer.String(media.c_str(), static_cast<SizeType>(media.size()));
+        }
+
+
+        writer.EndObject();
+    }
+
+};
+
+class CommandGeneric : public Command {
+private:
+    bool result;
+    string content;
+public:
+    CommandGeneric(int id, bool result, const string &content) : Command(id), result(result), content(content) {}
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        writer.StartObject();
+
+        Command::Serialize(writer);
+        writer.String("result");
+        writer.Bool(result);
+
+        writer.String("content");
+        writer.String(content.c_str(), static_cast<SizeType>(content.size()));
+
+        writer.EndObject();
+    }
+
+};
+
