@@ -7,6 +7,7 @@
 
 
 #include "../Socket/Client.h"
+#include "../Managers/Users_Manager.h"
 #include "../Socket/Server.h"
 
 class Dispatcher {
@@ -20,9 +21,11 @@ private:
     //TODO: GESTORE UTENTI -----> GestoreUtenti *gestoreUtenti;
     //TODO: GESTORE CHAT ----> GestoreChat *gestoreChat;
 
+    Users_Manager* usersManager;
 
-
-    Dispatcher() {}
+    Dispatcher() {
+        usersManager = new Users_Manager();
+    }
 
 public:
 

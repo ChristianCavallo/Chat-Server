@@ -37,11 +37,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.15.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeRCCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeSystem.cmake"
-  "C:/vcpkg-2019.11/installed/x86-windows/share/libbsoncxx/libbsoncxx-config.cmake"
-  "C:/vcpkg-2019.11/installed/x86-windows/share/libmongocxx/libmongocxx-config.cmake"
-  "C:/vcpkg-2019.11/installed/x86-windows/share/rapidjson/RapidJSONConfig.cmake"
-  "C:/vcpkg-2019.11/installed/x86-windows/share/rapidjson/RapidJSONConfigVersion.cmake"
-  "C:/vcpkg-2019.11/scripts/buildsystems/vcpkg.cmake"
+  "C:/vcpkg/installed/x86-windows/share/libbsoncxx/libbsoncxx-config.cmake"
+  "C:/vcpkg/installed/x86-windows/share/libmongocxx/libmongocxx-config.cmake"
+  "C:/vcpkg/installed/x86-windows/share/rapidjson/RapidJSONConfig.cmake"
+  "C:/vcpkg/installed/x86-windows/share/rapidjson/RapidJSONConfigVersion.cmake"
+  "C:/vcpkg/scripts/buildsystems/vcpkg.cmake"
   )
 
 # The corresponding makefile is:

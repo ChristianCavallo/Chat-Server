@@ -17,7 +17,7 @@ find_package(OpenSSL REQUIRED)
 message("OpenSSL include dir: ${OPENSSL_INCLUDE_DIR}")
 message("OpenSSL libraries: ${OPENSSL_LIBRARIES}")
 
-add_executable(Chat_Server main.cpp Socket/Server.cpp Socket/Server.h Socket/Client.cpp Socket/Client.h Commands/Command.h Socket/Security/Crypto.h Utils/base64.cpp Utils/base64.h Database/mongodb.cpp Database/mongodb.h Socket/Security/Crypto.cpp core/Dispatcher.cpp core/Dispatcher.h Database/MediaManager.cpp Database/MediaManager.h)
+add_executable(Chat_Server main.cpp Socket/Server.cpp Socket/Server.h Socket/Client.cpp Socket/Client.h Commands/Command.h Socket/Security/Crypto.h Utils/base64.cpp Utils/base64.h Database/mongodb.cpp Database/mongodb.h Socket/Security/Crypto.cpp core/Dispatcher.cpp core/Dispatcher.h)
 
 target_include_directories(Chat_Server PUBLIC ${LIBBSONCXX_INCLUDE_DIRS})
 target_include_directories(Chat_Server PRIVATE ${OPENSSL_INCLUDE_DIR})

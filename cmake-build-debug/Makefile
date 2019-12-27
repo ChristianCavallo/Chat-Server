@@ -49,10 +49,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server"
+CMAKE_SOURCE_DIR = "C:\Users\Noemi Buggea\CLionProjects\Chat-Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,9 +81,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles" "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Noemi Buggea\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,33 @@ Database\mongodb.s: Database\mongodb.cpp.s
 Database\mongodb.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
 .PHONY : Database\mongodb.cpp.s
+
+Managers\Users_Manager.obj: Managers\Users_Manager.cpp.obj
+
+.PHONY : Managers\Users_Manager.obj
+
+# target to build an object file
+Managers\Users_Manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj
+.PHONY : Managers\Users_Manager.cpp.obj
+
+Managers\Users_Manager.i: Managers\Users_Manager.cpp.i
+
+.PHONY : Managers\Users_Manager.i
+
+# target to preprocess a source file
+Managers\Users_Manager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.i
+.PHONY : Managers\Users_Manager.cpp.i
+
+Managers\Users_Manager.s: Managers\Users_Manager.cpp.s
+
+.PHONY : Managers\Users_Manager.s
+
+# target to generate assembly for a file
+Managers\Users_Manager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s
+.PHONY : Managers\Users_Manager.cpp.s
 
 Socket\Client.obj: Socket\Client.cpp.obj
 
@@ -355,6 +382,9 @@ help:
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s
+	@echo ... Managers/Users_Manager.obj
+	@echo ... Managers/Users_Manager.i
+	@echo ... Managers/Users_Manager.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s
