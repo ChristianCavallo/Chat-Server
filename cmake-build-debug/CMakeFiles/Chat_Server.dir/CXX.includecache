@@ -15,20 +15,20 @@ rapidjson/prettywriter.h
 -
 rapidjson/stringbuffer.h
 -
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.cpp
-MediaManager.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
-fstream
--
-iostream
--
-random
--
+../Managers/User.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
 string
 -
+
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp
+mongodb.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
+../Commands/Command.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+../Managers/User.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
 cstdint
@@ -51,6 +51,16 @@ bsoncxx/builder/stream/array.hpp
 -
 bsoncxx/builder/stream/document.hpp
 -
+../Managers/User.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h
+string
+-
+iostream
+-
+User.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp
 Client.h
@@ -80,6 +90,10 @@ thread
 string
 -
 Security/Crypto.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
+
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.cpp
+Crypto.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
@@ -132,11 +146,17 @@ vector
 thread
 -
 
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.cpp
+base64.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
+
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
 string
 -
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.cpp
+rapidjson/prettywriter.h
+-
 rapidjson/stringbuffer.h
 -
 rapidjson/document.h
@@ -151,6 +171,8 @@ C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 ../Socket/Client.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+../Managers/Users_Manager.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h
 ../Socket/Server.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
 
@@ -167,10 +189,6 @@ Commands/Command.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
 core/Dispatcher.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
-Database/MediaManager.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
-fstream
--
 
 C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp
 boost/config.hpp

@@ -89,12 +89,6 @@
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.cpp">
-			<Option target="Chat_Server"/>
-		</Unit>
-		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h">
-			<Option target="Chat_Server"/>
-		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
