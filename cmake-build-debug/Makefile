@@ -124,6 +124,33 @@ Chat_Server\fast:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\build
 .PHONY : Chat_Server\fast
 
+Database\MediaManager.obj: Database\MediaManager.cpp.obj
+
+.PHONY : Database\MediaManager.obj
+
+# target to build an object file
+Database\MediaManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj
+.PHONY : Database\MediaManager.cpp.obj
+
+Database\MediaManager.i: Database\MediaManager.cpp.i
+
+.PHONY : Database\MediaManager.i
+
+# target to preprocess a source file
+Database\MediaManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.i
+.PHONY : Database\MediaManager.cpp.i
+
+Database\MediaManager.s: Database\MediaManager.cpp.s
+
+.PHONY : Database\MediaManager.s
+
+# target to generate assembly for a file
+Database\MediaManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.s
+.PHONY : Database\MediaManager.cpp.s
+
 Database\mongodb.obj: Database\mongodb.cpp.obj
 
 .PHONY : Database\mongodb.obj
@@ -150,6 +177,60 @@ Database\mongodb.s: Database\mongodb.cpp.s
 Database\mongodb.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
 .PHONY : Database\mongodb.cpp.s
+
+Managers\User.obj: Managers\User.cpp.obj
+
+.PHONY : Managers\User.obj
+
+# target to build an object file
+Managers\User.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj
+.PHONY : Managers\User.cpp.obj
+
+Managers\User.i: Managers\User.cpp.i
+
+.PHONY : Managers\User.i
+
+# target to preprocess a source file
+Managers\User.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.i
+.PHONY : Managers\User.cpp.i
+
+Managers\User.s: Managers\User.cpp.s
+
+.PHONY : Managers\User.s
+
+# target to generate assembly for a file
+Managers\User.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.s
+.PHONY : Managers\User.cpp.s
+
+Managers\Users_Manager.obj: Managers\Users_Manager.cpp.obj
+
+.PHONY : Managers\Users_Manager.obj
+
+# target to build an object file
+Managers\Users_Manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj
+.PHONY : Managers\Users_Manager.cpp.obj
+
+Managers\Users_Manager.i: Managers\Users_Manager.cpp.i
+
+.PHONY : Managers\Users_Manager.i
+
+# target to preprocess a source file
+Managers\Users_Manager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.i
+.PHONY : Managers\Users_Manager.cpp.i
+
+Managers\Users_Manager.s: Managers\Users_Manager.cpp.s
+
+.PHONY : Managers\Users_Manager.s
+
+# target to generate assembly for a file
+Managers\Users_Manager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s
+.PHONY : Managers\Users_Manager.cpp.s
 
 Socket\Client.obj: Socket\Client.cpp.obj
 
@@ -322,9 +403,18 @@ help:
 	@echo ... Chat_Server
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Database/MediaManager.obj
+	@echo ... Database/MediaManager.i
+	@echo ... Database/MediaManager.s
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s
+	@echo ... Managers/User.obj
+	@echo ... Managers/User.i
+	@echo ... Managers/User.s
+	@echo ... Managers/Users_Manager.obj
+	@echo ... Managers/Users_Manager.i
+	@echo ... Managers/Users_Manager.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s

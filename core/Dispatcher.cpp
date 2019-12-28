@@ -6,6 +6,7 @@
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
 #include "../Database/MediaManager.h"
+#include "../Managers/User.h"
 #include "Dispatcher.h"
 
 
@@ -14,14 +15,15 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
     document.Parse(message.c_str());
 
     Command *c;
-    //User* u;
+
+
     if (!document.HasMember("id")) {
         cout << "Invalid message received: " << message << "\n";
         return;
     }
 
     int id = document["id"].GetInt();
-
+    User *u;
     switch (id) {
         case COMMAND_TEST:
             c = new CommandTest(document["message"].GetString());
@@ -30,11 +32,15 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             break;
 
         case COMMAND_REGISTER_REQUEST:
+            
             break;
 
         case COMMAND_LOGIN_REQUEST: //21
-            // u = usersManager->Login(document["email"].GetString(), document["password"].GetString());
-            //c = new CommandLogin(u);
+            u = usersManager->Login(document["email"].GetString(), document["password"].GetString());
+            if (u != nullptr) {
+                sender.user_id = u->id;
+            }
+            c = new CommandLogin(u);
             sender.sendMessage(c->getSerializedString());
             delete u;
             delete c;

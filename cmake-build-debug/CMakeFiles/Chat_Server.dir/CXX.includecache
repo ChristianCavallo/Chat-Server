@@ -54,6 +54,10 @@ bsoncxx/builder/stream/document.hpp
 ../Managers/User.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
 
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+string
+-
+
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h
 string
 -
@@ -61,22 +65,6 @@ iostream
 -
 User.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp
-Client.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
-iostream
--
-thread
--
-rapidjson/stringbuffer.h
--
-rapidjson/document.h
--
-../Commands/Command.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
-../core/Dispatcher.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
 Windows.h
@@ -90,10 +78,6 @@ thread
 string
 -
 Security/Crypto.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.cpp
-Crypto.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
@@ -120,24 +104,6 @@ openssl/err.h
 openssl/rand.h
 -
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.cpp
-Windows.h
--
-WinSock2.h
--
-WS2tcpip.h
--
-stdio.h
--
-string
--
-iostream
--
-Server.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
-thread
--
-
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
 Client.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
@@ -145,10 +111,6 @@ vector
 -
 thread
 -
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.cpp
-base64.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
 
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
 string
@@ -165,6 +127,8 @@ rapidjson/document.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
 ../Database/MediaManager.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
+../Managers/User.h
+C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
 Dispatcher.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 
@@ -175,20 +139,6 @@ C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h
 ../Socket/Server.h
 C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/main.cpp
-iostream
--
-string
--
-Database/mongodb.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
-Socket/Server.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
-Commands/Command.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
-core/Dispatcher.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
 
 C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp
 boost/config.hpp

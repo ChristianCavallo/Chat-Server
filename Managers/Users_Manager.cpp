@@ -5,7 +5,7 @@
 #include "Users_Manager.h"
 #include "../Database/mongodb.h"
 
-User *Users_Manager::Login(string email, string password) {
+User *Users_Manager::Login(const string &email, const string &password) {
     /*
      * ======LOGIN======
      * 1) la funzione prende come parametri: email e password

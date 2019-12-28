@@ -89,10 +89,28 @@
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h">
 			<Option target="Chat_Server"/>
 		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h">
+			<Option target="Chat_Server"/>
+		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h">
 			<Option target="Chat_Server"/>
 		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp">

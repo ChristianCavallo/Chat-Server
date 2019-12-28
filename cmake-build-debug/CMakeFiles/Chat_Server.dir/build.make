@@ -191,6 +191,63 @@ CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.s /c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\core\Dispatcher.cpp"
 <<
 
+CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj: CMakeFiles\Chat_Server.dir\flags.make
+CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj: ..\Managers\User.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Chat_Server.dir/Managers/User.cpp.obj"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Chat_Server.dir\Managers\User.cpp.obj /FdCMakeFiles\Chat_Server.dir\ /FS -c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Managers\User.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Managers\User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chat_Server.dir/Managers/User.cpp.i"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe > CMakeFiles\Chat_Server.dir\Managers\User.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Managers\User.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Managers\User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chat_Server.dir/Managers/User.cpp.s"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Chat_Server.dir\Managers\User.cpp.s /c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Managers\User.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj: CMakeFiles\Chat_Server.dir\flags.make
+CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj: ..\Database\MediaManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Chat_Server.dir/Database/MediaManager.cpp.obj"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj /FdCMakeFiles\Chat_Server.dir\ /FS -c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Database\MediaManager.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chat_Server.dir/Database/MediaManager.cpp.i"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe > CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Database\MediaManager.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chat_Server.dir/Database/MediaManager.cpp.s"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.s /c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Database\MediaManager.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj: CMakeFiles\Chat_Server.dir\flags.make
+CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj: ..\Managers\Users_Manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Chat_Server.dir/Managers/Users_Manager.cpp.obj"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj /FdCMakeFiles\Chat_Server.dir\ /FS -c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Managers\Users_Manager.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chat_Server.dir/Managers/Users_Manager.cpp.i"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe > CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Managers\Users_Manager.cpp"
+<<
+
+CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chat_Server.dir/Managers/Users_Manager.cpp.s"
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s /c "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\Managers\Users_Manager.cpp"
+<<
+
 # Object files for target Chat_Server
 Chat_Server_OBJECTS = \
 "CMakeFiles\Chat_Server.dir\main.cpp.obj" \
@@ -199,7 +256,10 @@ Chat_Server_OBJECTS = \
 "CMakeFiles\Chat_Server.dir\Utils\base64.cpp.obj" \
 "CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj" \
 "CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.obj" \
-"CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj"
+"CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj" \
+"CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj" \
+"CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj" \
+"CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj"
 
 # External object files for target Chat_Server
 Chat_Server_EXTERNAL_OBJECTS =
@@ -211,13 +271,16 @@ Chat_Server.exe: CMakeFiles\Chat_Server.dir\Utils\base64.cpp.obj
 Chat_Server.exe: CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj
 Chat_Server.exe: CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.obj
 Chat_Server.exe: CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj
+Chat_Server.exe: CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj
+Chat_Server.exe: CMakeFiles\Chat_Server.dir\Database\MediaManager.cpp.obj
+Chat_Server.exe: CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.obj
 Chat_Server.exe: CMakeFiles\Chat_Server.dir\build.make
 Chat_Server.exe: C:\vcpkg-2019.11\installed\x86-windows\debug\lib\mongocxx.lib
 Chat_Server.exe: C:\vcpkg-2019.11\installed\x86-windows\debug\lib\bsoncxx.lib
 Chat_Server.exe: C:\vcpkg-2019.11\installed\x86-windows\debug\lib\ssleay32.lib
 Chat_Server.exe: C:\vcpkg-2019.11\installed\x86-windows\debug\lib\libeay32.lib
 Chat_Server.exe: CMakeFiles\Chat_Server.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Chat_Server.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Chat_Server.exe"
 	"C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Chat_Server.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Chat_Server.dir\objects1.rsp @<<
  /out:Chat_Server.exe /implib:Chat_Server.lib /pdb:"C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\Chat_Server.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console C:\vcpkg-2019.11\installed\x86-windows\debug\lib\mongocxx.lib C:\vcpkg-2019.11\installed\x86-windows\debug\lib\bsoncxx.lib C:\vcpkg-2019.11\installed\x86-windows\debug\lib\ssleay32.lib C:\vcpkg-2019.11\installed\x86-windows\debug\lib\libeay32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

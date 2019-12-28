@@ -9,7 +9,7 @@
 #include <Windows.h>
 #include <WinSock2.h>
 #include <WS2tcpip.h>
-#include <stdio.h>
+#include <cstdio>
 #include <string>
 #include <iostream>
 #include "Server.h"
@@ -22,6 +22,7 @@ using namespace std;
 int index = 0;
 
 Server::Server() {
+    this->stopFlag = false;
 }
 
 void Server::start() {

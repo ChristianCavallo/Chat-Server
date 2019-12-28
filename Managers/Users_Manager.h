@@ -16,7 +16,8 @@ class Users_Manager {
 public:
     Users_Manager(){};
 
-    User* Login(string email, string password);
+    User *Login(const string &email, const string &password);
+
     int Registration(User *u);
 };
 
