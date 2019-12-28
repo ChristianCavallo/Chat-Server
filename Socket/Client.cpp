@@ -7,7 +7,6 @@
 #include "Client.h"
 #include <iostream>
 #include <thread>
-#include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
@@ -31,7 +30,7 @@ void Client::receive() {
     int received = 0;
     int a = 0;
     char syncBuffer[4];
-    char* buffer;
+    char *buffer = nullptr;
 
     cout << "Starting receive!\n";
     do{
@@ -101,7 +100,7 @@ void Client::receive() {
                     string str(crypto->pub_key);
                     string aes_key = base64_encode(crypto->AES_Key, 32);
                     string aes_iv = base64_encode(crypto->AES_iv, crypto->AES_BLOCK_SIZE);
-                    CommandKey *cmdKey = new CommandKey(str, aes_key, aes_iv);
+                    auto *cmdKey = new CommandKey(str, aes_key, aes_iv);
                     sendMessage(cmdKey->getSerializedString());
 
                     delete cmdKey;
@@ -121,6 +120,7 @@ void Client::receive() {
         }
 
         delete[] buffer;
+
 
     } while(received > 0);
 
@@ -150,7 +150,7 @@ void Client::close() {
 }
 
 
-void Client::sendMessage(string msg) {
+void Client::sendMessage(const string &msg) {
 
     char *content;
     int messageLen = 0;
@@ -191,9 +191,7 @@ void Client::sendMessage(string msg) {
     }
 }
 
-Client::~Client() {
-
-}
+Client::~Client() = default;
 
 
 

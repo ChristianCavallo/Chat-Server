@@ -97,7 +97,7 @@ char *Crypto::encrypt_AES(char *msg) {
     unsigned char *ciphertext = new unsigned char[c_len + 4];
 
     /* allows reusing of 'e' for multiple encryption cycles */
-    EVP_EncryptInit_ex(e_ctx, NULL, NULL, NULL, NULL);
+    EVP_EncryptInit_ex(e_ctx, nullptr, nullptr, nullptr, nullptr);
 
     /* update ciphertext, c_len is filled with the length of ciphertext generated,
       *len is the size of plaintext in bytes */
@@ -121,7 +121,7 @@ string Crypto::decrypt_AES(char *msg) {
 
     char *plaintext = new char[p_len];
 
-    EVP_DecryptInit_ex(d_ctx, NULL, NULL, NULL, NULL);
+    EVP_DecryptInit_ex(d_ctx, nullptr, nullptr, nullptr, nullptr);
     EVP_DecryptUpdate(d_ctx, reinterpret_cast<unsigned char *>(plaintext), &p_len, (const unsigned char *) msg + 4,
                       p_len);
     EVP_DecryptFinal_ex(d_ctx, reinterpret_cast<unsigned char *>(plaintext + p_len), &f_len);

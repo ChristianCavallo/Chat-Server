@@ -6,8 +6,6 @@
 #include "Socket/Server.h"
 #include "Commands/Command.h"
 #include "core/Dispatcher.h"
-#include "Managers/User.h"
-#include "Managers/Users_Manager.h"
 
 using namespace std;
 
@@ -50,8 +48,10 @@ int main() {
     */
 
 
-    Server *server = new Server();
+    auto *server = new Server();
     server->start();
+
+    Dispatcher::getInstance().server = server;
 
     cin.get();
 

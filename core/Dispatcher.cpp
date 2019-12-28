@@ -5,25 +5,26 @@
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
+#include "../Database/MediaManager.h"
+#include "../Managers/User.h"
 #include "Dispatcher.h"
 
 
-void Dispatcher::executeRequest(Client &sender, string message) {
-    Document document; //definisci un document
-    document.Parse(message.c_str()); //gli passi la stringa json e poi puoi accedere ai compi in questo modo:
-    // string email = document["email"]
+void Dispatcher::executeRequest(Client &sender, const string &message) {
+    Document document;
+    document.Parse(message.c_str());
 
-    //il dispatche legge la stringa e la fa ridiventare un json e analizza il campo ID come prima cosa, ok?ok
+    Command *c;
+
+
     if (!document.HasMember("id")) {
         cout << "Invalid message received: " << message << "\n";
         return;
     }
 
     int id = document["id"].GetInt();
-
+    User *u;
     switch (id) {
-        Command *c;
-        User* u; //o lo fai qua
         case COMMAND_TEST:
             c = new CommandTest(document["message"].GetString());
             sender.sendMessage(c->getSerializedString());
@@ -31,31 +32,96 @@ void Dispatcher::executeRequest(Client &sender, string message) {
             break;
 
         case COMMAND_REGISTER_REQUEST:
-            //qua verra gestita la richiesta di registrazione...
-            //dovrebbe funzionare tipo cosi
-            //int risultato = gestoreUtenti.register(document["name"], document["surname"], document["email"], document["password"]);
-            //lui fa la registrazione... tipo bho ti fai ritornare un numero che ti fa capire se ha avuto successo
-
-            //anzi, mando il risulato al client... e lui capisce da solo se è andato bene o no xD
-            //c = new CommandRegister(risultato);
-            sender.sendMessage(c->getSerializedString());
-            delete c;
-
+            
             break;
 
         case COMMAND_LOGIN_REQUEST: //21
-        /*
-         * Il dispatcher è un distributore di operazioni. In questo caso ci troviamo difronte ad una richiesta di login.
-         * Chi gestisce le richieste di login? Lo users_manager. Quindi il dispatchere deve passare l'operazione a lui
-         * Capito?si
-         */
-            //ultimo problema... qua nn puoi definire variabili... cioè dentro lo switch
             u = usersManager->Login(document["email"].GetString(), document["password"].GetString());
-
+            if (u != nullptr) {
+                sender.user_id = u->id;
+            }
             c = new CommandLogin(u);
             sender.sendMessage(c->getSerializedString());
             delete u;
             delete c;
+            break;
+
+        default:
+            break;
+    }
+
+    if (sender.user_id.empty()) {
+        //Not Logged yet. The following switch case is reserved to logged users.
+        return;
+    }
+
+    switch (id) {
+        case COMMAND_MEDIA_REQUEST:
+            if (!document.HasMember("media-id")) {
+                cout << "Invalid message without media-id received: " << message << "\n";
+                return;
+            }
+
+            c = new CommandMedia(document["media-id"].GetString(),
+                                 MediaManager::getMediaById(document["media-id"].GetString()));
+            sender.sendMessage(c->getSerializedString());
+            delete c;
+            break;
+
+
+        case COMMAND_ADD_CONTACT_REQUEST:
+            //TODO: Add new contact = Create a new chat between Sender and Receiver
+            //My Id = sender.user_id
+            //document["email"] = email of the other contact. Search it in the db, fetch the id and so create a new chat between them.
+
+            c = new CommandGeneric(COMMAND_ADD_CONTACT_RESPONSE, true, "contatto gia esistente oppure nnt tt apposto");
+            sender.sendMessage(c->getSerializedString());
+            delete c;
+            break;
+
+        case COMMAND_DELETE_CHAT_REQUEST:
+
+            //TODO: Implement deletion of chats.
+            /*
+             * Packet composition:
+             *     document["chat-id"]
+             *     document["isGroup"]
+             *
+             */
+            c = new CommandGeneric(COMMAND_DELETE_CHAT_RESPONSE, true, "chat cancellata o errore");
+            sender.sendMessage(c->getSerializedString());
+            delete c;
+            break;
+
+        case COMMAND_CREATE_GROUP_REQUEST:
+            /*
+             * Packet composition:
+             *      document["ids"] => array of int
+             */
+
+
+            if (document["ids"].IsArray()) {
+                // const Value& ids = document["ids"];
+                /*
+                 *      for (SizeType i = 0; i < ids.Size(); i++)
+                 *          int id = ids[i].GetInt()
+                 *
+                 */
+
+                c = new CommandGeneric(COMMAND_CREATE_GROUP_RESPONSE, true, "chat cancellata o errore");
+                sender.sendMessage(c->getSerializedString());
+                delete c;
+            }
+
+            break;
+
+        case COMMAND_MESSAGE_REQUEST:
+            /*
+             * Packet composition:
+             *      "chat-id": id of selected chat
+             *      "text":  string containing the message content
+             *      "media": null or base64 string
+             */
             break;
 
 

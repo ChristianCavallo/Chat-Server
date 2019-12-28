@@ -41,7 +41,7 @@ public:
 
     bool closed = false;
 
-    void sendMessage(std::string msg);
+    void sendMessage(const std::string &msg);
 
     void start();
 

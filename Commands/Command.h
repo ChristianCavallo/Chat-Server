@@ -24,31 +24,42 @@ enum Commands {
     COMMAND_REGISTER_REQUEST = 10,
     COMMAND_REGISTER_RESPONSE = 11,
 
-    //Facciamo finta che il python ti mandi una richiesta
-    // di login di questo tipo { id = 20, email : "pollo@ciao.it", password : "abcd12345" },
-    // { id = 10, name : "...", surname : "...", email "....", password "..."} giusto?sisi, id = 10
-    //andiamo nel dispatcher
-
     COMMAND_LOGIN_REQUEST = 20,
     COMMAND_LOGIN_RESPONSE = 21,
-    //QUesta è la lista dei comandi... il client invia una "Request", il server risponde con una Response, fin qui ci sono
-    COMMAND_NOME_REQUEST = 22,
-    COMMAND_NOME_RESPONSE = 23 //Ok facciamo il python, inviamo una richiesta con id = 22 cioè una NOME_REQUEST, capito?ok
+
+    COMMAND_ADD_CONTACT_REQUEST = 30,
+    COMMAND_ADD_CONTACT_RESPONSE = 31,
+
+    COMMAND_MESSAGE_REQUEST = 40,
+    COMMAND_MESSAGE_RESPONSE = 41,
+
+    COMMAND_CREATE_GROUP_REQUEST = 50,
+    COMMAND_CREATE_GROUP_RESPONSE = 51,
+
+    COMMAND_MEDIA_REQUEST = 60,
+    COMMAND_MEDIA_RESPONSE = 61,
+
+    COMMAND_DELETE_CHAT_REQUEST = 70,
+    COMMAND_DELETE_CHAT_RESPONSE = 71,
+
+    COMMAND_FETCH_CONTACTS_REQUEST = 80,
+    COMMAND_FETCH_CONTACTS_RESPONSE = 81,
+
+    COMMAND_FETCH_CHAT_REQUEST = 90,
+    COMMAND_FETCH_CHAT_RESPONSE = 91
+
 };
 
 class Command {
 public:
     int id;
-    //lui è il padre... un comando semplice con solo l'id... ma tu puoi creare un altro comando che estende questo e arrichhirlo con tanti altri parametri
-    //esattamente come abbiamo fatto con il comando nuovo, capito? sisi lascia i commeni xD
+
     Command(int id) {
         this->id = id;
     }
 
     virtual ~Command() {}
 
-    //questo qua, prende l'oggetto fatto dalla funzione di prima e ritorna la stringa che dobbiamo inviare al python
-    //andiamo a farlo?ok
     virtual string getSerializedString() {
         StringBuffer sb;
         PrettyWriter<StringBuffer> prettyWriter(sb);
@@ -165,40 +176,54 @@ public:
 
 };
 
-//come devi dalla dichiarazione, CommandName estende Command
-class CommandName : public Command {
+class CommandMedia : public Command {
 private:
-    string name;
-    int variabileDiNoemi = 12345; //ok?okok
+    string media_id;
+    string media;
 public:
-    //meglio fare da zero... allora questo è il comando che dobbiamo mandare come response
-    //è una vera e propria classe, dove tutti i parametri che metti, saranno inseriti nel json...
-    //in questo caso ci serve solo il nome
-    //l'id nn ci serve... xke sappiamo che la response ha id 23
-    CommandName(const string &name) : Command(COMMAND_NOME_RESPONSE) {
-        //è il costruttore... ma siccome è una clase ereditata, dobbiamo chiamare anche il costruttore del padre
-        //quindi io da qui accedo anche ai parametri del padre (cioè solo l'id in questo caso)
 
-        this->name = name;
-    }
+    CommandMedia(const string &mediaId, const string &media) : Command(COMMAND_MEDIA_RESPONSE), media_id(mediaId),
+                                                               media(media) {}
 
-    //ci sei con il costruttore? stiamo creando un comando con
-    // l'id della response e ci stiamo aggiungendo un parametro name
-
-    void Serialize(PrettyWriter<StringBuffer> &writer) const {
-        //questo è il serializzatore, cioe quello che fa questo... quello che crea l'oggetto json
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
         writer.StartObject();
 
-        Command::Serialize(writer); //questo aggiunge "id" : 23
-        writer.String("name");  //Qui creiamo "name" :
-        writer.String(name.c_str(), static_cast<SizeType>(name.size())); //qui impostiamo "name" : valore della variabile name
+        Command::Serialize(writer);
+        writer.String("media-id");
+        writer.String(media_id.c_str(), static_cast<SizeType>(media_id.size()));
 
-        writer.String("altroValore");
-        writer.Int(variabileDiNoemi); //giustamente faccio writer.Int xke è un numero capito?sisi, e che cerco di scrivere di meno per non darti disturbo
-            //capito?sisi ma se ho più variabili?
+        writer.String("media");
+        if (media == "") {
+            writer.Null();
+        } else {
+            writer.String(media.c_str(), static_cast<SizeType>(media.size()));
+        }
 
-            //Il padre ha il metodo che fa la stringa, la stessa cosa di python
+
         writer.EndObject();
     }
 
 };
+
+class CommandGeneric : public Command {
+private:
+    bool result;
+    string content;
+public:
+    CommandGeneric(int id, bool result, const string &content) : Command(id), result(result), content(content) {}
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        writer.StartObject();
+
+        Command::Serialize(writer);
+        writer.String("result");
+        writer.Bool(result);
+
+        writer.String("content");
+        writer.String(content.c_str(), static_cast<SizeType>(content.size()));
+
+        writer.EndObject();
+    }
+
+};
+

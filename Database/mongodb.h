@@ -42,8 +42,8 @@ public:
     void operator=(Mongodb const &) = delete;
 
 private:
-    instance* inst;
-    client* client;
+    instance *inst;
+    mongocxx::client *client;
     database db;
     collection coll;
 
@@ -58,11 +58,11 @@ private:
     virtual ~Mongodb();
 
 public:
-    User* getUser(string &email); //per esempio... puoi farla anche diversamente
+    User *getUser(const string &email); //per esempio... puoi farla anche diversamente
 
     //Voglio che capisci solo questa cosa. La funzione addUser aggiunge un utente. ma al solito, come facciamo a sapere se lo ha
     //fattpo o no? un ritorno di variabile? si, di che tipo? bool va bene. esegui
-    bool Mongodb::addUser(User* u);
+    bool Mongodb::addUser(User *u);
 };
 
 

@@ -28,7 +28,7 @@ bool Mongodb::addUser(User* u){     //Passo l'utente ovverò tutti i campi creat
             << "password" << u->password
             << bsoncxx::builder::stream::finalize;
     bsoncxx::document::view view = doc_value.view();
-    coll.insert_one(doc_value.view());
+    coll.insert_one(view);
     cout << "Utente inserito \n";
     //Deve tornare True;
     return true;
@@ -41,7 +41,7 @@ Mongodb::~Mongodb() {
 }
 
 //ritorna un user in base all email
-User* Mongodb::getUser(string &email) {
+User *Mongodb::getUser(const string &email) {
 
     //Ricapitoliamo, pero devi rispondermi (anche con un "NON SO").
     /*
@@ -51,7 +51,8 @@ User* Mongodb::getUser(string &email) {
      *
      */
     coll = this->db["users"];                                           // SELECT * FROM users WHERE email = 'email'
-    bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(document{} << "email" << email << finalize);
+    bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
+            document{} << "email" << email << finalize);
     if(result) {
         //std::cout << bsoncxx::to_json(*result) << "\n";
 
