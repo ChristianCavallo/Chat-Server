@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -IC:\vcpkg\installed\x86-windows\include 
+CXX_INCLUDES = -IC:\vcpkg-2019.11\installed\x86-windows\include 
 
