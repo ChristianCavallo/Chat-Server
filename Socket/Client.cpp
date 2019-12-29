@@ -147,6 +147,11 @@ void Client::close() {
     this->closed = true;
     cout << "Client closed and thread deattached!\n";
 
+    if (!user_id.empty()) {
+        Dispatcher::getInstance().logoutUser(user_id);
+        cout << "Logout user: " << user_id << "\n";
+    }
+
 }
 
 

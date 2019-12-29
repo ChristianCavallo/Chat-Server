@@ -954,6 +954,7 @@ CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Socket\Client.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Socket\Security\Crypto.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Socket\Server.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Utils\base64.h
+CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Utils\util.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\core\Dispatcher.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\main.cpp
 CMakeFiles\Chat_Server.dir\main.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\assert.hpp

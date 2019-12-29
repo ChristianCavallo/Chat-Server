@@ -6,7 +6,7 @@
 #include <iostream>
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
-#include "../Managers/User.h"
+#include "../Primitives/User.h"
 
 #ifndef CHAT_SERVER_COMMAND_H
 #define CHAT_SERVER_COMMAND_H

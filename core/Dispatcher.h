@@ -43,6 +43,7 @@ public:
 
     void executeResponse(Client &sender, Command *c);
 
+    void logoutUser(const string &id);
 };
 
 

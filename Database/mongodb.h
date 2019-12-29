@@ -12,7 +12,10 @@
 #include <mongocxx/instance.hpp>
 #include <bsoncxx/builder/stream/array.hpp>
 #include <bsoncxx/builder/stream/document.hpp>
-#include "../Managers/User.h"
+
+#include "../Primitives/User.h"
+#include "../Primitives/Chat.h"
+#include <vector>
 
 using bsoncxx::builder::stream::close_array;
 using bsoncxx::builder::stream::close_document;
@@ -58,11 +61,14 @@ private:
     virtual ~Mongodb();
 
 public:
-    User *getUser(const string &email); //per esempio... puoi farla anche diversamente
+    User *getUser(const string &email);
 
-    //Voglio che capisci solo questa cosa. La funzione addUser aggiunge un utente. ma al solito, come facciamo a sapere se lo ha
-    //fattpo o no? un ritorno di variabile? si, di che tipo? bool va bene. esegui
     bool Mongodb::addUser(User *u);
+
+    void UpdateUserLastAccess(const string &id);
+
+    vector<Chat *> getChat(const string &userid);
+
 };
 
 

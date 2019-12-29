@@ -6,7 +6,7 @@
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
 #include "../Database/MediaManager.h"
-#include "../Managers/User.h"
+#include "../Primitives/User.h"
 #include "Dispatcher.h"
 
 
@@ -32,7 +32,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             break;
 
         case COMMAND_REGISTER_REQUEST:
-            
+
             break;
 
         case COMMAND_LOGIN_REQUEST: //21
@@ -150,3 +150,9 @@ void Dispatcher::executeResponse(Client &sender, Command *c) {
     }
 
 }
+
+void Dispatcher::logoutUser(const string &id) {
+    usersManager->updateUserLastAccess(id);
+}
+
+

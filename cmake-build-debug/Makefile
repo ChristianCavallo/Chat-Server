@@ -178,32 +178,32 @@ Database\mongodb.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
 .PHONY : Database\mongodb.cpp.s
 
-Managers\User.obj: Managers\User.cpp.obj
+Managers\Chat_Manager.obj: Managers\Chat_Manager.cpp.obj
 
-.PHONY : Managers\User.obj
+.PHONY : Managers\Chat_Manager.obj
 
 # target to build an object file
-Managers\User.cpp.obj:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj
-.PHONY : Managers\User.cpp.obj
+Managers\Chat_Manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Chat_Manager.cpp.obj
+.PHONY : Managers\Chat_Manager.cpp.obj
 
-Managers\User.i: Managers\User.cpp.i
+Managers\Chat_Manager.i: Managers\Chat_Manager.cpp.i
 
-.PHONY : Managers\User.i
+.PHONY : Managers\Chat_Manager.i
 
 # target to preprocess a source file
-Managers\User.cpp.i:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.i
-.PHONY : Managers\User.cpp.i
+Managers\Chat_Manager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Chat_Manager.cpp.i
+.PHONY : Managers\Chat_Manager.cpp.i
 
-Managers\User.s: Managers\User.cpp.s
+Managers\Chat_Manager.s: Managers\Chat_Manager.cpp.s
 
-.PHONY : Managers\User.s
+.PHONY : Managers\Chat_Manager.s
 
 # target to generate assembly for a file
-Managers\User.cpp.s:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.s
-.PHONY : Managers\User.cpp.s
+Managers\Chat_Manager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Chat_Manager.cpp.s
+.PHONY : Managers\Chat_Manager.cpp.s
 
 Managers\Users_Manager.obj: Managers\Users_Manager.cpp.obj
 
@@ -231,6 +231,60 @@ Managers\Users_Manager.s: Managers\Users_Manager.cpp.s
 Managers\Users_Manager.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s
 .PHONY : Managers\Users_Manager.cpp.s
+
+Primitives\Chat.obj: Primitives\Chat.cpp.obj
+
+.PHONY : Primitives\Chat.obj
+
+# target to build an object file
+Primitives\Chat.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.obj
+.PHONY : Primitives\Chat.cpp.obj
+
+Primitives\Chat.i: Primitives\Chat.cpp.i
+
+.PHONY : Primitives\Chat.i
+
+# target to preprocess a source file
+Primitives\Chat.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.i
+.PHONY : Primitives\Chat.cpp.i
+
+Primitives\Chat.s: Primitives\Chat.cpp.s
+
+.PHONY : Primitives\Chat.s
+
+# target to generate assembly for a file
+Primitives\Chat.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.s
+.PHONY : Primitives\Chat.cpp.s
+
+Primitives\User.obj: Primitives\User.cpp.obj
+
+.PHONY : Primitives\User.obj
+
+# target to build an object file
+Primitives\User.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\User.cpp.obj
+.PHONY : Primitives\User.cpp.obj
+
+Primitives\User.i: Primitives\User.cpp.i
+
+.PHONY : Primitives\User.i
+
+# target to preprocess a source file
+Primitives\User.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\User.cpp.i
+.PHONY : Primitives\User.cpp.i
+
+Primitives\User.s: Primitives\User.cpp.s
+
+.PHONY : Primitives\User.s
+
+# target to generate assembly for a file
+Primitives\User.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\User.cpp.s
+.PHONY : Primitives\User.cpp.s
 
 Socket\Client.obj: Socket\Client.cpp.obj
 
@@ -409,12 +463,18 @@ help:
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s
-	@echo ... Managers/User.obj
-	@echo ... Managers/User.i
-	@echo ... Managers/User.s
+	@echo ... Managers/Chat_Manager.obj
+	@echo ... Managers/Chat_Manager.i
+	@echo ... Managers/Chat_Manager.s
 	@echo ... Managers/Users_Manager.obj
 	@echo ... Managers/Users_Manager.i
 	@echo ... Managers/Users_Manager.s
+	@echo ... Primitives/Chat.obj
+	@echo ... Primitives/Chat.i
+	@echo ... Primitives/Chat.s
+	@echo ... Primitives/User.obj
+	@echo ... Primitives/User.i
+	@echo ... Primitives/User.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s

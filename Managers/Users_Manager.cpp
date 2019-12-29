@@ -40,10 +40,14 @@ int Users_Manager::Registration(User *u) {
     // addUser vuole un utente, Registration ha come parametro l'utente, il dispatcher procura l'utente a registration
     // quindi Dispatcher crea u --> Registration(u) --> addUser(u)
     //se addUser(U) registra allora ritorna true, altrimenti false
-    if(Mongodb::getInstance().addUser(u)){ //vuol dire true
+    if (Mongodb::getInstance().addUser(u)) { //vuol dire true
         return 1; // è registrato...
     }
     return 0; // se va qui non lo è... devo aggiungerlo...o qualche problema?
+}
+
+void Users_Manager::updateUserLastAccess(const string &id) {
+    Mongodb::getInstance().UpdateUserLastAccess(id);
 }
 
 

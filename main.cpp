@@ -6,14 +6,28 @@
 #include "Socket/Server.h"
 #include "Commands/Command.h"
 #include "core/Dispatcher.h"
+#include "Utils/util.h"
+#include <bsoncxx/types.hpp>
+#include <iostream>
+#include <chrono>
 
 using namespace std;
 
 
 int main() {
 
+    auto now = system_clock::now();
 
+    bsoncxx::types::b_date d{now};
+    bsoncxx::types::b_date e{now};
+    cout << d << "\n";
 
+    if (d > e) {
+        cout << "siii\n";
+    } else {
+        cout << "Nooo\n";
+    }
+    cout << d << "\n";
     Mongodb::getInstance(); //Prima inizializzazione del db
     Dispatcher::getInstance(); //Lazy initialization
 

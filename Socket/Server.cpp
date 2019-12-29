@@ -105,6 +105,7 @@ void Server::startListen() {
             if(c->closed){
                 clients.erase(clients.begin() + i);
                 delete c;
+                cout << "Client removed.\n";
             }
         }
 
@@ -132,11 +133,13 @@ Client *Server::getClientById(int id) {
 Client *Server::getClientByUserId(string id) {
     for (int i = 0; i < clients.size(); i++) {
         Client *c = clients.at(i);
-        if (c->user_id == id) {
-            return c;
+        if (!c->closed) {
+            if (c->user_id == id) {
+                return c;
+            }
         }
+        return nullptr;
     }
-    return nullptr;
 }
 
 
