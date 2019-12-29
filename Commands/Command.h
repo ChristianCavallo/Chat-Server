@@ -30,8 +30,8 @@ enum Commands {
     COMMAND_ADD_CONTACT_REQUEST = 30,
     COMMAND_ADD_CONTACT_RESPONSE = 31,
 
-    COMMAND_MESSAGE_REQUEST = 40,
-    COMMAND_MESSAGE_RESPONSE = 41,
+    COMMAND_MESSAGE_REQUEST = 40, //Utente invia un messaggio
+    COMMAND_MESSAGE_RESPONSE = 41, //Utente riceve un messaggio
 
     COMMAND_CREATE_GROUP_REQUEST = 50,
     COMMAND_CREATE_GROUP_RESPONSE = 51,
@@ -69,7 +69,7 @@ public:
 
 protected:
 
-    virtual void Serialize(PrettyWriter<StringBuffer> &writer) const {
+    virtual void Serialize(PrettyWriter <StringBuffer> &writer) const {
         writer.String("id");
         writer.Int(id);
     };
@@ -77,51 +77,67 @@ protected:
 
 };
 
-class CommandLogin: public Command{
+//COMMAND_REGISTER_REQUEST = 10,
+//COMMAND_REGISTER_RESPONSE = 11
+class CommandRegistration : public Command {
 
 private:
-    //al python interessa uno user... quindi facciamolo... però! cè un problema quale? che nn so come falro xD ma come xD
-    User* u;
-
+    string result;
 public:
-    //meglio fare da zero... allora questo è il comando che dobbiamo mandare come response
-    //è una vera e propria classe, dove tutti i parametri che metti, saranno inseriti nel json...
-    //in questo caso ci serve solo l'email e la password
-    //l'id nn ci serve... xke sappiamo che la response ha id 23
-    CommandLogin(User* u) : Command(COMMAND_LOGIN_RESPONSE) {
-        this->u = u;
-    }
-    //ci sei con il costruttore? stiamo creando un comando con
-    // l'id della response e ci stiamo aggiungendo il parametro email e password
+    CommandRegistration(const string &result) : Command(COMMAND_REGISTER_RESPONSE), result(result) {}
 
-    void Serialize(PrettyWriter<StringBuffer> &writer) const {
-        //questo è il serializzatore, cioe quello che fa questo... quello che crea l'oggetto json
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        //questo è il serializzatore, cioè  quello che crea l'oggetto json
         writer.StartObject();
 
-        Command::Serialize(writer); //questo aggiunge "id" : 21
-        writer.String("user-id");  //Qui creiamo "email" :
-        if(u == nullptr){
-            writer.Null();
-        } else {
-            //è andata via la retr?okok
-            writer.String(u->id.c_str(), static_cast<SizeType>(u->id.size()));
-
-            //cosa altro ci puo servire... nome... cognome... email? bho..
-            writer.String("name");
-            writer.String(u->name.c_str(), static_cast<SizeType>(u->name.size()));
-
-            writer.String("surname");
-            writer.String(u->surname.c_str(), static_cast<SizeType>(u->surname.size()));
-
-            //penso basta... per ora..ok... cioè dentro un Command, tu devi metterci quello che interessa al python.sisi ho capito
-
-        }
+        Command::Serialize(writer); //questo aggiunge "id" : 11
+        writer.String("res");
+        writer.String(result.c_str(), static_cast<SizeType>(result.size()));
 
         //Il padre ha il metodo che fa la stringa, la stessa cosa di python
         writer.EndObject();
     }
 
+};
 
+class CommandLogin : public Command {
+
+private:
+    User *u;
+
+public:
+    //Questo è il comando che dobbiamo mandare come response
+    //Dove tutti i parametri che metti, saranno inseriti nel json...
+    //in questo caso ci serve solo l'email e la password
+    //l'id nn ci serve... xke sappiamo che la response ha id 23
+    CommandLogin(User *u) : Command(COMMAND_LOGIN_RESPONSE) {
+        this->u = u;
+    }
+    //ci sei con il costruttore? stiamo creando un comando con
+    // l'id della response e ci stiamo aggiungendo il parametro email e password
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        //questo è il serializzatore, cioè  quello che crea l'oggetto json
+        writer.StartObject();
+
+        Command::Serialize(writer); //questo aggiunge "id" : 21
+        writer.String("user-id");
+        if(u == nullptr){
+            writer.Null();
+        } else {
+            writer.String(u->id.c_str(), static_cast<SizeType>(u->id.size()));
+
+            //cosa altro ci puo servire... nome... cognome... email?
+            writer.String("name");
+            writer.String(u->name.c_str(), static_cast<SizeType>(u->name.size()));
+
+            writer.String("surname");
+            writer.String(u->surname.c_str(), static_cast<SizeType>(u->surname.size()));
+            //devo passare quello che interessa il python
+        }
+        //Il padre ha il metodo che fa la stringa, la stessa cosa di python
+        writer.EndObject();
+    }
 };
 
 class CommandKey : public Command {

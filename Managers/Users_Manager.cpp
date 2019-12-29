@@ -18,10 +18,10 @@ User *Users_Manager::Login(const string &email, const string &password) {
 
     if (u != nullptr) {
         if (email == u->email && password == u->password) {
-            cout << u->getName() << " " << u->surname << " correctly logged\n";
+            cout << u->name << " " << u->surname << " correctly logged\n";
             return u;
         }
-        cout << u->getName() << " " << u->surname << " -> wrong credentials!\n";
+        cout << u->name << " " << u->surname << " -> wrong credentials!\n";
         return nullptr;
     }
 
@@ -29,7 +29,7 @@ User *Users_Manager::Login(const string &email, const string &password) {
     return nullptr;
 }
 
-int Users_Manager::Registration(User *u) {
+string Users_Manager::Registration(User *u) {
     /* ========REGISTRAZIONE=====
     * 1) la funzione di registrazione prende una serie di parametri: in questo caso un user
     * 2) la funzione crea una nuova classe User* u, con tutti i parametri
@@ -37,17 +37,37 @@ int Users_Manager::Registration(User *u) {
     * 4) se l'utente viene inserito, allora ritorna True, altrimenti False.
     * 5) per il passo 4) è necessario modificare il tipo di ritorno della funzione, attualmente impostato su void.
     */
-    // addUser vuole un utente, Registration ha come parametro l'utente, il dispatcher procura l'utente a registration
-    // quindi Dispatcher crea u --> Registration(u) --> addUser(u)
-    //se addUser(U) registra allora ritorna true, altrimenti false
-    if (Mongodb::getInstance().addUser(u)) { //vuol dire true
-        return 1; // è registrato...
+
+    if (u->name.empty() || u->name.size() > 20) {
+
+        return "Invalid name.";
     }
-    return 0; // se va qui non lo è... devo aggiungerlo...o qualche problema?
+
+    if (u->surname.empty() || u->surname.size() > 20) {
+
+        return "Invalid surname.";
+    }
+
+    if (u->email.size() < 6 || u->email.find('@') == std::string::npos || u->email.find('.') == std::string::npos) {
+        return "Invalid email.";
+    }
+
+    if (u->password.empty() || u->password.size() != 32) {
+
+        return "Invalid password.";
+    }
+
+
+    return Mongodb::getInstance().addUser(u);
+
 }
 
 void Users_Manager::updateUserLastAccess(const string &id) {
     Mongodb::getInstance().UpdateUserLastAccess(id);
+}
+
+long long Users_Manager::getLastAccess(const string &userid) {
+    return Mongodb::getInstance().getLastAccess(userid);
 }
 
 

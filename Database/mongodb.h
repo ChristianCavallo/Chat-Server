@@ -61,11 +61,15 @@ private:
     virtual ~Mongodb();
 
 public:
-    User *getUser(const string &email);
+    User *getUser(const string &email); //per esempio... puoi farla anche diversamente
 
-    bool Mongodb::addUser(User *u);
+    //Voglio che capisci solo questa cosa. La funzione addUser aggiunge un utente. ma al solito, come facciamo a sapere se lo ha
+    //fattpo o no? un ritorno di variabile? si, di che tipo? bool va bene. esegui
+    string Mongodb::addUser(User *u);
 
     void UpdateUserLastAccess(const string &id);
+
+    long long getLastAccess(const string &userid);
 
     vector<Chat *> getChat(const string &userid);
 

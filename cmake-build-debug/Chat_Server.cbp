@@ -119,6 +119,12 @@
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/Chat.h">
 			<Option target="Chat_Server"/>
 		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/Message.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/Message.h">
+			<Option target="Chat_Server"/>
+		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/User.cpp">
 			<Option target="Chat_Server"/>
 		</Unit>

@@ -23,11 +23,11 @@ int index = 0;
 
 Server::Server() {
     this->stopFlag = false;
+
 }
 
 void Server::start() {
     this->t = thread(&Server::startListen, this);
-    t.join();
 }
 
 void Server::startListen() {
@@ -120,17 +120,11 @@ void Server::startListen() {
     cout << "Server is dead\n";
 }
 
-Client *Server::getClientById(int id) {
-    for (int i = 0; i < clients.size(); i++) {
-        Client *c = clients.at(i);
-        if (c->id == id) {
-            return c;
-        }
-    }
-    return nullptr;
-}
 
 Client *Server::getClientByUserId(string id) {
+    if (clients.empty()) {
+        return nullptr;
+    }
     for (int i = 0; i < clients.size(); i++) {
         Client *c = clients.at(i);
         if (!c->closed) {
@@ -138,8 +132,10 @@ Client *Server::getClientByUserId(string id) {
                 return c;
             }
         }
-        return nullptr;
+
     }
+
+    return nullptr;
 }
 
 

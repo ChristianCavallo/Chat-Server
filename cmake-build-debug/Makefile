@@ -259,6 +259,33 @@ Primitives\Chat.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.s
 .PHONY : Primitives\Chat.cpp.s
 
+Primitives\Message.obj: Primitives\Message.cpp.obj
+
+.PHONY : Primitives\Message.obj
+
+# target to build an object file
+Primitives\Message.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Message.cpp.obj
+.PHONY : Primitives\Message.cpp.obj
+
+Primitives\Message.i: Primitives\Message.cpp.i
+
+.PHONY : Primitives\Message.i
+
+# target to preprocess a source file
+Primitives\Message.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Message.cpp.i
+.PHONY : Primitives\Message.cpp.i
+
+Primitives\Message.s: Primitives\Message.cpp.s
+
+.PHONY : Primitives\Message.s
+
+# target to generate assembly for a file
+Primitives\Message.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Message.cpp.s
+.PHONY : Primitives\Message.cpp.s
+
 Primitives\User.obj: Primitives\User.cpp.obj
 
 .PHONY : Primitives\User.obj
@@ -472,6 +499,9 @@ help:
 	@echo ... Primitives/Chat.obj
 	@echo ... Primitives/Chat.i
 	@echo ... Primitives/Chat.s
+	@echo ... Primitives/Message.obj
+	@echo ... Primitives/Message.i
+	@echo ... Primitives/Message.s
 	@echo ... Primitives/User.obj
 	@echo ... Primitives/User.i
 	@echo ... Primitives/User.s

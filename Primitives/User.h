@@ -20,27 +20,10 @@ public:
     string email;
     string password;
 
-    User(string id, string name, string surname, string email, string password) {
-        this->id = id;
-        this->name = name;
-        this->surname = surname;
-        this->email = email;
-        this->password = password;
-    }
+    User(const string &id, const string &name, const string &surname, const string &email, const string &password) : id(
+            id), name(name), surname(surname), email(email), password(password) {}
 
     User() {}
-
-    const string &getName() const {
-        return name;
-    }
-
-    const string &getEmail() const {
-        return email;
-    }
-
-    const string &getPassword() const {
-        return password;
-    }
 
     //questi li genera in automatico... praticamente possiamo cambiare il comportamento degli operatori tipo ==
     bool operator==(const User &rhs) const {

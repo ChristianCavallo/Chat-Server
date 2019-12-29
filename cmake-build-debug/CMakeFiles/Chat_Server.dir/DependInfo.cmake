@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Chat_Manager.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Managers/Chat_Manager.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Managers/Users_Manager.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/Chat.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Primitives/Chat.cpp.obj"
+  "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/Message.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Primitives/Message.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Primitives/User.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Primitives/User.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Socket/Client.cpp.obj"
   "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.cpp" "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/Chat_Server.dir/Socket/Security/Crypto.cpp.obj"

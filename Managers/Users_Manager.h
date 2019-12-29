@@ -18,9 +18,11 @@ public:
 
     User *Login(const string &email, const string &password);
 
-    int Registration(User *u);
+    string Registration(User *u);
 
     void updateUserLastAccess(const string &id);
+
+    long long getLastAccess(const string &userid);
 };
 
 
