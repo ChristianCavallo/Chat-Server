@@ -17,19 +17,15 @@ int main() {
     Mongodb::getInstance(); //Prima inizializzazione del db
     Dispatcher::getInstance(); //Lazy initialization
 
-    /*
+/*
     //creo un utente
     User *p = new User("","tigro", "bello", "tigro@live.it", "abcd123");
     //inserisco l'utente nella lista users
-    Mongodb::getInstance().addUser(p);
+    cout << Mongodb::getInstance().addUser(p) << "\n";
     //verifico se l'iscrizione è andata a buon fine
-    int a= Users_Manager().Registration(p);
-    cout << a;
-    //verifico il login
-    Users_Manager().Login(const_cast<string &>(p->getEmail()), const_cast<string &>(p->getPassword()));
 
     delete p;
-    */
+*/
 
     /*
     if(user != nullptr){

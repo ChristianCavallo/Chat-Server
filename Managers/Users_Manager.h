@@ -18,7 +18,7 @@ public:
 
     User *Login(const string &email, const string &password);
 
-    int Registration(User *u);
+    string Registration(User *u);
 };
 
 

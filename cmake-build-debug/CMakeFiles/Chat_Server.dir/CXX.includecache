@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Commands/Command.h
 string
 -
 iostream
@@ -16,21 +16,17 @@ rapidjson/prettywriter.h
 rapidjson/stringbuffer.h
 -
 ../Managers/User.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/User.h
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
-string
--
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.cpp
+C:/Users/Noemi/CLionProjects/Chat-Server/Database/mongodb.cpp
 mongodb.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Database/mongodb.h
 ../Commands/Command.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Commands/Command.h
 ../Managers/User.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/User.h
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/mongodb.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Database/mongodb.h
 cstdint
 -
 iostream
@@ -52,21 +48,27 @@ bsoncxx/builder/stream/array.hpp
 bsoncxx/builder/stream/document.hpp
 -
 ../Managers/User.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/User.h
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/User.h
 string
 -
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/Users_Manager.cpp
+Users_Manager.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/Users_Manager.h
+../Database/mongodb.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Database/mongodb.h
+
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/Users_Manager.h
 string
 -
 iostream
 -
 User.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/User.h
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Client.h
 Windows.h
 -
 WinSock2.h
@@ -78,9 +80,9 @@ thread
 string
 -
 Security/Crypto.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Security/Crypto.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
 openssl/rsa.h
 -
 openssl/pem.h
@@ -92,7 +94,7 @@ string
 iostream
 -
 ../../Utils/base64.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
 chrono
 -
 openssl/conf.h
@@ -104,41 +106,39 @@ openssl/err.h
 openssl/rand.h
 -
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.h
 Client.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Client.h
 vector
 -
 thread
 -
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
 string
 -
 
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.cpp
-rapidjson/prettywriter.h
--
-rapidjson/stringbuffer.h
--
-rapidjson/document.h
--
-../Commands/Command.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Commands/Command.h
-../Database/MediaManager.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Database/MediaManager.h
-../Managers/User.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/User.h
-Dispatcher.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
-
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/core/Dispatcher.h
+C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.h
 ../Socket/Client.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Client.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Client.h
 ../Managers/Users_Manager.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Managers/Users_Manager.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Managers/Users_Manager.h
 ../Socket/Server.h
-C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Socket/Server.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.h
+
+C:/Users/Noemi/CLionProjects/Chat-Server/main.cpp
+iostream
+-
+string
+-
+Database/mongodb.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Database/mongodb.h
+Socket/Server.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.h
+Commands/Command.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Commands/Command.h
+core/Dispatcher.h
+C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.h
 
 C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp
 boost/config.hpp
@@ -4250,45 +4250,9 @@ C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/allocators.h
 rapidjson.h
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/document.h
-reader.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/reader.h
-internal/meta.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/meta.h
-internal/strfunc.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strfunc.h
-memorystream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/memorystream.h
-encodedstream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodedstream.h
-new
--
-limits
--
-iterator
--
-utility
--
-
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodedstream.h
-stream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
-memorystream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/memorystream.h
-
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodings.h
 rapidjson.h
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
-
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/error/error.h
-../rapidjson.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
-
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/biginteger.h
-../rapidjson.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
-intrin.h
--
 
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/diyfp.h
 ../rapidjson.h
@@ -4320,10 +4284,6 @@ C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
 type_traits
 -
 
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/pow10.h
-../rapidjson.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
-
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
 ../allocators.h
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/allocators.h
@@ -4338,27 +4298,9 @@ C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
 cwchar
 -
 
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strtod.h
-ieee754.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/ieee754.h
-biginteger.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/biginteger.h
-diyfp.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/diyfp.h
-pow10.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/pow10.h
-climits
--
-limits
--
-
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/swap.h
 ../rapidjson.h
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson.h
-
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/memorystream.h
-stream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
 
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/msinttypes/inttypes.h
 stdint.h
@@ -4401,38 +4343,6 @@ rapidjson/...
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/...
 cassert
 -
-
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/reader.h
-allocators.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/allocators.h
-stream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
-encodedstream.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/encodedstream.h
-internal/meta.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/meta.h
-internal/stack.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/stack.h
-internal/strtod.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/internal/strtod.h
-limits
--
-intrin.h
--
-nmmintrin.h
--
-emmintrin.h
--
-arm_neon.h
--
-stdexcept
--
-rapidjson/error/error.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/error/error.h
-rapidjson/reader.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/rapidjson/reader.h
-error/error.h
-C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/error/error.h
 
 C:/vcpkg-2019.11/installed/x86-windows/include/rapidjson/stream.h
 rapidjson.h

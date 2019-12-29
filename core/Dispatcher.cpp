@@ -32,7 +32,14 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             break;
 
         case COMMAND_REGISTER_REQUEST:
-            
+
+            u = new User("", document["name"].GetString(),document["surname"].GetString(),document["email"].GetString(),document["password"].GetString());
+            cout << "qua ci arrivo\n";
+            c = new CommandRegistration(usersManager->Registration(u));
+            cout << "qua ci arrivo2\n";
+            sender.sendMessage(c->getSerializedString());
+            delete u;
+            delete c;
             break;
 
         case COMMAND_LOGIN_REQUEST: //21
