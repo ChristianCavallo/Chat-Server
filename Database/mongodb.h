@@ -12,7 +12,10 @@
 #include <mongocxx/instance.hpp>
 #include <bsoncxx/builder/stream/array.hpp>
 #include <bsoncxx/builder/stream/document.hpp>
-#include "../Managers/User.h"
+
+#include "../Primitives/User.h"
+#include "../Primitives/Chat.h"
+#include <vector>
 
 using bsoncxx::builder::stream::close_array;
 using bsoncxx::builder::stream::close_document;
@@ -63,6 +66,13 @@ public:
     //Voglio che capisci solo questa cosa. La funzione addUser aggiunge un utente. ma al solito, come facciamo a sapere se lo ha
     //fattpo o no? un ritorno di variabile? si, di che tipo? bool va bene. esegui
     string Mongodb::addUser(User *u);
+
+    void UpdateUserLastAccess(const string &id);
+
+    long long getLastAccess(const string &userid);
+
+    vector<Chat *> getChat(const string &userid);
+
 };
 
 

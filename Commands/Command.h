@@ -6,7 +6,7 @@
 #include <iostream>
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
-#include "../Managers/User.h"
+#include "../Primitives/User.h"
 
 #ifndef CHAT_SERVER_COMMAND_H
 #define CHAT_SERVER_COMMAND_H
@@ -69,23 +69,24 @@ public:
 
 protected:
 
-    virtual void Serialize(PrettyWriter<StringBuffer> &writer) const {
+    virtual void Serialize(PrettyWriter <StringBuffer> &writer) const {
         writer.String("id");
         writer.Int(id);
     };
 
 
 };
+
 //COMMAND_REGISTER_REQUEST = 10,
 //COMMAND_REGISTER_RESPONSE = 11
-class CommandRegistration: public Command{
+class CommandRegistration : public Command {
 
 private:
     string result;
 public:
     CommandRegistration(const string &result) : Command(COMMAND_REGISTER_RESPONSE), result(result) {}
 
-    void Serialize(PrettyWriter<StringBuffer> &writer) const {
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
         //questo è il serializzatore, cioè  quello che crea l'oggetto json
         writer.StartObject();
 
@@ -99,23 +100,23 @@ public:
 
 };
 
-class CommandLogin: public Command{
+class CommandLogin : public Command {
 
 private:
-    User* u;
+    User *u;
 
 public:
     //Questo è il comando che dobbiamo mandare come response
     //Dove tutti i parametri che metti, saranno inseriti nel json...
     //in questo caso ci serve solo l'email e la password
     //l'id nn ci serve... xke sappiamo che la response ha id 23
-    CommandLogin(User* u) : Command(COMMAND_LOGIN_RESPONSE) {
+    CommandLogin(User *u) : Command(COMMAND_LOGIN_RESPONSE) {
         this->u = u;
     }
     //ci sei con il costruttore? stiamo creando un comando con
     // l'id della response e ci stiamo aggiungendo il parametro email e password
 
-    void Serialize(PrettyWriter<StringBuffer> &writer) const {
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
         //questo è il serializzatore, cioè  quello che crea l'oggetto json
         writer.StartObject();
 

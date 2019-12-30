@@ -7,25 +7,27 @@
 #include "Commands/Command.h"
 #include "core/Dispatcher.h"
 
+
 using namespace std;
 
 
 int main() {
 
-
-
     Mongodb::getInstance(); //Prima inizializzazione del db
     Dispatcher::getInstance(); //Lazy initialization
 
-/*
+
     //creo un utente
-    User *p = new User("","tigro", "bello", "tigro@live.it", "abcd123");
+    User *p = new User("", "pollo", "pollone", "pollo@live.it", "12345");
     //inserisco l'utente nella lista users
     cout << Mongodb::getInstance().addUser(p) << "\n";
-    //verifico se l'iscrizione è andata a buon fine
 
     delete p;
-*/
+
+    string id = "5e091e5575020000b7007312";
+
+
+
 
     /*
     if(user != nullptr){
@@ -49,6 +51,8 @@ int main() {
 
     Dispatcher::getInstance().server = server;
 
+    Dispatcher::getInstance().logoutUser(id);
+    cout << Dispatcher::getInstance().getUserStatus(id) << "\n";
     cin.get();
 
 }

@@ -62,4 +62,12 @@ string Users_Manager::Registration(User *u) {
 
 }
 
+void Users_Manager::updateUserLastAccess(const string &id) {
+    Mongodb::getInstance().UpdateUserLastAccess(id);
+}
+
+long long Users_Manager::getLastAccess(const string &userid) {
+    return Mongodb::getInstance().getLastAccess(userid);
+}
+
 

@@ -3,11 +3,13 @@
 //
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
+#include "../Utils/util.h"
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
 #include "../Database/MediaManager.h"
-#include "../Managers/User.h"
+#include "../Primitives/User.h"
 #include "Dispatcher.h"
+
 
 
 void Dispatcher::executeRequest(Client &sender, const string &message) {
@@ -33,13 +35,6 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
         case COMMAND_REGISTER_REQUEST:
 
-            u = new User("", document["name"].GetString(),document["surname"].GetString(),document["email"].GetString(),document["password"].GetString());
-            cout << "qua ci arrivo\n";
-            c = new CommandRegistration(usersManager->Registration(u));
-            cout << "qua ci arrivo2\n";
-            sender.sendMessage(c->getSerializedString());
-            delete u;
-            delete c;
             break;
 
         case COMMAND_LOGIN_REQUEST: //21
@@ -157,3 +152,23 @@ void Dispatcher::executeResponse(Client &sender, Command *c) {
     }
 
 }
+
+void Dispatcher::logoutUser(const string &id) {
+    usersManager->updateUserLastAccess(id);
+}
+
+string Dispatcher::getUserStatus(const string &user_id) {
+    if (server->getClientByUserId(user_id) != nullptr) {
+        return "online";
+    } else {
+        long long count = usersManager->getLastAccess(user_id);
+        if (count == 0) {
+            cout << "User " << user_id << " doesn't have a last-access time!\n";
+            return "Undefined";
+        } else {
+            return formatDateFromMilliseconds(count);
+        }
+    }
+}
+
+

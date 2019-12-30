@@ -24,8 +24,6 @@ public:
     void start();
     void stop();
 
-    Client *getClientById(int id);
-
     Client *getClientByUserId(string id);
 };
 

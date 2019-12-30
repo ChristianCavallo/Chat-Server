@@ -36,19 +36,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Noemi\CLionProjects\Chat-Server
+CMAKE_SOURCE_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -75,14 +75,14 @@ preinstall:
 CMakeFiles\Chat_Server.dir\all:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\depend
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Chat_Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target Chat_Server"
 .PHONY : CMakeFiles\Chat_Server.dir\all
 
 # Build rule for subdir invocation for target.
 CMakeFiles\Chat_Server.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" 14
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles\Chat_Server.dir\rule
 
 # Convenience name for target.

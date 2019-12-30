@@ -40,19 +40,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Noemi\CLionProjects\Chat-Server
+CMAKE_SOURCE_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -60,7 +60,7 @@ CMAKE_BINARY_DIR = C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	echo >nul && "C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -71,7 +71,7 @@ edit_cache\fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	echo >nul && "C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	echo >nul && "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -81,9 +81,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Noemi\CLionProjects\Chat-Server\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\chryc\Desktop\CLion Projects\Chat-Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -178,32 +178,32 @@ Database\mongodb.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.s
 .PHONY : Database\mongodb.cpp.s
 
-Managers\User.obj: Managers\User.cpp.obj
+Managers\Chat_Manager.obj: Managers\Chat_Manager.cpp.obj
 
-.PHONY : Managers\User.obj
+.PHONY : Managers\Chat_Manager.obj
 
 # target to build an object file
-Managers\User.cpp.obj:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.obj
-.PHONY : Managers\User.cpp.obj
+Managers\Chat_Manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Chat_Manager.cpp.obj
+.PHONY : Managers\Chat_Manager.cpp.obj
 
-Managers\User.i: Managers\User.cpp.i
+Managers\Chat_Manager.i: Managers\Chat_Manager.cpp.i
 
-.PHONY : Managers\User.i
+.PHONY : Managers\Chat_Manager.i
 
 # target to preprocess a source file
-Managers\User.cpp.i:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.i
-.PHONY : Managers\User.cpp.i
+Managers\Chat_Manager.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Chat_Manager.cpp.i
+.PHONY : Managers\Chat_Manager.cpp.i
 
-Managers\User.s: Managers\User.cpp.s
+Managers\Chat_Manager.s: Managers\Chat_Manager.cpp.s
 
-.PHONY : Managers\User.s
+.PHONY : Managers\Chat_Manager.s
 
 # target to generate assembly for a file
-Managers\User.cpp.s:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\User.cpp.s
-.PHONY : Managers\User.cpp.s
+Managers\Chat_Manager.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Chat_Manager.cpp.s
+.PHONY : Managers\Chat_Manager.cpp.s
 
 Managers\Users_Manager.obj: Managers\Users_Manager.cpp.obj
 
@@ -231,6 +231,87 @@ Managers\Users_Manager.s: Managers\Users_Manager.cpp.s
 Managers\Users_Manager.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Managers\Users_Manager.cpp.s
 .PHONY : Managers\Users_Manager.cpp.s
+
+Primitives\Chat.obj: Primitives\Chat.cpp.obj
+
+.PHONY : Primitives\Chat.obj
+
+# target to build an object file
+Primitives\Chat.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.obj
+.PHONY : Primitives\Chat.cpp.obj
+
+Primitives\Chat.i: Primitives\Chat.cpp.i
+
+.PHONY : Primitives\Chat.i
+
+# target to preprocess a source file
+Primitives\Chat.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.i
+.PHONY : Primitives\Chat.cpp.i
+
+Primitives\Chat.s: Primitives\Chat.cpp.s
+
+.PHONY : Primitives\Chat.s
+
+# target to generate assembly for a file
+Primitives\Chat.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Chat.cpp.s
+.PHONY : Primitives\Chat.cpp.s
+
+Primitives\Message.obj: Primitives\Message.cpp.obj
+
+.PHONY : Primitives\Message.obj
+
+# target to build an object file
+Primitives\Message.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Message.cpp.obj
+.PHONY : Primitives\Message.cpp.obj
+
+Primitives\Message.i: Primitives\Message.cpp.i
+
+.PHONY : Primitives\Message.i
+
+# target to preprocess a source file
+Primitives\Message.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Message.cpp.i
+.PHONY : Primitives\Message.cpp.i
+
+Primitives\Message.s: Primitives\Message.cpp.s
+
+.PHONY : Primitives\Message.s
+
+# target to generate assembly for a file
+Primitives\Message.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\Message.cpp.s
+.PHONY : Primitives\Message.cpp.s
+
+Primitives\User.obj: Primitives\User.cpp.obj
+
+.PHONY : Primitives\User.obj
+
+# target to build an object file
+Primitives\User.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\User.cpp.obj
+.PHONY : Primitives\User.cpp.obj
+
+Primitives\User.i: Primitives\User.cpp.i
+
+.PHONY : Primitives\User.i
+
+# target to preprocess a source file
+Primitives\User.cpp.i:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\User.cpp.i
+.PHONY : Primitives\User.cpp.i
+
+Primitives\User.s: Primitives\User.cpp.s
+
+.PHONY : Primitives\User.s
+
+# target to generate assembly for a file
+Primitives\User.cpp.s:
+	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Primitives\User.cpp.s
+.PHONY : Primitives\User.cpp.s
 
 Socket\Client.obj: Socket\Client.cpp.obj
 
@@ -409,12 +490,21 @@ help:
 	@echo ... Database/mongodb.obj
 	@echo ... Database/mongodb.i
 	@echo ... Database/mongodb.s
-	@echo ... Managers/User.obj
-	@echo ... Managers/User.i
-	@echo ... Managers/User.s
+	@echo ... Managers/Chat_Manager.obj
+	@echo ... Managers/Chat_Manager.i
+	@echo ... Managers/Chat_Manager.s
 	@echo ... Managers/Users_Manager.obj
 	@echo ... Managers/Users_Manager.i
 	@echo ... Managers/Users_Manager.s
+	@echo ... Primitives/Chat.obj
+	@echo ... Primitives/Chat.i
+	@echo ... Primitives/Chat.s
+	@echo ... Primitives/Message.obj
+	@echo ... Primitives/Message.i
+	@echo ... Primitives/Message.s
+	@echo ... Primitives/User.obj
+	@echo ... Primitives/User.i
+	@echo ... Primitives/User.s
 	@echo ... Socket/Client.obj
 	@echo ... Socket/Client.i
 	@echo ... Socket/Client.s
