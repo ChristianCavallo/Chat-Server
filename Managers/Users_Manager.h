@@ -23,6 +23,8 @@ public:
     void updateUserLastAccess(const string &id);
 
     long long getLastAccess(const string &userid);
+
+    User *getUserById(const string &id);
 };
 
 

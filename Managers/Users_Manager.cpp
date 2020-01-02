@@ -70,4 +70,10 @@ long long Users_Manager::getLastAccess(const string &userid) {
     return Mongodb::getInstance().getLastAccess(userid);
 }
 
+User* Users_Manager::getUserById(const string & id){
+
+    return Mongodb::getInstance().getUserById(id);
+
+}
+
 

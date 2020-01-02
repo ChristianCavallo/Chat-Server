@@ -14,8 +14,9 @@
 
 void Dispatcher::executeRequest(Client &sender, const string &message) {
     Document document;
+    cout << "ciao3\n";
     document.Parse(message.c_str());
-
+    cout << "ciao4\n";
     Command *c;
 
 
@@ -26,6 +27,8 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
     int id = document["id"].GetInt();
     User *u;
+    vector<Chat*> chats;
+    Chat* ch;
     switch (id) {
         case COMMAND_TEST:
             c = new CommandTest(document["message"].GetString());
@@ -35,6 +38,11 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
         case COMMAND_REGISTER_REQUEST:
 
+            u = new User("", document["name"].GetString(),document["surname"].GetString(),document["email"].GetString(),document["password"].GetString());
+            c = new CommandRegistration(usersManager->Registration(u));
+            sender.sendMessage(c->getSerializedString());
+            delete u;
+            delete c;
             break;
 
         case COMMAND_LOGIN_REQUEST: //21
@@ -126,6 +134,28 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
              */
             break;
 
+        case COMMAND_FETCH_CONTACTS_REQUEST:
+            cout << "ciao1\n";
+            chats = chatManager->fetchChats(sender.user_id);
+            cout << "ciao2\n";
+            for(auto p : chats){
+                if(!p->IsGroup){
+                    p->Participants.remove(sender.user_id);
+                    u= usersManager->getUserById(p->Participants.front());
+                    p->Name= u->name + " " + u->surname;
+                    delete u;
+                }
+            }
+
+            c = new CommandFetchContacts(chats);
+            sender.sendMessage(c->getSerializedString());
+            delete c;
+            for(auto p : chats){
+                delete p;
+            }
+            chats.clear();
+
+            break;
 
         default:
             break;
