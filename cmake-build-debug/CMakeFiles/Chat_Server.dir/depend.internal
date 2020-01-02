@@ -11,6 +11,7 @@ CMakeFiles/Chat_Server.dir/Database/mongodb.cpp.obj
  C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/Chat.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/Message.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/User.h
+ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/config.hpp
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/borland.hpp
@@ -1297,6 +1298,7 @@ CMakeFiles/Chat_Server.dir/Socket/Client.cpp.obj
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
+ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
  C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.h
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/config.hpp
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/config/compiler/borland.hpp
@@ -1483,6 +1485,7 @@ CMakeFiles/Chat_Server.dir/Socket/Security/Crypto.cpp.obj
  C:/vcpkg-2019.11/installed/x86-windows/include/openssl/x509.h
  C:/vcpkg-2019.11/installed/x86-windows/include/openssl/x509_vfy.h
 CMakeFiles/Chat_Server.dir/Socket/Server.cpp.obj
+ C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/User.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Client.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.cpp
@@ -1523,6 +1526,9 @@ CMakeFiles/Chat_Server.dir/Socket/Server.cpp.obj
 CMakeFiles/Chat_Server.dir/Utils/base64.cpp.obj
  C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.cpp
  C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
+CMakeFiles/Chat_Server.dir/Utils/utils.cpp.obj
+ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.cpp
+ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
 CMakeFiles/Chat_Server.dir/core/Dispatcher.cpp.obj
  C:/Users/Noemi/CLionProjects/Chat-Server/Commands/Command.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Database/MediaManager.h
@@ -1535,7 +1541,7 @@ CMakeFiles/Chat_Server.dir/core/Dispatcher.cpp.obj
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
- C:/Users/Noemi/CLionProjects/Chat-Server/Utils/util.h
+ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
  C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.cpp
  C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.h
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/config.hpp
@@ -1698,6 +1704,7 @@ CMakeFiles/Chat_Server.dir/main.cpp.obj
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Server.h
  C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
+ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
  C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.h
  C:/Users/Noemi/CLionProjects/Chat-Server/main.cpp
  C:/vcpkg-2019.11/installed/x86-windows/include/boost/assert.hpp

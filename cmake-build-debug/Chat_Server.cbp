@@ -155,7 +155,10 @@
 		<Unit filename="C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/Noemi/CLionProjects/Chat-Server/Utils/util.h">
+		<Unit filename="C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.cpp">
+			<Option target="Chat_Server"/>
+		</Unit>
+		<Unit filename="C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h">
 			<Option target="Chat_Server"/>
 		</Unit>
 		<Unit filename="C:/Users/Noemi/CLionProjects/Chat-Server/core/Dispatcher.cpp">

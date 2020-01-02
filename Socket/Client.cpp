@@ -19,7 +19,7 @@ Client::Client(SOCKET &sck) {
     this->sck = sck;
     this->crypto = new Crypto();
     this->id = 0;
-    this->user_id = "";
+    this->myUser = nullptr;
 }
 
 void Client::start() {
@@ -147,9 +147,9 @@ void Client::close() {
     this->closed = true;
     cout << "Client closed and thread deattached!\n";
 
-    if (!user_id.empty()) {
-        Dispatcher::getInstance().logoutUser(user_id);
-        cout << "Logout user: " << user_id << "\n";
+    if (myUser != nullptr) {
+        Dispatcher::getInstance().logoutUser(myUser->id);
+        cout << "Logout user: " << myUser->id << "\n";
     }
 
 }
@@ -196,7 +196,9 @@ void Client::sendMessage(const string &msg) {
     }
 }
 
-Client::~Client() = default;
+Client::~Client(){
+    delete  myUser;
+};
 
 
 

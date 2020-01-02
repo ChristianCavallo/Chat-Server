@@ -14,6 +14,7 @@
 #include <thread>
 #include <string>
 #include "Security/Crypto.h"
+#include "../Primitives/User.h"
 
 
 #ifndef CHAT_SERVER_CLIENT_H
@@ -35,7 +36,7 @@ private:
 public:
     int id;
 
-    string user_id;
+    User* myUser;
 
     Client(SOCKET &sck);
 

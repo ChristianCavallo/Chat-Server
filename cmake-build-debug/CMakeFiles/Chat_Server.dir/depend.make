@@ -10,6 +10,7 @@ CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: ..\Database\mongodb.h
 CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: ..\Primitives\Chat.h
 CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: ..\Primitives\Message.h
 CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: ..\Primitives\User.h
+CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: ..\Utils\utils.h
 CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\assert.hpp
 CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\config.hpp
 CMakeFiles\Chat_Server.dir\Database\mongodb.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\config\compiler\borland.hpp
@@ -1296,6 +1297,7 @@ CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: ..\Socket\Client.h
 CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: ..\Socket\Security\Crypto.h
 CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: ..\Socket\Server.h
 CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: ..\Utils\base64.h
+CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: ..\Utils\utils.h
 CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: ..\core\Dispatcher.h
 CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\config.hpp
 CMakeFiles\Chat_Server.dir\Socket\Client.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\config\compiler\borland.hpp
@@ -1482,6 +1484,7 @@ CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.obj: C:\vcpkg-2019.11\inst
 CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\openssl\x509.h
 CMakeFiles\Chat_Server.dir\Socket\Security\Crypto.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\openssl\x509_vfy.h
 
+CMakeFiles\Chat_Server.dir\Socket\Server.cpp.obj: ..\Primitives\User.h
 CMakeFiles\Chat_Server.dir\Socket\Server.cpp.obj: ..\Socket\Client.h
 CMakeFiles\Chat_Server.dir\Socket\Server.cpp.obj: ..\Socket\Security\Crypto.h
 CMakeFiles\Chat_Server.dir\Socket\Server.cpp.obj: ..\Socket\Server.cpp
@@ -1523,6 +1526,9 @@ CMakeFiles\Chat_Server.dir\Socket\Server.cpp.obj: C:\vcpkg-2019.11\installed\x86
 CMakeFiles\Chat_Server.dir\Utils\base64.cpp.obj: ..\Utils\base64.cpp
 CMakeFiles\Chat_Server.dir\Utils\base64.cpp.obj: ..\Utils\base64.h
 
+CMakeFiles\Chat_Server.dir\Utils\utils.cpp.obj: ..\Utils\utils.cpp
+CMakeFiles\Chat_Server.dir\Utils\utils.cpp.obj: ..\Utils\utils.h
+
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Commands\Command.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Database\MediaManager.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Managers\Chat_Manager.h
@@ -1534,7 +1540,7 @@ CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Socket\Client.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Socket\Security\Crypto.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Socket\Server.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Utils\base64.h
-CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Utils\util.h
+CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\Utils\utils.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\core\Dispatcher.cpp
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: ..\core\Dispatcher.h
 CMakeFiles\Chat_Server.dir\core\Dispatcher.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\config.hpp
@@ -1697,6 +1703,7 @@ CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Socket\Client.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Socket\Security\Crypto.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Socket\Server.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Utils\base64.h
+CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\Utils\utils.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\core\Dispatcher.h
 CMakeFiles\Chat_Server.dir\main.cpp.obj: ..\main.cpp
 CMakeFiles\Chat_Server.dir\main.cpp.obj: C:\vcpkg-2019.11\installed\x86-windows\include\boost\assert.hpp

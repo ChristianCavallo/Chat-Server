@@ -25,15 +25,36 @@ Chat* Chat_Manager::addMessageToChat(const string &chatid, Message *m) {
 }
 
 
-Chat *Chat_Manager::createChat(Chat* ch) {
+string Chat_Manager::createChat(Chat* ch) {
 
-    string result= Mongodb::getInstance().CreateChat(ch);
-    //essendo che il controllo se esiste la chat è fatta nella funzione getchat che viene richiamata in addchat qua controllo
-    //solo quello che ritorna chat.
-    if(result=="ok"){
+    return Mongodb::getInstance().CreateChat(ch);
 
-        return ch;
+}
+
+Chat* Chat_Manager::getChatById(const string& id){
+
+    return Mongodb::getInstance().getChatById(id);
+
+}
+
+string Chat_Manager::deleteChat(const string& chatid, const string& userid){
+
+    Chat* ch = Mongodb::getInstance().getChatById(chatid);
+    if(ch == nullptr){
+        return "Chat doesn't exist.";
     }
 
-    return nullptr;
+    if(ch->IsGroup){
+
+        return Mongodb::getInstance().deletePartecipant(chatid,userid);
+
+    }
+
+    if(find(ch->Participants.begin(), ch->Participants.end(), userid) == ch->Participants.end()){ //così non la trova se imposto invece == diverso allora lo trova
+       delete ch;
+       return "User doesn't partecipate to this chat";
+    }
+
+    return Mongodb::getInstance().deleteChatById(chatid);
+
 }

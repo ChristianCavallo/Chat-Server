@@ -80,6 +80,10 @@ public:
     Chat *updateMessage(const string &chatId, Message* m);
 
     User *getUserById(const string &id);
+
+    string deleteChatById(const string &chatid);
+
+    string deletePartecipant(const string &chatid, const string &userid);
 };
 
 

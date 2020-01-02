@@ -8,6 +8,7 @@
 #include <rapidjson/stringbuffer.h>
 #include "../Primitives/User.h"
 #include "../Primitives/Chat.h"
+#include "../Utils/utils.h"
 
 #ifndef CHAT_SERVER_COMMAND_H
 #define CHAT_SERVER_COMMAND_H
@@ -244,6 +245,7 @@ public:
 
 class CommandFetchContacts: public Command {
 private:
+
     vector<Chat*> ch;
 
 public:
@@ -256,7 +258,7 @@ public:
         Command::Serialize(writer);
         writer.String("chats");
         writer.StartArray();
-        cout << "ciao\n";
+
         for(auto c: ch){
             writer.StartObject();
 
@@ -282,3 +284,89 @@ public:
 
 };
 
+class CommandFetchChat: public Command {
+private:
+    vector<Message* > m;
+    string status;
+
+public:
+
+    CommandFetchChat(const vector<Message *> m, string status) : Command(COMMAND_FETCH_CHAT_RESPONSE), m(m), status(status) {}
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        writer.StartObject();
+
+        Command::Serialize(writer);
+        writer.String("status");
+        writer.String(status.c_str(), static_cast<SizeType>(status.size()));
+
+        writer.String("messages");
+        writer.StartArray();
+
+        for(auto ms: m){
+            writer.StartObject();
+
+            writer.String("senderName");
+            writer.String(ms->SenderName.c_str(), static_cast<SizeType>(ms->SenderName.size()));
+
+            writer.String("sender_id");
+            writer.String(ms->Sender_id.c_str(), static_cast<SizeType>(ms->Sender_id.size()));
+
+            writer.String("time");
+            string dt = utils::formatDateFromMilliseconds(ms->ReceptionDate);
+            writer.String(dt.c_str(), static_cast<SizeType>(dt.size()));
+
+            writer.String("content");
+            writer.String(ms->Content.c_str(), static_cast<SizeType>(ms->Content.size()));
+
+            writer.String("media");
+            writer.String(ms->Media.c_str(), static_cast<SizeType>(ms->Media.size()));
+
+            writer.EndObject();
+        }
+
+        writer.EndArray();
+
+        writer.EndObject();
+    }
+
+};
+
+
+class CommandMessage: public Command {
+private:
+    string chatid;
+    Message* m;
+
+public:
+
+    CommandMessage(const string &chatid, Message *m) : Command(COMMAND_MESSAGE_RESPONSE), chatid(chatid), m(m) {}
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        writer.StartObject();
+
+        Command::Serialize(writer);
+        writer.String("chat-id");
+        writer.String(chatid.c_str(), static_cast<SizeType>(chatid.size()));
+
+
+        writer.String("senderName");
+        writer.String(m->SenderName.c_str(), static_cast<SizeType>(m->SenderName.size()));
+
+        writer.String("sender_id");
+        writer.String(m->Sender_id.c_str(), static_cast<SizeType>(m->Sender_id.size()));
+
+        writer.String("time");
+        string dt = utils::formatDateFromMilliseconds(m->ReceptionDate);
+        writer.String(dt.c_str(), static_cast<SizeType>(dt.size()));
+
+        writer.String("content");
+        writer.String(m->Content.c_str(), static_cast<SizeType>(m->Content.size()));
+
+        writer.String("media");
+        writer.String(m->Media.c_str(), static_cast<SizeType>(m->Media.size()));
+
+        writer.EndObject();
+    }
+
+};

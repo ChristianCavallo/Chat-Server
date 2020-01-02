@@ -25,6 +25,8 @@ public:
     long long getLastAccess(const string &userid);
 
     User *getUserById(const string &id);
+
+    User *getUserByEmail(const string &email);
 };
 
 
