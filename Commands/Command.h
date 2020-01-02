@@ -7,6 +7,7 @@
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
 #include "../Primitives/User.h"
+#include "../Primitives/Chat.h"
 
 #ifndef CHAT_SERVER_COMMAND_H
 #define CHAT_SERVER_COMMAND_H
@@ -77,8 +78,6 @@ protected:
 
 };
 
-//COMMAND_REGISTER_REQUEST = 10,
-//COMMAND_REGISTER_RESPONSE = 11
 class CommandRegistration : public Command {
 
 private:
@@ -237,6 +236,46 @@ public:
 
         writer.String("content");
         writer.String(content.c_str(), static_cast<SizeType>(content.size()));
+
+        writer.EndObject();
+    }
+
+};
+
+class CommandFetchContacts: public Command {
+private:
+    vector<Chat*> ch;
+
+public:
+
+    CommandFetchContacts(const vector<Chat *> ch) : Command(COMMAND_FETCH_CONTACTS_RESPONSE), ch(ch) {}
+
+    void Serialize(PrettyWriter <StringBuffer> &writer) const {
+        writer.StartObject();
+
+        Command::Serialize(writer);
+        writer.String("chats");
+        writer.StartArray();
+        cout << "ciao\n";
+        for(auto c: ch){
+            writer.StartObject();
+
+            writer.String("chat-id");
+            writer.String(c->getId().c_str(), static_cast<SizeType>(c->getId().size()));
+
+            writer.String("contact-id");
+            writer.String(c->Participants.front().c_str(), static_cast<SizeType>(c->Participants.front().size()));
+
+            writer.String("name");
+            writer.String(c->Name.c_str(), static_cast<SizeType>(c->Name.size()));
+
+            writer.String("isGroup");
+            writer.Bool(c->IsGroup);
+
+            writer.EndObject();
+        }
+
+        writer.EndArray();
 
         writer.EndObject();
     }

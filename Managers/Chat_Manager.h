@@ -15,11 +15,12 @@ using namespace std;
 
 class Chat_Manager {
 
+public:
     vector<Chat *> fetchChats(const string &id);
 
-    void addMessageToChat(const string &chatid, Message *m);
+    Chat* addMessageToChat(const string &chatid, Message *m);
 
-    Chat *createChat(vector<string> ids);
+    Chat *createChat(Chat* ch);
 
 };
 

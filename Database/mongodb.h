@@ -31,7 +31,7 @@ using namespace std;
 
 
 class Mongodb {
-    //ho capito quello che dici tu... infatti ne anche io ero convint.... ma sicocme facendo mongodb. non succedeva nt.... sono nadata nel apllone pe
+
 public:
     static Mongodb &getInstance() {
         static Mongodb instance;
@@ -61,18 +61,25 @@ private:
     virtual ~Mongodb();
 
 public:
-    User *getUser(const string &email); //per esempio... puoi farla anche diversamente
+    User *getUser(const string &email);
 
-    //Voglio che capisci solo questa cosa. La funzione addUser aggiunge un utente. ma al solito, come facciamo a sapere se lo ha
-    //fattpo o no? un ritorno di variabile? si, di che tipo? bool va bene. esegui
     string Mongodb::addUser(User *u);
+
+    string Mongodb::CreateChat(Chat *ch);
 
     void UpdateUserLastAccess(const string &id);
 
     long long getLastAccess(const string &userid);
 
-    vector<Chat *> getChat(const string &userid);
+    vector<Chat *> getChats(const string &userid);
 
+    Chat * getChat(Chat* c);
+
+    Chat *getChatById(const string &chatId);
+
+    Chat *updateMessage(const string &chatId, Message* m);
+
+    User *getUserById(const string &id);
 };
 
 
