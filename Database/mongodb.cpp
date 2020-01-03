@@ -122,7 +122,7 @@ string Mongodb::CreateChat(Chat *ch) {
     Chat *ch1 = getChat(ch);
     if (ch1 != nullptr) {
         delete ch1;
-        return "Chat exist.";
+        return "Chat already exist.";
     }
 
     this->coll = db["chats"];
@@ -180,10 +180,11 @@ Chat *Mongodb::getChatById(const string &chatId) {
 
         for (const auto &element : result->view()["messages"].get_array().value) {
             string content = element["content"].get_utf8().value.to_string();
-            string sender = element["sender"].get_utf8().value.to_string();
+            string senderName = element["senderName"].get_utf8().value.to_string();
+            string sender_id = element["sender_id"].get_utf8().value.to_string();
             string media_id = element["media"].get_utf8().value.to_string();
             bsoncxx::types::b_date date = element["receptionDate"].get_date();
-            Message *msg = new Message(content, sender, media_id, date);
+            Message *msg = new Message(content, sender_id, senderName, media_id, date);
             chat->addMessage(msg);
         }
 
@@ -234,10 +235,11 @@ Chat *Mongodb::getChat(Chat *c) {
 
         for (const auto &element : result->view()["messages"].get_array().value) { //for each
             string content = element["content"].get_utf8().value.to_string();
-            string sender = element["sender"].get_utf8().value.to_string();
+            string senderName = element["senderName"].get_utf8().value.to_string();
+            string sender_id = element["sender_id"].get_utf8().value.to_string();
             string media_id = element["media"].get_utf8().value.to_string();
             bsoncxx::types::b_date date = element["receptionDate"].get_date();
-            Message *msg = new Message(content, sender, media_id, date);
+            Message *msg = new Message(content, sender_id, senderName, media_id, date);
             chat->addMessage(msg);
         }
 
@@ -254,7 +256,8 @@ Chat *Mongodb::updateMessage(const string &chatId, Message *m) {
     auto result = coll.update_one(document{} << "_id" << bsoncxx::oid{stdx::string_view{chatId}} << finalize,
                                   document{} << "$push" << open_document << "messages" <<
                                              open_document << "content" << m->Content <<
-                                             "sender" << m->Sender <<
+                                             "senderName" << m->SenderName <<
+                                             "sender_id" << m->Sender_id <<
                                              "media" << m->Media <<
                                              "receptionDate" << m->ReceptionDate << close_document
                                              << close_document << finalize);
@@ -289,10 +292,11 @@ vector<Chat *> Mongodb::getChats(const string &userid) {
 
         for (const auto &element : result["messages"].get_array().value) { //for each
             string content = element["content"].get_utf8().value.to_string();
-            string sender = element["sender"].get_utf8().value.to_string();
+            string senderName = element["senderName"].get_utf8().value.to_string();
+            string sender_id = element["sender_id"].get_utf8().value.to_string();
             string media_id = element["media"].get_utf8().value.to_string();
             bsoncxx::types::b_date date = element["receptionDate"].get_date();
-            Message *msg = new Message(content, sender, media_id, date);
+            Message *msg = new Message(content, sender_id, senderName, media_id, date);
             chat->addMessage(msg);
         }
 
@@ -300,4 +304,35 @@ vector<Chat *> Mongodb::getChats(const string &userid) {
     }
 
     return ch;
+}
+
+string Mongodb::deleteChatById(const string &chatid){
+
+    coll = this->db["chats"];
+
+
+    auto result =coll.delete_one(
+            document{} << "_id" << bsoncxx::oid{stdx::string_view{chatid}} << finalize);
+
+    if(result->deleted_count()==1){
+        return "ok";
+    }else{
+        return "Chat doesn't exist.";
+    }
+}
+
+string Mongodb::deletePartecipant(const string& chatid, const string& userid){
+
+    coll = this->db["chats"];
+
+    auto result = coll.update_one(document{} << "_id" << bsoncxx::oid{stdx::string_view{chatid}} << finalize,
+                                  document{} << "$pop" << open_document << "partecipants" << userid
+                                             << close_document << finalize);
+
+
+    if(result->modified_count()==1){
+        return "ok";
+    }else{
+        return "Can't remove this user from the chat.";
+    }
 }

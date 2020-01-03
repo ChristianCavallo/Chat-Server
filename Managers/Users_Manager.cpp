@@ -76,4 +76,8 @@ User* Users_Manager::getUserById(const string & id){
 
 }
 
+User* Users_Manager::getUserByEmail(const string& email){
+    return Mongodb::getInstance().getUser(email);
+}
+
 

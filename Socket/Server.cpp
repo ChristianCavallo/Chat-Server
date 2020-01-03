@@ -128,9 +128,12 @@ Client *Server::getClientByUserId(string id) {
     for (int i = 0; i < clients.size(); i++) {
         Client *c = clients.at(i);
         if (!c->closed) {
-            if (c->user_id == id) {
-                return c;
+            if(c->myUser != nullptr){
+                if (c->myUser->id == id) {
+                    return c;
+                }
             }
+
         }
 
     }

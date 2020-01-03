@@ -3,7 +3,6 @@
 //
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
-#include "../Utils/util.h"
 #include <rapidjson/document.h>
 #include "../Commands/Command.h"
 #include "../Database/MediaManager.h"
@@ -11,12 +10,11 @@
 #include "Dispatcher.h"
 
 
-
 void Dispatcher::executeRequest(Client &sender, const string &message) {
     Document document;
-    cout << "ciao3\n";
+
     document.Parse(message.c_str());
-    cout << "ciao4\n";
+
     Command *c;
 
 
@@ -27,8 +25,11 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
     int id = document["id"].GetInt();
     User *u;
-    vector<Chat*> chats;
-    Chat* ch;
+    vector<Chat *> chats;
+    Chat *ch;
+    Message *m;
+    string result;
+    Client *c1;
     switch (id) {
         case COMMAND_TEST:
             c = new CommandTest(document["message"].GetString());
@@ -38,7 +39,8 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
         case COMMAND_REGISTER_REQUEST:
 
-            u = new User("", document["name"].GetString(),document["surname"].GetString(),document["email"].GetString(),document["password"].GetString());
+            u = new User("", document["name"].GetString(), document["surname"].GetString(),
+                         document["email"].GetString(), document["password"].GetString());
             c = new CommandRegistration(usersManager->Registration(u));
             sender.sendMessage(c->getSerializedString());
             delete u;
@@ -48,11 +50,11 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
         case COMMAND_LOGIN_REQUEST: //21
             u = usersManager->Login(document["email"].GetString(), document["password"].GetString());
             if (u != nullptr) {
-                sender.user_id = u->id;
+                sender.myUser = u;
             }
             c = new CommandLogin(u);
             sender.sendMessage(c->getSerializedString());
-            delete u;
+            //delete u;
             delete c;
             break;
 
@@ -60,7 +62,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             break;
     }
 
-    if (sender.user_id.empty()) {
+    if (sender.myUser == nullptr) {
         //Not Logged yet. The following switch case is reserved to logged users.
         return;
     }
@@ -80,25 +82,36 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
 
         case COMMAND_ADD_CONTACT_REQUEST:
-            //TODO: Add new contact = Create a new chat between Sender and Receiver
-            //My Id = sender.user_id
             //document["email"] = email of the other contact. Search it in the db, fetch the id and so create a new chat between them.
+            u = usersManager->getUserByEmail(document["email"].GetString());
 
-            c = new CommandGeneric(COMMAND_ADD_CONTACT_RESPONSE, true, "contatto gia esistente oppure nnt tt apposto");
+            if (u == nullptr) {
+                c = new CommandGeneric(COMMAND_ADD_CONTACT_RESPONSE, false, "User not found");
+                sender.sendMessage(c->getSerializedString());
+                delete c;
+                break;
+            }
+
+            ch = new Chat("");
+            ch->addPartecipant(u->id);
+            ch->addPartecipant(sender.myUser->id);
+
+            result = chatManager->createChat(ch);
+
+            c = new CommandGeneric(COMMAND_ADD_CONTACT_RESPONSE, result == "ok", result);
             sender.sendMessage(c->getSerializedString());
             delete c;
             break;
 
         case COMMAND_DELETE_CHAT_REQUEST:
-
-            //TODO: Implement deletion of chats.
             /*
              * Packet composition:
              *     document["chat-id"]
              *     document["isGroup"]
-             *
              */
-            c = new CommandGeneric(COMMAND_DELETE_CHAT_RESPONSE, true, "chat cancellata o errore");
+            result = chatManager->deleteChat(document["chat-id"].GetString(), sender.myUser->id);
+
+            c = new CommandGeneric(COMMAND_DELETE_CHAT_RESPONSE, result == "ok", result);
             sender.sendMessage(c->getSerializedString());
             delete c;
             break;
@@ -108,17 +121,16 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
              * Packet composition:
              *      document["ids"] => array of int
              */
-
-
+            ch = new Chat("");
             if (document["ids"].IsArray()) {
                 // const Value& ids = document["ids"];
-                /*
-                 *      for (SizeType i = 0; i < ids.Size(); i++)
-                 *          int id = ids[i].GetInt()
-                 *
-                 */
 
-                c = new CommandGeneric(COMMAND_CREATE_GROUP_RESPONSE, true, "chat cancellata o errore");
+                for (SizeType i = 0; i < document["ids"].Size(); i++) {
+                    ch->addPartecipant(document["ids"][i].GetString());
+                }
+                result = chatManager->createChat(ch);
+
+                c = new CommandGeneric(COMMAND_CREATE_GROUP_RESPONSE, result == "ok", result);
                 sender.sendMessage(c->getSerializedString());
                 delete c;
             }
@@ -132,17 +144,39 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
              *      "text":  string containing the message content
              *      "media": null or base64 string
              */
+            m = new Message(document["content"].GetString(), sender.myUser->id,
+                            sender.myUser->name + sender.myUser->surname, document["media"].GetString());
+            ch = chatManager->addMessageToChat(document["chat-id"].GetString(), m);
+
+            if (ch == nullptr) {
+                cout << "Received an invalid message.\n";
+                delete m;
+                break;
+            }
+
+            c = new CommandMessage(ch->Id, m);
+
+            for (auto p: ch->Participants) {
+                c1 = server->getClientByUserId(p);
+                if (c1 != nullptr) {
+                    c1->sendMessage(c->getSerializedString());
+                }
+            }
+
+            delete c;
+            delete m;
+
             break;
 
         case COMMAND_FETCH_CONTACTS_REQUEST:
-            cout << "ciao1\n";
-            chats = chatManager->fetchChats(sender.user_id);
-            cout << "ciao2\n";
-            for(auto p : chats){
-                if(!p->IsGroup){
-                    p->Participants.remove(sender.user_id);
-                    u= usersManager->getUserById(p->Participants.front());
-                    p->Name= u->name + " " + u->surname;
+
+            chats = chatManager->fetchChats(sender.myUser->id);
+
+            for (auto p : chats) {
+                if (!p->IsGroup) {
+                    p->Participants.remove(sender.myUser->id);
+                    u = usersManager->getUserById(p->Participants.front());
+                    p->Name = u->name + " " + u->surname;
                     delete u;
                 }
             }
@@ -150,12 +184,25 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             c = new CommandFetchContacts(chats);
             sender.sendMessage(c->getSerializedString());
             delete c;
-            for(auto p : chats){
+            for (auto p : chats) {
                 delete p;
             }
             chats.clear();
 
             break;
+
+        case COMMAND_FETCH_CHAT_REQUEST:
+
+            ch = chatManager->getChatById(document["chat-id"].GetString());
+            result = "";
+            if (!ch->IsGroup) {
+                ch->Participants.remove(sender.myUser->id);
+                result = getUserStatus(ch->Participants.front());
+            }
+            c = new CommandFetchChat(ch->messagges, result);
+            sender.sendMessage(c->getSerializedString());
+            delete c;
+            delete ch;
 
         default:
             break;
@@ -196,7 +243,7 @@ string Dispatcher::getUserStatus(const string &user_id) {
             cout << "User " << user_id << " doesn't have a last-access time!\n";
             return "Undefined";
         } else {
-            return formatDateFromMilliseconds(count);
+            return utils::formatDateFromMilliseconds(count);
         }
     }
 }

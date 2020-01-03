@@ -19,6 +19,8 @@ rapidjson/stringbuffer.h
 C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/User.h
 ../Primitives/Chat.h
 C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/Chat.h
+../Utils/utils.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
 
 C:/Users/Noemi/CLionProjects/Chat-Server/Database/MediaManager.h
 string
@@ -77,6 +79,8 @@ string
 -
 Security/Crypto.h
 C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
+../Primitives/User.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Primitives/User.h
 
 C:/Users/Noemi/CLionProjects/Chat-Server/Socket/Security/Crypto.h
 openssl/rsa.h
@@ -114,7 +118,7 @@ C:/Users/Noemi/CLionProjects/Chat-Server/Utils/base64.h
 string
 -
 
-C:/Users/Noemi/CLionProjects/Chat-Server/Utils/util.h
+C:/Users/Noemi/CLionProjects/Chat-Server/Utils/utils.h
 iostream
 -
 chrono
@@ -127,8 +131,6 @@ rapidjson/prettywriter.h
 -
 rapidjson/stringbuffer.h
 -
-../Utils/util.h
-C:/Users/Noemi/CLionProjects/Chat-Server/Utils/util.h
 rapidjson/document.h
 -
 ../Commands/Command.h

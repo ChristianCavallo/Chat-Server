@@ -20,8 +20,11 @@ public:
 
     Chat* addMessageToChat(const string &chatid, Message *m);
 
-    Chat *createChat(Chat* ch);
+    string createChat(Chat* ch);
 
+    Chat *getChatById(const string &id);
+
+    string deleteChat(const string &chatid, const string& userid);
 };
 
 
