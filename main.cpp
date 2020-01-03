@@ -15,8 +15,7 @@ int main() {
 
     Mongodb::getInstance(); //Prima inizializzazione del db
     Dispatcher::getInstance(); //Lazy initialization
-
-
+    
     auto *server = new Server();
     server->start();
 

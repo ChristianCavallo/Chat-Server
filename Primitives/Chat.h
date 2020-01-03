@@ -30,16 +30,23 @@ public:
 
     const string &getId() const;
 
-    void addPartecipant(const string& id){
+    void addPartecipant(const string &id) {
         Participants.push_front(id);
     }
 
-    void addMessage(Message* m){
+    void addMessage(Message *m) {
         messagges.push_back(m);
     }
 
     virtual ~Chat();
 
+    bool operator<(const Chat &rhs) const;
+
+    bool operator>(const Chat &rhs) const;
+
+    bool operator<=(const Chat &rhs) const;
+
+    bool operator>=(const Chat &rhs) const;
 };
 
 

@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include "../Primitives/User.h"
+#include <bsoncxx/types.hpp>
 
 using std::string;
 using namespace std;
@@ -22,7 +23,7 @@ public:
 
     void updateUserLastAccess(const string &id);
 
-    long long getLastAccess(const string &userid);
+    bsoncxx::types::b_date getLastAccess(const string &userid);
 
     User *getUserById(const string &id);
 

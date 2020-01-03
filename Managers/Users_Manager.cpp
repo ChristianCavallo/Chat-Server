@@ -66,7 +66,7 @@ void Users_Manager::updateUserLastAccess(const string &id) {
     Mongodb::getInstance().UpdateUserLastAccess(id);
 }
 
-long long Users_Manager::getLastAccess(const string &userid) {
+bsoncxx::types::b_date Users_Manager::getLastAccess(const string &userid) {
     return Mongodb::getInstance().getLastAccess(userid);
 }
 

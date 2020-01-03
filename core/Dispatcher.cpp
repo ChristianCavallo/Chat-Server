@@ -54,6 +54,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             }
             c = new CommandLogin(u);
             sender.sendMessage(c->getSerializedString());
+
             //delete u;
             delete c;
             break;
@@ -179,7 +180,18 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
                     p->Name = u->name + " " + u->surname;
                     delete u;
                 }
+
+                if (p->messagges.size() > 20) {
+                    for (int i = 0; i < p->messagges.size() - 20; i++) {
+                        delete p->messagges.at(i);
+                    }
+                    p->messagges.erase(p->messagges.begin(), p->messagges.end() - 20);
+                }
+
+                p->NumNotifications = getNotifiesCount(p->messagges, sender.myUser->lastaccess);
             }
+
+            sort(chats.begin(), chats.end()); //Sort chats
 
             c = new CommandFetchContacts(chats);
             sender.sendMessage(c->getSerializedString());
@@ -199,6 +211,14 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
                 ch->Participants.remove(sender.myUser->id);
                 result = getUserStatus(ch->Participants.front());
             }
+
+            if (ch->messagges.size() > 20) {
+                for (int i = 0; i < ch->messagges.size() - 20; i++) {
+                    delete ch->messagges.at(i);
+                }
+                ch->messagges.erase(ch->messagges.begin(), ch->messagges.end() - 20);
+            }
+
             c = new CommandFetchChat(ch->messagges, result);
             sender.sendMessage(c->getSerializedString());
             delete c;
@@ -237,15 +257,29 @@ void Dispatcher::logoutUser(const string &id) {
 string Dispatcher::getUserStatus(const string &user_id) {
     if (server->getClientByUserId(user_id) != nullptr) {
         return "online";
-    } else {
-        long long count = usersManager->getLastAccess(user_id);
-        if (count == 0) {
-            cout << "User " << user_id << " doesn't have a last-access time!\n";
-            return "Undefined";
-        } else {
-            return utils::formatDateFromMilliseconds(count);
+    }
+
+    long long count = usersManager->getLastAccess(user_id).value.count();
+
+    return "Last access " + utils::formatDateFromMilliseconds(count);
+
+}
+
+int Dispatcher::getNotifiesCount(vector<Message *> mv, bsoncxx::types::b_date lastaccess) {
+    int notifies = 0;
+    //Check if the date of last message is > than last access
+    if (mv.at(mv.size() - 1)->ReceptionDate > lastaccess) {
+        //Calculate the number of notifies
+        for (int i = 0; i < mv.size(); i++) {
+            if (mv.at(i)->ReceptionDate > lastaccess) {
+                notifies = mv.size() - i;
+                break;
+            }
         }
     }
+
+    return notifies;
 }
+
 
 

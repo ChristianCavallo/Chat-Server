@@ -6,6 +6,8 @@
 #define CHAT_SERVER_USER_H
 
 #include <string>
+#include <bsoncxx/types.hpp>
+#include <chrono>
 
 using namespace std;
 
@@ -19,11 +21,14 @@ public:
     string surname;
     string email;
     string password;
+    bsoncxx::types::b_date lastaccess{std::chrono::system_clock::now()};
+
+    User(const string &id, const string &name, const string &surname, const string &email, const string &password,
+         const bsoncxx::types::b_date &lastaccess) : id(id), name(name), surname(surname), email(email),
+                                                     password(password), lastaccess(lastaccess) {}
 
     User(const string &id, const string &name, const string &surname, const string &email, const string &password) : id(
             id), name(name), surname(surname), email(email), password(password) {}
-
-    User() {}
 
     //questi li genera in automatico... praticamente possiamo cambiare il comportamento degli operatori tipo ==
     bool operator==(const User &rhs) const {

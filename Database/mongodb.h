@@ -69,7 +69,7 @@ public:
 
     void UpdateUserLastAccess(const string &id);
 
-    long long getLastAccess(const string &userid);
+    bsoncxx::types::b_date getLastAccess(const string &userid);
 
     vector<Chat *> getChats(const string &userid);
 

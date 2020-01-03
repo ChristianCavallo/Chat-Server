@@ -24,6 +24,14 @@ public:
             const bsoncxx::types::b_date &receptionDate);
 
     Message(const string &content, const string &sender_id, const string &senderName, const string &media);
+
+    bool operator<(const Message &rhs) const;
+
+    bool operator>(const Message &rhs) const;
+
+    bool operator<=(const Message &rhs) const;
+
+    bool operator>=(const Message &rhs) const;
 };
 
 

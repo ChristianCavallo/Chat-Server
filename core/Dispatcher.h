@@ -47,6 +47,8 @@ public:
     void logoutUser(const string &id);
 
     string getUserStatus(const string &user_id);
+
+    int getNotifiesCount(vector<Message *> mv, bsoncxx::types::b_date lastaccess);
 };
 
 
