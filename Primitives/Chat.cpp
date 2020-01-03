@@ -26,4 +26,20 @@ Chat::~Chat() {
 
 }
 
+bool Chat::operator<(const Chat &rhs) const {
+    return NumNotifications < rhs.NumNotifications;
+}
+
+bool Chat::operator>(const Chat &rhs) const {
+    return rhs < *this;
+}
+
+bool Chat::operator<=(const Chat &rhs) const {
+    return !(rhs < *this);
+}
+
+bool Chat::operator>=(const Chat &rhs) const {
+    return !(*this < rhs);
+}
+
 

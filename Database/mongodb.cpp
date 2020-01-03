@@ -60,9 +60,8 @@ User *Mongodb::getUser(const string &email) {
         string password = result->view()["password"].get_utf8().value.to_string();
 
         string id = result->view()["_id"].get_oid().value.to_string();
-
-        //in teoria, è finita. ma no che non partiva per il trattino basso xD pignoli xD già xD cmq grazie xD un atitmo che faccio pipì e torno xD
-        User *u = new User(id, name, surname, email, password);
+        bsoncxx::types::b_date dt = result->view()["last-access"].get_date();
+        User *u = new User(id, name, surname, email, password, dt);
         return u;
 
     }
@@ -86,8 +85,8 @@ User *Mongodb::getUserById(const string &id) {
 
         string id = result->view()["_id"].get_oid().value.to_string();
 
-        //in teoria, è finita. ma no che non partiva per il trattino basso xD pignoli xD già xD cmq grazie xD un atitmo che faccio pipì e torno xD
-        User *u = new User(id, name, surname, email, password);
+        bsoncxx::types::b_date dt = result->view()["last-access"].get_date();
+        User *u = new User(id, name, surname, email, password, dt);
         return u;
 
     }
@@ -104,14 +103,16 @@ void Mongodb::UpdateUserLastAccess(const string &id) {
                                "last-access" << dt << close_document << finalize);
 }
 
-long long Mongodb::getLastAccess(const string &userid) {
+bsoncxx::types::b_date Mongodb::getLastAccess(const string &userid) {
     coll = this->db["users"];
     bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
             document{} << "_id" << bsoncxx::oid{stdx::string_view{userid}} << finalize);
     if (result) {
-        return result->view()["last-access"].get_date().value.count();
+        return result->view()["last-access"].get_date();
     }
-    return 0;
+
+    bsoncxx::types::b_date dt{std::chrono::system_clock::now()};
+    return dt;
 }
 
 

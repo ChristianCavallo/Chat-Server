@@ -16,7 +16,6 @@
 #include "Security/Crypto.h"
 #include "../Primitives/User.h"
 
-
 #ifndef CHAT_SERVER_CLIENT_H
 #define CHAT_SERVER_CLIENT_H
 

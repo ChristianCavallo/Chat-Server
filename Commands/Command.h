@@ -274,6 +274,9 @@ public:
             writer.String("isGroup");
             writer.Bool(c->IsGroup);
 
+            writer.String("notifies");
+            writer.Int(c->NumNotifications);
+
             writer.EndObject();
         }
 
