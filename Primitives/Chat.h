@@ -26,9 +26,6 @@ public:
 
     Chat::Chat(const string &id) : Id(id) {}
 
-    int getNumNotifications() const;
-
-    const string &getId() const;
 
     void addPartecipant(const string &id) {
         Participants.push_front(id);
@@ -42,11 +39,6 @@ public:
 
     bool operator<(const Chat &rhs) const;
 
-    bool operator>(const Chat &rhs) const;
-
-    bool operator<=(const Chat &rhs) const;
-
-    bool operator>=(const Chat &rhs) const;
 };
 
 

@@ -263,7 +263,7 @@ public:
             writer.StartObject();
 
             writer.String("chat-id");
-            writer.String(c->getId().c_str(), static_cast<SizeType>(c->getId().size()));
+            writer.String(c->Id.c_str(), static_cast<SizeType>(c->Id.size()));
 
             writer.String("contact-id");
             writer.String(c->Participants.front().c_str(), static_cast<SizeType>(c->Participants.front().size()));
