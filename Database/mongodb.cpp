@@ -327,7 +327,7 @@ string Mongodb::deletePartecipant(const string& chatid, const string& userid){
     coll = this->db["chats"];
 
     auto result = coll.update_one(document{} << "_id" << bsoncxx::oid{stdx::string_view{chatid}} << finalize,
-                                  document{} << "$pop" << open_document << "partecipants" << userid
+                                  document{} << "$pull" << open_document << "partecipants" << userid
                                              << close_document << finalize);
 
 
