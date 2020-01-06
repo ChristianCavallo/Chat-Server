@@ -214,7 +214,7 @@ Chat *Mongodb::getChat(Chat *c) {
     //db.chats.find_one( {   partecipants : { $all : [ 1, 2] } , isGroup: false   } )
     bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
             document{} << "partecipants" << open_document << "$all"
-                       << array_builder << close_document << finalize);
+                       << array_builder << close_document << "isgroup" << checkIsgroup << finalize);
 
 
     if (result) {

@@ -165,7 +165,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
             delete c;
             delete m;
-
+            delete ch;
             break;
         }
         case COMMAND_FETCH_CONTACTS_REQUEST: {
@@ -173,8 +173,8 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             vector<Chat *> chats = chatManager->fetchChats(sender.myUser->id);
 
             for (auto p : chats) {
+                p->Participants.remove(sender.myUser->id);
                 if (!p->IsGroup) {
-                    p->Participants.remove(sender.myUser->id);
                     User *u = usersManager->getUserById(p->Participants.front());
                     p->Name = u->name + " " + u->surname;
                     delete u;
