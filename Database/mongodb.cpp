@@ -12,7 +12,7 @@ using namespace std;
 
 Mongodb::~Mongodb() {
     delete inst;
-    delete client;
+    delete pool;
 
 }
 
@@ -26,7 +26,10 @@ string Mongodb::addUser(User *u) {     //Passo l'utente ovverò tutti i campi cr
         return "User already exist.";
     }
 
-    this->coll = db["users"];
+
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["users"];
+
     auto builder = bsoncxx::builder::stream::document{};
     auto now = std::chrono::system_clock::now();
     bsoncxx::types::b_date dt{now};
@@ -48,8 +51,9 @@ string Mongodb::addUser(User *u) {     //Passo l'utente ovverò tutti i campi cr
 User *Mongodb::getUser(const string &email) {
 
     //SELECT * FROM chats WHERE partecipants =
-
-    coll = this->db["users"];                                           // SELECT * FROM users WHERE email = 'email'
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["users"];
+    //coll = this->db["users"];                                           // SELECT * FROM users WHERE email = 'email'
     bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
             document{} << "email" << email << finalize);
     if (result) {
@@ -72,8 +76,9 @@ User *Mongodb::getUser(const string &email) {
 User *Mongodb::getUserById(const string &id) {
 
     //SELECT * FROM chats WHERE partecipants =
-
-    coll = this->db["users"];                                           // SELECT * FROM users WHERE email = 'email'
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["users"];
+    //coll = this->db["users"];                                           // SELECT * FROM users WHERE email = 'email'
     bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
             document{} << "_id" << bsoncxx::oid{stdx::string_view{id}} << finalize);
     if (result) {
@@ -97,14 +102,18 @@ User *Mongodb::getUserById(const string &id) {
 void Mongodb::UpdateUserLastAccess(const string &id) {
     auto now = std::chrono::system_clock::now();
     bsoncxx::types::b_date dt{now};
-    coll = this->db["users"];       //UPDATE users SET last-access = now WHERE id = id
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["users"];
+    //coll = this->db["users"];       //UPDATE users SET last-access = now WHERE id = id
     coll.update_one(document{} << "_id" << bsoncxx::oid{stdx::string_view{id}} << finalize,
                     document{} << "$set" << open_document <<
                                "last-access" << dt << close_document << finalize);
 }
 
 bsoncxx::types::b_date Mongodb::getLastAccess(const string &userid) {
-    coll = this->db["users"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["users"];
+    //coll = this->db["users"];
     bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
             document{} << "_id" << bsoncxx::oid{stdx::string_view{userid}} << finalize);
     if (result) {
@@ -125,8 +134,9 @@ string Mongodb::CreateChat(Chat *ch) {
         delete ch1;
         return "Chat already exist.";
     }
-
-    this->coll = db["chats"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //this->coll = db["chats"];
     auto builder = bsoncxx::builder::stream::document{};
 
     bool isgroup = false;
@@ -155,7 +165,10 @@ string Mongodb::CreateChat(Chat *ch) {
 }
 
 Chat *Mongodb::getChatById(const string &chatId) {
-    coll = this->db["chats"];
+
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //coll = this->db["chats"];
 
     //chat ha: id_chat(generato dal db) - Nomechat - lista partecipanti - isGroup - message[]
 
@@ -196,7 +209,9 @@ Chat *Mongodb::getChatById(const string &chatId) {
 }
 
 Chat *Mongodb::getChat(Chat *c) {
-    coll = this->db["chats"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //coll = this->db["chats"];
 
     auto array_builder = bsoncxx::builder::stream::array{};
 
@@ -214,7 +229,7 @@ Chat *Mongodb::getChat(Chat *c) {
     //db.chats.find_one( {   partecipants : { $all : [ 1, 2] } , isGroup: false   } )
     bsoncxx::stdx::optional<bsoncxx::document::value> result = coll.find_one(
             document{} << "partecipants" << open_document << "$all"
-                       << array_builder << close_document << finalize);
+                       << array_builder << close_document << "isgroup" << checkIsgroup << finalize);
 
 
     if (result) {
@@ -252,7 +267,9 @@ Chat *Mongodb::getChat(Chat *c) {
 
 Chat *Mongodb::updateMessage(const string &chatId, Message *m) {
 
-    coll = this->db["chats"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //coll = this->db["chats"];
 
     auto result = coll.update_one(document{} << "_id" << bsoncxx::oid{stdx::string_view{chatId}} << finalize,
                                   document{} << "$push" << open_document << "messages" <<
@@ -269,7 +286,9 @@ Chat *Mongodb::updateMessage(const string &chatId, Message *m) {
 vector<Chat *> Mongodb::getChats(const string &userid) {
 
     vector<Chat*> ch;
-    coll = this->db["chats"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //coll = this->db["chats"];
 
     mongocxx::cursor cursor = coll.find(
             document{} << "partecipants" << userid << finalize);
@@ -309,7 +328,9 @@ vector<Chat *> Mongodb::getChats(const string &userid) {
 
 string Mongodb::deleteChatById(const string &chatid){
 
-    coll = this->db["chats"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //coll = this->db["chats"];
 
 
     auto result =coll.delete_one(
@@ -323,8 +344,9 @@ string Mongodb::deleteChatById(const string &chatid){
 }
 
 string Mongodb::deletePartecipant(const string& chatid, const string& userid){
-
-    coll = this->db["chats"];
+    auto client = pool->acquire();
+    this->coll = client->database("testdb")["chats"];
+    //coll = this->db["chats"];
 
     auto result = coll.update_one(document{} << "_id" << bsoncxx::oid{stdx::string_view{chatid}} << finalize,
                                   document{} << "$pull" << open_document << "partecipants" << userid

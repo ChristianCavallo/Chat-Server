@@ -150,6 +150,7 @@ void Client::close() {
     if (myUser != nullptr) {
         Dispatcher::getInstance().logoutUser(myUser->id);
         cout << "Logout user: " << myUser->id << "\n";
+        delete myUser;
     }
 
 }
@@ -196,9 +197,7 @@ void Client::sendMessage(const string &msg) {
     }
 }
 
-Client::~Client(){
-    delete  myUser;
-};
+Client::~Client()=default;
 
 
 

@@ -265,8 +265,13 @@ public:
             writer.String("chat-id");
             writer.String(c->Id.c_str(), static_cast<SizeType>(c->Id.size()));
 
-            writer.String("contact-id");
-            writer.String(c->Participants.front().c_str(), static_cast<SizeType>(c->Participants.front().size()));
+            writer.String("contacts-id");
+
+            writer.StartArray();
+            for(auto p: c->Participants){
+                writer.String(p.c_str(), static_cast<SizeType>(p.size()));
+            }
+            writer.EndArray();
 
             writer.String("name");
             writer.String(c->Name.c_str(), static_cast<SizeType>(c->Name.size()));

@@ -111,6 +111,31 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             Command *c = new CommandGeneric(COMMAND_DELETE_CHAT_RESPONSE, result == "ok", result);
             sender.sendMessage(c->getSerializedString());
             delete c;
+
+            if(result == "ok"){
+                Message *m = new Message("User '" + sender.myUser->name + " " + sender.myUser->surname + "' has left the group", "1234567890",
+                                         "Server", "");
+                Chat *ch = chatManager->addMessageToChat(document["chat-id"].GetString(), m);
+
+                if (ch == nullptr) {
+                    delete m;
+                    break;
+                }
+
+                Command *c = new CommandMessage(ch->Id, m);
+
+                for (auto p: ch->Participants) {
+                    Client *c1 = server->getClientByUserId(p);
+                    if (c1 != nullptr) {
+                        c1->sendMessage(c->getSerializedString());
+                    }
+                }
+
+                delete c;
+                delete m;
+                delete ch;
+            }
+
             break;
         }
         case COMMAND_CREATE_GROUP_REQUEST: {
@@ -165,7 +190,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
             delete c;
             delete m;
-
+            delete ch;
             break;
         }
         case COMMAND_FETCH_CONTACTS_REQUEST: {
@@ -173,8 +198,8 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             vector<Chat *> chats = chatManager->fetchChats(sender.myUser->id);
 
             for (auto p : chats) {
+                p->Participants.remove(sender.myUser->id);
                 if (!p->IsGroup) {
-                    p->Participants.remove(sender.myUser->id);
                     User *u = usersManager->getUserById(p->Participants.front());
                     p->Name = u->name + " " + u->surname;
                     delete u;
