@@ -9,6 +9,7 @@
 #include <mongocxx/client.hpp>
 #include <mongocxx/stdx.hpp>
 #include <mongocxx/uri.hpp>
+#include <mongocxx/pool.hpp>
 #include <mongocxx/instance.hpp>
 #include <bsoncxx/builder/stream/array.hpp>
 #include <bsoncxx/builder/stream/document.hpp>
@@ -46,15 +47,14 @@ public:
 
 private:
     instance *inst;
-    mongocxx::client *client;
-    database db;
+    mongocxx::pool *pool;
+    //database db;
     collection coll;
 
     Mongodb() {
         inst = new instance();
-        client = new mongocxx::client(uri{});
+        pool = new mongocxx::pool{mongocxx::uri{}};
 
-        db = client->database("testdb");
         cout << "Mongo connected\n";
     }
 
