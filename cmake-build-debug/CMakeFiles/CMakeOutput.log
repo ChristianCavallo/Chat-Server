@@ -21,7 +21,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx86/x86/cl.exe 
@@ -45,57 +45,57 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_82c4d\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_82c4d.dir\build.make /nologo -L                  CMakeFiles\cmTC_82c4d.dir\build
-Building C object CMakeFiles/cmTC_82c4d.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\Noemi\AppData\Local\Temp\nm219D.tmp
+Run Build Command(s):nmake /nologo cmTC_98ce2\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_98ce2.dir\build.make /nologo -L                  CMakeFiles\cmTC_98ce2.dir\build
+Building C object CMakeFiles/cmTC_98ce2.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\chryc\AppData\Local\Temp\nm926A.tmp
 testCCompiler.c
-Linking C executable cmTC_82c4d.exe
-	"C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_82c4d.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_82c4d.dir\objects1.rsp @C:\Users\Noemi\AppData\Local\Temp\nm2353.tmp
-	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_82c4d.exe -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
+Linking C executable cmTC_98ce2.exe
+	"C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_98ce2.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_98ce2.dir\objects1.rsp @C:\Users\chryc\AppData\Local\Temp\nm9440.tmp
+	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_98ce2.exe" -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_3fd4b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_3fd4b.dir\build.make /nologo -L                  CMakeFiles\cmTC_3fd4b.dir\build
-Building C object CMakeFiles/cmTC_3fd4b.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\Noemi\AppData\Local\Temp\nm2788.tmp
+Run Build Command(s):nmake /nologo cmTC_e04af\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_e04af.dir\build.make /nologo -L                  CMakeFiles\cmTC_e04af.dir\build
+Building C object CMakeFiles/cmTC_e04af.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\chryc\AppData\Local\Temp\nmA352.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_3fd4b.exe
-	"C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3fd4b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3fd4b.dir\objects1.rsp @C:\Users\Noemi\AppData\Local\Temp\nm27E7.tmp
-	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_3fd4b.exe -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
+Linking C executable cmTC_e04af.exe
+	"C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_e04af.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_e04af.dir\objects1.rsp @C:\Users\chryc\AppData\Local\Temp\nmA41F.tmp
+	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_e04af.exe" -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
 
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_b3ae6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_b3ae6.dir\build.make /nologo -L                  CMakeFiles\cmTC_b3ae6.dir\build
-Building CXX object CMakeFiles/cmTC_b3ae6.dir/testCXXCompiler.cxx.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\Noemi\AppData\Local\Temp\nm2AF3.tmp
+Run Build Command(s):nmake /nologo cmTC_90e4a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_90e4a.dir\build.make /nologo -L                  CMakeFiles\cmTC_90e4a.dir\build
+Building CXX object CMakeFiles/cmTC_90e4a.dir/testCXXCompiler.cxx.obj
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\chryc\AppData\Local\Temp\nmAD36.tmp
 testCXXCompiler.cxx
-Linking CXX executable cmTC_b3ae6.exe
-	"C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_b3ae6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_b3ae6.dir\objects1.rsp @C:\Users\Noemi\AppData\Local\Temp\nm2B62.tmp
-	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_b3ae6.exe -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
+Linking CXX executable cmTC_90e4a.exe
+	"C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_90e4a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_90e4a.dir\objects1.rsp @C:\Users\chryc\AppData\Local\Temp\nmAE11.tmp
+	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_90e4a.exe" -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d4112\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d4112.dir\build.make /nologo -L                  CMakeFiles\cmTC_d4112.dir\build
-Building CXX object CMakeFiles/cmTC_d4112.dir/CMakeCXXCompilerABI.cpp.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\Noemi\AppData\Local\Temp\nm2DE1.tmp
+Run Build Command(s):nmake /nologo cmTC_9ea40\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9ea40.dir\build.make /nologo -L                  CMakeFiles\cmTC_9ea40.dir\build
+Building CXX object CMakeFiles/cmTC_9ea40.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\chryc\AppData\Local\Temp\nmB757.tmp
 CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d4112.exe
-	"C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d4112.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d4112.dir\objects1.rsp @C:\Users\Noemi\AppData\Local\Temp\nm2E40.tmp
-	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Noemi/CLionProjects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_d4112.exe -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
+Linking CXX executable cmTC_9ea40.exe
+	"C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9ea40.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9ea40.dir\objects1.rsp @C:\Users\chryc\AppData\Local\Temp\nmB833.tmp
+	powershell -noprofile -executionpolicy Bypass -file C:/vcpkg-2019.11/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/chryc/Desktop/CLion Projects/Chat-Server/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_9ea40.exe" -installedDir C:/vcpkg-2019.11/installed/x86-windows/debug/bin -OutVariable out
 
 
 

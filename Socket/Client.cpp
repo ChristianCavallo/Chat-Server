@@ -58,14 +58,11 @@ void Client::receive() {
         }
 
         memcpy(&a, syncBuffer, 4);
-        if(a < 0 || a > 1048000){ //Payload < 1Mb
+        if (a < 0) {
             cout << "Size error: " << a << "\n";
             continue;
         }
-        //cout << "Payload size is " << a << "\n";
 
-        //allocate a new buffer with sizeof(a)
-        //TODO: REMEMBER TO DELETE THE BUFFER!!!!!
         buffer = new char[a + 1];
         received = recv(this->sck, buffer, a, MSG_WAITALL);
         if(received != a){
@@ -114,8 +111,7 @@ void Client::receive() {
             string decrypted = crypto->decrypt_AES(buffer);
             cout << "Received a new message: " << decrypted << "\n";
             Dispatcher::getInstance().executeRequest(*this, decrypted);
-            //Quando arriva un nuovo messaggio, questo viene passato al Dispatcher... di preciso alla funzione executeRequest
-            //ok?ok
+            
             decrypted.clear();
         }
 
