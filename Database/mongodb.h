@@ -2,6 +2,9 @@
 // Created by chryc on 11/12/2019.
 //
 
+#ifndef CHAT_SERVER_MONGODB_H
+#define CHAT_SERVER_MONGODB_H
+
 #include <cstdint>
 #include <iostream>
 #include <vector>
@@ -13,10 +16,12 @@
 #include <mongocxx/instance.hpp>
 #include <bsoncxx/builder/stream/array.hpp>
 #include <bsoncxx/builder/stream/document.hpp>
-
 #include "../Primitives/User.h"
 #include "../Primitives/Chat.h"
 #include <vector>
+
+#include <bsoncxx/types.hpp>
+#include <chrono>
 
 using bsoncxx::builder::stream::close_array;
 using bsoncxx::builder::stream::close_document;
@@ -26,10 +31,6 @@ using bsoncxx::builder::stream::open_array;
 using bsoncxx::builder::stream::open_document;
 using namespace mongocxx;
 using namespace std;
-
-#ifndef CHAT_SERVER_MONGODB_H
-#define CHAT_SERVER_MONGODB_H
-
 
 class Mongodb {
 

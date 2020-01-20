@@ -1,13 +1,10 @@
 //
 // Created by chryc on 14/12/2019.
 //
-#include <rapidjson/prettywriter.h>
-#include <rapidjson/stringbuffer.h>
-#include <rapidjson/document.h>
-#include "../Commands/Command.h"
-#include "../Database/MediaManager.h"
-#include "../Primitives/User.h"
+
 #include "Dispatcher.h"
+#include "../Socket/Client.h"
+#include "../Commands/Command.h"
 
 
 void Dispatcher::executeRequest(Client &sender, const string &message) {
@@ -113,8 +110,10 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             delete c;
 
             if(result == "ok"){
-                Message *m = new Message("User '" + sender.myUser->name + " " + sender.myUser->surname + "' has left the group", "1234567890",
-                                         "Server", "");
+                auto *m = new Message(
+                        "User '" + sender.myUser->name + " " + sender.myUser->surname + "' has left the group",
+                        "1234567890",
+                        "Server", "");
                 Chat *ch = chatManager->addMessageToChat(document["chat-id"].GetString(), m);
 
                 if (ch == nullptr) {
@@ -124,7 +123,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
                 Command *c = new CommandMessage(ch->Id, m);
 
-                for (auto p: ch->Participants) {
+                for (const auto &p: ch->Participants) {
                     Client *c1 = server->getClientByUserId(p);
                     if (c1 != nullptr) {
                         c1->sendMessage(c->getSerializedString());
@@ -169,8 +168,8 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
              *      "text":  string containing the message content
              *      "media": null or base64 string
              */
-            Message *m = new Message(document["content"].GetString(), sender.myUser->id,
-                            sender.myUser->name + " " + sender.myUser->surname, document["media"].GetString());
+            auto *m = new Message(document["content"].GetString(), sender.myUser->id,
+                                  sender.myUser->name + " " + sender.myUser->surname, document["media"].GetString());
             Chat *ch = chatManager->addMessageToChat(document["chat-id"].GetString(), m);
 
             if (ch == nullptr) {
@@ -181,7 +180,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
             Command *c = new CommandMessage(ch->Id, m);
 
-            for (auto p: ch->Participants) {
+            for (const auto &p: ch->Participants) {
                 Client *c1 = server->getClientByUserId(p);
                 if (c1 != nullptr) {
                     c1->sendMessage(c->getSerializedString());
@@ -264,25 +263,6 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
 }
 
-void Dispatcher::executeResponse(Client &sender, Command *c) {
-
-    switch (c->id) {
-        case COMMAND_TEST:
-            //Casting Command al vero tipo.
-            dynamic_cast<CommandTest *>(c)->print();
-            break;
-
-        case COMMAND_REGISTER_RESPONSE:
-            break;
-
-        case COMMAND_LOGIN_RESPONSE:
-            break;
-
-        default:
-            break;
-    }
-
-}
 
 void Dispatcher::logoutUser(const string &id) {
     usersManager->updateUserLastAccess(id);
@@ -317,6 +297,4 @@ int Dispatcher::getNotifiesCount(vector<Message *> mv, bsoncxx::types::b_date la
 
     return notifies;
 }
-
-
 

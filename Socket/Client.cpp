@@ -5,11 +5,6 @@
 
 
 #include "Client.h"
-#include <iostream>
-#include <thread>
-#include <rapidjson/stringbuffer.h>
-#include <rapidjson/document.h>
-#include "../Commands/Command.h"
 #include "../core/Dispatcher.h"
 
 using namespace std;

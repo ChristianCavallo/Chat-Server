@@ -6,10 +6,16 @@
 #define CHAT_SERVER_DISPATCHER_H
 
 
-#include "../Socket/Client.h"
+#include "../Primitives/User.h"
+
 #include "../Managers/Users_Manager.h"
-#include "../Socket/Server.h"
 #include "../Managers/Chat_Manager.h"
+#include "../Database/MediaManager.h"
+
+#include <rapidjson/prettywriter.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/document.h>
+#include "../Socket/Server.h"
 
 class Dispatcher {
 public:
@@ -29,20 +35,17 @@ private:
     }
 
 public:
-
     Server *server;
 
     Dispatcher(Dispatcher const &) = delete;
 
     void operator=(Dispatcher const &) = delete;
 
-    //============================================
+
 public:
 
 
     void executeRequest(Client &sender, const string &message);
-
-    void executeResponse(Client &sender, Command *c);
 
     void logoutUser(const string &id);
 

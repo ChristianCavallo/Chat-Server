@@ -2,11 +2,10 @@
 // Created by chryc on 23/12/2019.
 //
 
-//#include "Windows.h"
-#include <string>
-
 #ifndef CHAT_SERVER_MEDIAMANAGER_H
 #define CHAT_SERVER_MEDIAMANAGER_H
+
+#include <string>
 
 #define FOLDER "MediaFiles"
 using namespace std;

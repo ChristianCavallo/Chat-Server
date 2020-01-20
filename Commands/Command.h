@@ -2,18 +2,19 @@
 // Created by chryc on 07/12/2019.
 //
 
+
+
+#ifndef CHAT_SERVER_COMMAND_H
+#define CHAT_SERVER_COMMAND_H
+
+#include "../Utils/utils.h"
 #include <string>
 #include <iostream>
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
 #include "../Primitives/User.h"
 #include "../Primitives/Chat.h"
-#include "../Utils/utils.h"
 
-#ifndef CHAT_SERVER_COMMAND_H
-#define CHAT_SERVER_COMMAND_H
-
-#endif //CHAT_SERVER_COMMAND_H
 
 using namespace std;
 using namespace rapidjson;
@@ -378,3 +379,6 @@ public:
     }
 
 };
+
+#endif //CHAT_SERVER_COMMAND_H
+

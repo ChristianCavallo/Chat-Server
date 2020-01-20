@@ -2,14 +2,16 @@
 // Created by chryc on 29/12/2019.
 //
 
+
+
+#ifndef CHAT_SERVER_CHAT_MANAGER_H
+#define CHAT_SERVER_CHAT_MANAGER_H
+
 #include <vector>
 #include <string>
 #include <iostream>
 #include "../Primitives/Chat.h"
 #include "../Primitives/Message.h"
-
-#ifndef CHAT_SERVER_CHAT_MANAGER_H
-#define CHAT_SERVER_CHAT_MANAGER_H
 
 using namespace std;
 

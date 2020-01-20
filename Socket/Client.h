@@ -3,6 +3,10 @@
 //
 
 
+
+#ifndef CHAT_SERVER_CLIENT_H
+#define CHAT_SERVER_CLIENT_H
+
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
@@ -11,14 +15,17 @@
 #include <Windows.h>
 #include <WinSock2.h>
 #include <WS2tcpip.h>
-#include <thread>
-#include <string>
 #include "Security/Crypto.h"
 #include "../Primitives/User.h"
+#include <iostream>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/document.h>
 
-#ifndef CHAT_SERVER_CLIENT_H
-#define CHAT_SERVER_CLIENT_H
 
+#include "../Commands/Command.h"
+
+#include <thread>
+#include <string>
 
 class Client {
 private:

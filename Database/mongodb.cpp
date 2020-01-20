@@ -3,10 +3,6 @@
 //
 
 #include "mongodb.h"
-#include "../Commands/Command.h"
-#include "../Primitives/User.h"
-#include <bsoncxx/types.hpp>
-#include <chrono>
 
 using namespace std;
 
@@ -128,21 +124,25 @@ bsoncxx::types::b_date Mongodb::getLastAccess(const string &userid) {
 //==========================Chat=========================//
 string Mongodb::CreateChat(Chat *ch) {
 
-    //creare la chat se esiste ricaricarla
-    Chat *ch1 = getChat(ch);
-    if (ch1 != nullptr) {
-        delete ch1;
-        return "Chat already exist.";
+    bool isgroup = false;
+    if (ch->Participants.size() > 2) {
+        isgroup = true;
     }
+
+    //potrei creare 100 gruppi con sempre le stesse persone...
+    if (!isgroup) {
+        Chat *ch1 = getChat(ch);
+        if (ch1 != nullptr) {
+            delete ch1;
+            return "Chat already exist.";
+        }
+    }
+
     auto client = pool->acquire();
     this->coll = client->database("testdb")["chats"];
     //this->coll = db["chats"];
     auto builder = bsoncxx::builder::stream::document{};
 
-    bool isgroup = false;
-    if (ch->Participants.size() > 2) {
-        isgroup = true;
-    }
     auto array_builder = bsoncxx::builder::basic::array{};
 
     for (const auto &element : ch->Participants) {

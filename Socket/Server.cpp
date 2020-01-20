@@ -1,21 +1,11 @@
 //
 // Created by chryc on 06/12/2019.
 //
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-#pragma comment (lib, "Ws2_32.lib")
 
-#include <Windows.h>
-#include <WinSock2.h>
-#include <WS2tcpip.h>
-#include <cstdio>
-#include <string>
-#include <iostream>
 #include "Server.h"
-#include <thread>
 
-#define DEFAULT_PORT "15000"
+
+
 
 using namespace std;
 
@@ -128,12 +118,9 @@ Client *Server::getClientByUserId(string id) {
     for (int i = 0; i < clients.size(); i++) {
         Client *c = clients.at(i);
         if (!c->closed) {
-            if(c->myUser != nullptr){
-                if (c->myUser->id == id) {
-                    return c;
-                }
+            if (c->myUser->id == id) {
+                return c;
             }
-
         }
 
     }

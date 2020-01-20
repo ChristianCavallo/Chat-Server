@@ -11,9 +11,7 @@
 
 using namespace std;
 
-class utils {
-
-public:
+namespace utils {
     static string formatDateFromMilliseconds(unsigned long long milliseconds) {
         time_t a = milliseconds / 1000; // or 1439467747
         struct tm *timeinfo = localtime(&a);
@@ -24,8 +22,8 @@ public:
         string time(buffer);
         return time;
     }
+}
 
-};
 
 
 #endif //CHAT_SERVER_UTILS_H

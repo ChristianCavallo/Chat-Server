@@ -155,9 +155,6 @@
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/base64.h">
 			<Option target="Chat_Server"/>
 		</Unit>
-		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/utils.cpp">
-			<Option target="Chat_Server"/>
-		</Unit>
 		<Unit filename="C:/Users/chryc/Desktop/CLion Projects/Chat-Server/Utils/utils.h">
 			<Option target="Chat_Server"/>
 		</Unit>

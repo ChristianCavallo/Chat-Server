@@ -3,6 +3,9 @@
 //
 
 
+#ifndef CHAT_SERVER_CRYPTO_H
+#define CHAT_SERVER_CRYPTO_H
+
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
 #include <openssl/err.h>
@@ -14,9 +17,6 @@
 #include <openssl/evp.h>
 #include <openssl/err.h>
 #include <openssl/rand.h>
-
-#ifndef CHAT_SERVER_CRYPTO_H
-#define CHAT_SERVER_CRYPTO_H
 
 using namespace std;
 using namespace std::chrono;

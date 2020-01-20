@@ -421,33 +421,6 @@ Utils\base64.cpp.s:
 	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\base64.cpp.s
 .PHONY : Utils\base64.cpp.s
 
-Utils\utils.obj: Utils\utils.cpp.obj
-
-.PHONY : Utils\utils.obj
-
-# target to build an object file
-Utils\utils.cpp.obj:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\utils.cpp.obj
-.PHONY : Utils\utils.cpp.obj
-
-Utils\utils.i: Utils\utils.cpp.i
-
-.PHONY : Utils\utils.i
-
-# target to preprocess a source file
-Utils\utils.cpp.i:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\utils.cpp.i
-.PHONY : Utils\utils.cpp.i
-
-Utils\utils.s: Utils\utils.cpp.s
-
-.PHONY : Utils\utils.s
-
-# target to generate assembly for a file
-Utils\utils.cpp.s:
-	$(MAKE) -f CMakeFiles\Chat_Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Chat_Server.dir\Utils\utils.cpp.s
-.PHONY : Utils\utils.cpp.s
-
 core\Dispatcher.obj: core\Dispatcher.cpp.obj
 
 .PHONY : core\Dispatcher.obj
@@ -544,9 +517,6 @@ help:
 	@echo ... Utils/base64.obj
 	@echo ... Utils/base64.i
 	@echo ... Utils/base64.s
-	@echo ... Utils/utils.obj
-	@echo ... Utils/utils.i
-	@echo ... Utils/utils.s
 	@echo ... core/Dispatcher.obj
 	@echo ... core/Dispatcher.i
 	@echo ... core/Dispatcher.s
