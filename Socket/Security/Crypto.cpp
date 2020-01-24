@@ -94,7 +94,7 @@ char *Crypto::encrypt_AES(char *msg) {
 
     int len = strlen(msg) + 1;
     int c_len = len + AES_BLOCK_SIZE, f_len = 0;
-    unsigned char *ciphertext = new unsigned char[c_len + 4];
+    auto *ciphertext = new unsigned char[c_len + 4];
 
     /* allows reusing of 'e' for multiple encryption cycles */
     EVP_EncryptInit_ex(e_ctx, nullptr, nullptr, nullptr, nullptr);

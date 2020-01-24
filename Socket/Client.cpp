@@ -92,7 +92,7 @@ void Client::receive() {
                     string str(crypto->pub_key);
                     string aes_key = base64_encode(crypto->AES_Key, 32);
                     string aes_iv = base64_encode(crypto->AES_iv, crypto->AES_BLOCK_SIZE);
-                    auto *cmdKey = new CommandKey(str, aes_key, aes_iv);
+                    auto *cmdKey = new SocketCommands::CommandKey(str, aes_key, aes_iv);
                     sendMessage(cmdKey->getSerializedString());
 
                     delete cmdKey;

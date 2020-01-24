@@ -4,8 +4,8 @@
 
 #include "Dispatcher.h"
 #include "../Socket/Client.h"
-#include "../Commands/Command.h"
 
+using namespace SocketCommands;
 
 void Dispatcher::executeRequest(Client &sender, const string &message) {
     Document document;
@@ -297,4 +297,3 @@ int Dispatcher::getNotifiesCount(vector<Message *> mv, bsoncxx::types::b_date la
 
     return notifies;
 }
-

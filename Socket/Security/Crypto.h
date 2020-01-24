@@ -96,7 +96,7 @@ public:
 
     string decrypt_AES(char *msg);
 
-    void handleErrors(void) {
+    static void handleErrors(void) {
         ERR_print_errors_fp(stderr);
     }
 };

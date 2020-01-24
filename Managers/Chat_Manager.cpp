@@ -16,8 +16,7 @@ vector<Chat *> Chat_Manager::fetchChats(const string &id) {
 Chat* Chat_Manager::addMessageToChat(const string &chatid, Message *m) {
 
     if(!m->Media.empty()){
-        string mediaId= MediaManager::saveMedia(m->Media); //ritorna id del file cachato
-        m->Media= mediaId;
+        m->Media = MediaManager::saveMedia(m->Media);
     }
 
     return Mongodb::getInstance().updateMessage(chatid, m);

@@ -14,7 +14,6 @@ int main() {
     server->start();
 
     Dispatcher::getInstance().server = server;
-    
     cin.get();
 
 }

@@ -7,27 +7,13 @@
 
 #include <string>
 
-#define FOLDER "MediaFiles"
 using namespace std;
 
-class MediaManager {
+namespace MediaManager {
 
-public:
-    /* MediaManager(){
-         CreateFolder(FOLDER);
-     }; */
+    string saveMedia(const string &media); //return media's id
 
-    /* void CreateFolder(const char *path)
-     {
-         if(!CreateDirectory(path ,NULL))
-         {
-             return;
-         }
-     };*/
-
-    static string saveMedia(const string &media); //return media's id
-
-    static string getMediaById(const string &id); //return base64 media
+    string getMediaById(const string &id); //return base64 media
 
 };
 

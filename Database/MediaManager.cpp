@@ -33,7 +33,7 @@ string MediaManager::saveMedia(const string &media) {
 
 string MediaManager::getMediaById(const string &id) {
 
-    string base64;
+    string base64("");
     ifstream f("./MediaFiles/" + id + ".txt");
     if (f.is_open()) {
         getline(f, base64);
@@ -41,6 +41,6 @@ string MediaManager::getMediaById(const string &id) {
         return base64;
     }
     cout << "Media " << id << " not found!\n";
-    return "";
+    return base64;
 }
 
