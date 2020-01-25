@@ -57,6 +57,7 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
     if (sender.myUser == nullptr) {
         //Not Logged yet. The following switch case is reserved to logged users.
+        cout << "An unauthenticated user is trying to get some info!!\n";
         return;
     }
 
@@ -218,10 +219,6 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
             sort(chats.begin(), chats.end(), [](const Chat* lhs, const Chat* rhs) {
                 return lhs->NumNotifications > rhs->NumNotifications;
             });
-
-            for (auto o: chats) {
-                cout << o->Name << "\n";
-            }
 
             Command *c = new CommandFetchContacts(chats);
             sender.sendMessage(c->getSerializedString());

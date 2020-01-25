@@ -179,7 +179,7 @@ void Client::sendMessage(const string &msg) {
         cout << "Data send failed with error: " << WSAGetLastError() << "\n";
         this->close();
     } else {
-        cout << "Message sent: " << msg << "\n";
+        cout << "Response sent\n";
     }
 
     delete[] buffer;

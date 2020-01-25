@@ -96,6 +96,7 @@ void Server::startListen() {
                 clients.erase(clients.begin() + i);
                 delete c;
                 cout << "Client removed.\n";
+                break;
             }
         }
 
