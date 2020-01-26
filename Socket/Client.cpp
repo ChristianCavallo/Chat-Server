@@ -22,102 +22,114 @@ void Client::start() {
 }
 
 void Client::receive() {
-    int received = 0;
-    int a = 0;
-    char syncBuffer[4];
-    char *buffer = nullptr;
-
-    cout << "Starting receive!\n";
-    do{
-
-        received = recv(this->sck, syncBuffer, 4, 0);
-
-        if(received <= 0){
-            break;
-        }
-
-        if(received != 4){
-            continue;
-        }
-
-        memcpy(&a, syncBuffer, 4);
-        if(a != 12344321){
-            cout << "Sync error on step 1. Received: " << a << "\n";
-            continue;
-        }
-
-        received = recv(this->sck, syncBuffer, 4, 0);
-
-        if(received != 4){
-            continue;
-        }
-
-        memcpy(&a, syncBuffer, 4);
-        if (a < 0) {
-            cout << "Size error: " << a << "\n";
-            continue;
-        }
-
-        buffer = new char[a + 1];
-        received = recv(this->sck, buffer, a, MSG_WAITALL);
-        if(received != a){
-            cout << "Error while receiving! Received: " << received << "  Expected: " << a << "\n";
-            continue;
-        }
-        buffer[a] = '\0';
-
-        received = recv(this->sck, syncBuffer, 4, 0);
-
-        if (received != 4) {
-            continue;
-        }
-
-        memcpy(&a, syncBuffer, 4);
-        if (a != 43214321) {
-            cout << "Sync error on step 1.\n";
-            continue;
-        }
+    try {
 
 
-        if (!cryptedRSA) {
-            Document document;
-            document.Parse(buffer);
-            if (document.HasMember("id") && document.HasMember("key")) {
-                int id = document["id"].GetInt();
-                string key = document["key"].GetString();
-                if (id == 0) {
-                    crypto->setClientPublicKey(const_cast<char *>(key.c_str()));
-                    cryptedRSA = true;
+        int received = 0;
+        int a = 0;
+        char syncBuffer[4];
+        char *buffer = nullptr;
 
-                    string str(crypto->pub_key);
-                    string aes_key = base64_encode(crypto->AES_Key, 32);
-                    string aes_iv = base64_encode(crypto->AES_iv, crypto->AES_BLOCK_SIZE);
-                    auto *cmdKey = new SocketCommands::CommandKey(str, aes_key, aes_iv);
-                    sendMessage(cmdKey->getSerializedString());
+        cout << "Starting receive!\n";
+        do {
 
-                    delete cmdKey;
+            received = recv(this->sck, syncBuffer, 4, 0);
 
-                    cryptedAES = true;
-                    cout << "Connection is now secure!\n";
-                }
+            if(received <= 0){
+                break;
             }
 
-        } else {
-            string decrypted = crypto->decrypt_AES(buffer);
-            cout << "Received a new message: " << decrypted << "\n";
-            Dispatcher::getInstance().executeRequest(*this, decrypted);
-            
-            decrypted.clear();
-        }
+            if(received != 4){
+                continue;
+            }
 
-        delete[] buffer;
+            memcpy(&a, syncBuffer, 4);
+            if(a != 12344321){
+                cout << "Sync error on step 1. Received: " << a << "\n";
+                continue;
+            }
+
+            received = recv(this->sck, syncBuffer, 4, 0);
+
+            if (received != 4) {
+                continue;
+            } else if (received <= 0) {
+                break;
+            }
+
+            memcpy(&a, syncBuffer, 4);
+            if (a < 0) {
+                cout << "Size error: " << a << "\n";
+                continue;
+            }
+
+            buffer = new char[a + 1];
+            received = recv(this->sck, buffer, a, MSG_WAITALL);
+            if (received != a) {
+                cout << "Error while receiving! Received: " << received << "  Expected: " << a << "\n";
+                continue;
+            } else if (received <= 0) {
+                break;
+            }
+            buffer[a] = '\0';
+
+            received = recv(this->sck, syncBuffer, 4, 0);
+
+            if (received != 4) {
+                continue;
+            } else if (received <= 0) {
+                break;
+            }
+
+            memcpy(&a, syncBuffer, 4);
+            if (a != 43214321) {
+                cout << "Sync error on step 1.\n";
+                continue;
+            }
 
 
-    } while(received > 0);
+            if (!cryptedRSA) {
+                Document document;
+                document.Parse(buffer);
+                if (document.HasMember("id") && document.HasMember("key")) {
+                    int id = document["id"].GetInt();
+                    string key = document["key"].GetString();
+                    if (id == 0) {
+                        crypto->setClientPublicKey(const_cast<char *>(key.c_str()));
+                        cryptedRSA = true;
 
-    cout << "Client exited from receiving cause received data was 0 or less. Closing the socket...\n";
+                        string str(crypto->pub_key);
+                        string aes_key = base64_encode(crypto->AES_Key, 32);
+                        string aes_iv = base64_encode(crypto->AES_iv, crypto->AES_BLOCK_SIZE);
+                        auto *cmdKey = new SocketCommands::CommandKey(str, aes_key, aes_iv);
+                        sendMessage(cmdKey->getSerializedString());
 
-    this->close();
+                        delete cmdKey;
+
+                        cryptedAES = true;
+                        cout << "Connection is now secure!\n";
+                    }
+                }
+
+            } else {
+                string decrypted = crypto->decrypt_AES(buffer);
+                cout << "Received a new message: " << decrypted << "\n";
+                Dispatcher::getInstance().executeRequest(*this, decrypted);
+
+                decrypted.clear();
+            }
+
+            delete[] buffer;
+
+
+        } while (received > 0);
+
+        cout << "Client exited from receiving cause received data was 0 or less. Closing the socket...\n";
+
+        this->close();
+    } catch (exception ex) {
+        cout << "Exception caught: " << ex.what() << "\n";
+    }
 }
 
 

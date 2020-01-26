@@ -118,7 +118,7 @@ Client *Server::getClientByUserId(string id) {
     }
     for (int i = 0; i < clients.size(); i++) {
         Client *c = clients.at(i);
-        if (!c->closed) {
+        if (!c->closed && c->myUser != nullptr) {
             if (c->myUser->id == id) {
                 return c;
             }
