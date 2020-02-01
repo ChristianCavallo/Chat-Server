@@ -33,6 +33,19 @@ Install it and type the following commands:
 If you are using Visual Studio, also type "vcpkg integrate" in order to integrate everything directly to your ide.
 Alternatively, you can use chaining to link your ide to vcpkg's path.
 
+# R Script
+Inside this repository, an RScript called "data.R" has been added. It's a simple script that executes some statistical functions remotly on the database. To run it, just source it on your R session. It will print a menu with these features:
+- Show users
+- Show user's chats.
+- Show total amount of messages by hour.
+- Show total amount of messages by user.
+- Save current data inside an .RData file.
+- Load data from an .Rdata file.
+
+Additionally it requires 2 libraries:
+- Mongolite
+- ggplot
+
 ## Credits
 - Noemi Buggea [https://github.com/Noemi-Buggea]
 - Christian Cavallo [https://github.com/ChristianCavallo]
