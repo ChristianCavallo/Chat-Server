@@ -51,7 +51,10 @@ namespace SocketCommands {
         COMMAND_FETCH_CONTACTS_RESPONSE = 81,
 
         COMMAND_FETCH_CHAT_REQUEST = 90,
-        COMMAND_FETCH_CHAT_RESPONSE = 91
+        COMMAND_FETCH_CHAT_RESPONSE = 91,
+
+        COMMAND_ERROR = 404
+
 
     };
 

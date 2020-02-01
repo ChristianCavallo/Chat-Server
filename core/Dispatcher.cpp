@@ -235,6 +235,14 @@ void Dispatcher::executeRequest(Client &sender, const string &message) {
 
             Chat *ch = chatManager->getChatById(document["chat-id"].GetString());
             string result = "";
+
+            if (ch == nullptr) {
+                Command *c = new CommandGeneric(COMMAND_ERROR, false, "Chat not available. The user removed it.");
+                sender.sendMessage(c->getSerializedString());
+                delete c;
+                break;
+            }
+
             if (!ch->IsGroup) {
                 ch->Participants.remove(sender.myUser->id);
                 result = getUserStatus(ch->Participants.front());
