@@ -64,6 +64,23 @@ setMethod("showChatByUser", "mongostats",
 
             chats <-connection$aggregate(query, options = '{"allowDiskUse" : true}')
             
+            if(nrow(chats) > 0){
+              print(chats)
+              
+              cat("\nPut chat id (Press enter to skip): ")
+              chat_id <-readLines(n=1)
+              
+              if(chat_id != ""){
+                query <- paste('[{"$match" : {"_id": {"$oid" : "', chat_id,'"} }},
+                             {"$unwind": "$messages"},
+                             {"$match": {"messages.sender_id": "', id, '"}},
+                             {"$project": {"_id" : 0, "messages.senderName" : 1, "messages.content" : 1, "messages.media": 1}}
+                            ]', sep = "")
+                
+                chats <-connection$aggregate(query, options = '{"allowDiskUse" : true}')
+              }
+            
+            }
           
             connection$disconnect()
             return(chats)
